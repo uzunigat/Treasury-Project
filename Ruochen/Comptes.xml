@@ -1,0 +1,24 @@
+<Comptes>
+ <compte prop="Virtuel" id="0" nom="Compte Racine"/>
+ <compte parent="0" prop="Virtuel" id="1" type="Actif" nom="Actif"/>
+ <compte parent="1" prop="Reel" id="2" type="Actif" nom="Caisse" solde="2350"/>
+ <compte parent="1" prop="Reel" id="3" type="Actif" nom="Livret A" solde="100"/>
+ <compte parent="1" prop="Reel" id="4" type="Actif" nom="Banque" solde="100"/>
+ <compte parent="0" prop="Virtuel" id="5" type="Passif" nom="Passif"/>
+ <compte parent="0" prop="Virtuel" id="6" type="Depense" nom="Depense"/>
+ <compte parent="6" prop="Reel" id="7" type="Depense" nom="Banque" solde="200"/>
+ <compte parent="6" prop="Virtuel" id="8" type="Depense" nom="societe"/>
+ <compte parent="8" prop="Reel" id="9" type="Depense" nom="Achat de mat?riel" solde="2150"/>
+ <compte parent="8" prop="Reel" id="10" type="Depense" nom="Frais de personnel" solde="200"/>
+ <compte parent="6" prop="Virtuel" id="11" type="Depense" nom="loisir"/>
+ <compte parent="11" prop="Reel" id="12" type="Depense" nom="cinema" solde="2150"/>
+ <compte parent="11" prop="Reel" id="13" type="Depense" nom="piano" solde="200"/>
+ <compte parent="6" prop="Virtuel" id="14" type="Depense" nom="scolaire"/>
+ <compte parent="6" prop="Reel" id="15" type="Depense" nom="asda" solde="0"/>
+ <compte parent="0" prop="Virtuel" id="16" type="Recette" nom="Recette"/>
+ <compte parent="16" prop="Virtuel" id="17" type="Recette" nom="remuneration"/>
+ <compte parent="17" prop="Reel" id="18" type="Recette" nom="Salaire1" solde="2150"/>
+ <compte parent="16" prop="Reel" id="19" type="Recette" nom="Cotisations" solde="2150"/>
+ <compte parent="16" prop="Reel" id="20" type="Recette" nom="Subventions" solde="2150"/>
+ <compte parent="1" prop="Virtuel" id="21" type="Actif" nom="Compte_Test_1"/>
+</Comptes>

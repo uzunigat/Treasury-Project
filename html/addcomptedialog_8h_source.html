@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tresorerie_LO21:  Fichier source de Ruochen/addcomptedialog.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Tresorerie_LO21
+   </div>
+   <div id="projectbrief">gestion de trésorerie pour une association</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('addcomptedialog_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">addcomptedialog.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ADDCOMPTEDIALOG_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ADDCOMPTEDIALOG_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QDialog&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="namespace_ui.html">    6</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">class </span><a class="code" href="class_add_compte_dialog.html">AddCompteDialog</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_add_compte_dialog.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_add_compte_dialog.html">AddCompteDialog</a> : <span class="keyword">public</span> QDialog</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_add_compte_dialog.html#aebdf7940443a977e5d31f1e1e488ba47">AddCompteDialog</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_add_compte_dialog.html#a74369771765ec6ea5b43a30d94a58f3d">~AddCompteDialog</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_add_compte_dialog.html#a96dccc283b4d6176b434c3e75ad8ffb1">   42</a></span>&#160;    <span class="keyword">const</span> QString <a class="code" href="class_add_compte_dialog.html#a96dccc283b4d6176b434c3e75ad8ffb1">getFatherId</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> father_id;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_add_compte_dialog.html#a0b5075dec8639155513345facd193bed">   49</a></span>&#160;    QString <a class="code" href="class_add_compte_dialog.html#a0b5075dec8639155513345facd193bed">getProp</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> prop;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_add_compte_dialog.html#a8adcccb64a6de9ab835b68bf119be308">   56</a></span>&#160;    QString <a class="code" href="class_add_compte_dialog.html#a8adcccb64a6de9ab835b68bf119be308">getType</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> type;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_add_compte_dialog.html#ad00253bd5209c1a47713464fcbb4effe">   63</a></span>&#160;    QString <a class="code" href="class_add_compte_dialog.html#ad00253bd5209c1a47713464fcbb4effe">getId</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> id;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_add_compte_dialog.html#afbd5a413f3e54b1df6975dbf993304ff">   70</a></span>&#160;    <span class="keyword">const</span> QString <a class="code" href="class_add_compte_dialog.html#afbd5a413f3e54b1df6975dbf993304ff">getNom</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> nom;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_add_compte_dialog.html#a1f866b20ee7e3345203ab821375f7e3f">   77</a></span>&#160;    QString <a class="code" href="class_add_compte_dialog.html#a1f866b20ee7e3345203ab821375f7e3f">getSolde</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> QString::number(solde);}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_add_compte_dialog.html#aa52b3028aad88257eb21b947b1b77e70">   84</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_add_compte_dialog.html#aa52b3028aad88257eb21b947b1b77e70">setFatherId</a>(QString <span class="keywordtype">id</span>){father_id = id;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_add_compte_dialog.html#aa2ffec794ace34d854f5b102db2b4de3">   91</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_add_compte_dialog.html#aa2ffec794ace34d854f5b102db2b4de3">setProp</a>(QString p){prop = p;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_add_compte_dialog.html#a44cdaaee27cc3bd1a1ced03b73821e6e">   98</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_add_compte_dialog.html#a44cdaaee27cc3bd1a1ced03b73821e6e">setId</a>(QString <span class="keywordtype">id</span>) {this-&gt;<span class="keywordtype">id</span>= id;}</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_add_compte_dialog.html#a0899a1bad7ed51ffec1cf89ce82784e8">  105</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_add_compte_dialog.html#a0899a1bad7ed51ffec1cf89ce82784e8">setNom</a>(QString n){nom = n;}</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="class_add_compte_dialog.html#a4a43fe7d42c630eeae1315ac535d097d">  112</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_add_compte_dialog.html#a4a43fe7d42c630eeae1315ac535d097d">setSolde</a>(<span class="keywordtype">double</span> s){solde = s;}</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_add_compte_dialog.html#ad02aea8c9d5c936f45896dd9f342079b">  119</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_add_compte_dialog.html#ad02aea8c9d5c936f45896dd9f342079b">setType</a>(QString t){type = t;}</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="class_add_compte_dialog.html#ad7cc04087283ab33d9bc17b5b6ea907b">  126</a></span>&#160;    Ui::AddCompteDialog * <a class="code" href="class_add_compte_dialog.html#ad7cc04087283ab33d9bc17b5b6ea907b">getUi</a>(){<span class="keywordflow">return</span> ui;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_add_compte_dialog.html#ac68661f9eb34531c3b15b774aa6df4ee">accept</a>();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">void</span> on_comboBox_currentIndexChanged(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">void</span> on_comboBox2_currentIndexChanged(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    Ui::AddCompteDialog *ui;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    QString father_id;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    QString id;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    QString prop;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    QString type;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    QString nom;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">double</span> solde;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    QString filename;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;};</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#endif // ADDCOMPTEDIALOG_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_add_compte_dialog_html"><div class="ttname"><a href="class_add_compte_dialog.html">AddCompteDialog</a></div><div class="ttdoc">Cette classe vous permet de gérer la génération d'un compte.</div><div class="ttdef"><b>Definition:</b> addcomptedialog.h:17</div></div>
+<div class="ttc" id="aclass_add_compte_dialog_html_aa2ffec794ace34d854f5b102db2b4de3"><div class="ttname"><a href="class_add_compte_dialog.html#aa2ffec794ace34d854f5b102db2b4de3">AddCompteDialog::setProp</a></div><div class="ttdeci">void setProp(QString p)</div><div class="ttdoc">Setter de Propriété Méthode permetant de modifier la propriété du compte.</div><div class="ttdef"><b>Definition:</b> addcomptedialog.h:91</div></div>
+<div class="ttc" id="aclass_add_compte_dialog_html_aebdf7940443a977e5d31f1e1e488ba47"><div class="ttname"><a href="class_add_compte_dialog.html#aebdf7940443a977e5d31f1e1e488ba47">AddCompteDialog::AddCompteDialog</a></div><div class="ttdeci">AddCompteDialog(QWidget *parent=nullptr)</div><div class="ttdoc">Constructeur Constructeur de la classe AddCompteDialog.</div><div class="ttdef"><b>Definition:</b> addcomptedialog.cpp:6</div></div>
+<div class="ttc" id="aclass_add_compte_dialog_html_afbd5a413f3e54b1df6975dbf993304ff"><div class="ttname"><a href="class_add_compte_dialog.html#afbd5a413f3e54b1df6975dbf993304ff">AddCompteDialog::getNom</a></div><div class="ttdeci">const QString getNom() const</div><div class="ttdoc">Accesseur de Nom Méthode permetant d'acceder au nom du compte.</div><div class="ttdef"><b>Definition:</b> addcomptedialog.h:70</div></div>
+<div class="ttc" id="aclass_add_compte_dialog_html_a74369771765ec6ea5b43a30d94a58f3d"><div class="ttname"><a href="class_add_compte_dialog.html#a74369771765ec6ea5b43a30d94a58f3d">AddCompteDialog::~AddCompteDialog</a></div><div class="ttdeci">~AddCompteDialog()</div><div class="ttdoc">Destructeur Destructeur de la class AddCompteDialog.</div><div class="ttdef"><b>Definition:</b> addcomptedialog.cpp:19</div></div>
+<div class="ttc" id="aclass_add_compte_dialog_html_a44cdaaee27cc3bd1a1ced03b73821e6e"><div class="ttname"><a href="class_add_compte_dialog.html#a44cdaaee27cc3bd1a1ced03b73821e6e">AddCompteDialog::setId</a></div><div class="ttdeci">void setId(QString id)</div><div class="ttdoc">Setter de Id Méthode permetant de modifier l'id du compte.</div><div class="ttdef"><b>Definition:</b> addcomptedialog.h:98</div></div>
+<div class="ttc" id="aclass_add_compte_dialog_html_ad00253bd5209c1a47713464fcbb4effe"><div class="ttname"><a href="class_add_compte_dialog.html#ad00253bd5209c1a47713464fcbb4effe">AddCompteDialog::getId</a></div><div class="ttdeci">QString getId() const</div><div class="ttdoc">Accesseur de Id Méthode permetant d'acceder au Id du compte.</div><div class="ttdef"><b>Definition:</b> addcomptedialog.h:63</div></div>
+<div class="ttc" id="aclass_add_compte_dialog_html_a8adcccb64a6de9ab835b68bf119be308"><div class="ttname"><a href="class_add_compte_dialog.html#a8adcccb64a6de9ab835b68bf119be308">AddCompteDialog::getType</a></div><div class="ttdeci">QString getType() const</div><div class="ttdoc">Accesseur de Type Méthode permetant d'acceder au Type (Actif, Passif, Recette, Depense) du compte.</div><div class="ttdef"><b>Definition:</b> addcomptedialog.h:56</div></div>
+<div class="ttc" id="aclass_add_compte_dialog_html_a0899a1bad7ed51ffec1cf89ce82784e8"><div class="ttname"><a href="class_add_compte_dialog.html#a0899a1bad7ed51ffec1cf89ce82784e8">AddCompteDialog::setNom</a></div><div class="ttdeci">void setNom(QString n)</div><div class="ttdoc">Setter de Nom Méthode permetant de modifier le nom du compte.</div><div class="ttdef"><b>Definition:</b> addcomptedialog.h:105</div></div>
+<div class="ttc" id="aclass_add_compte_dialog_html_a0b5075dec8639155513345facd193bed"><div class="ttname"><a href="class_add_compte_dialog.html#a0b5075dec8639155513345facd193bed">AddCompteDialog::getProp</a></div><div class="ttdeci">QString getProp() const</div><div class="ttdoc">Accesseur de Propriété Méthode permetant d'acceder au Propriété (Virtuel ou pas) du compte.</div><div class="ttdef"><b>Definition:</b> addcomptedialog.h:49</div></div>
+<div class="ttc" id="aclass_add_compte_dialog_html_aa52b3028aad88257eb21b947b1b77e70"><div class="ttname"><a href="class_add_compte_dialog.html#aa52b3028aad88257eb21b947b1b77e70">AddCompteDialog::setFatherId</a></div><div class="ttdeci">void setFatherId(QString id)</div><div class="ttdoc">Setter de id Parent Méthode permetant de modifier l'id du compte parent.</div><div class="ttdef"><b>Definition:</b> addcomptedialog.h:84</div></div>
+<div class="ttc" id="aclass_add_compte_dialog_html_ad7cc04087283ab33d9bc17b5b6ea907b"><div class="ttname"><a href="class_add_compte_dialog.html#ad7cc04087283ab33d9bc17b5b6ea907b">AddCompteDialog::getUi</a></div><div class="ttdeci">Ui::AddCompteDialog * getUi()</div><div class="ttdoc">Accesseur de UserInterface Méthode permetant d'accéder à l'interface de la fenêtre &quot;AddCompte&quot;.</div><div class="ttdef"><b>Definition:</b> addcomptedialog.h:126</div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> addcomptedialog.h:6</div></div>
+<div class="ttc" id="aclass_add_compte_dialog_html_a4a43fe7d42c630eeae1315ac535d097d"><div class="ttname"><a href="class_add_compte_dialog.html#a4a43fe7d42c630eeae1315ac535d097d">AddCompteDialog::setSolde</a></div><div class="ttdeci">void setSolde(double s)</div><div class="ttdoc">Setter de Solde Méthode permetant de modifier le solde du compte.</div><div class="ttdef"><b>Definition:</b> addcomptedialog.h:112</div></div>
+<div class="ttc" id="aclass_add_compte_dialog_html_ac68661f9eb34531c3b15b774aa6df4ee"><div class="ttname"><a href="class_add_compte_dialog.html#ac68661f9eb34531c3b15b774aa6df4ee">AddCompteDialog::accept</a></div><div class="ttdeci">void accept()</div><div class="ttdef"><b>Definition:</b> addcomptedialog.cpp:56</div></div>
+<div class="ttc" id="aclass_add_compte_dialog_html_a96dccc283b4d6176b434c3e75ad8ffb1"><div class="ttname"><a href="class_add_compte_dialog.html#a96dccc283b4d6176b434c3e75ad8ffb1">AddCompteDialog::getFatherId</a></div><div class="ttdeci">const QString getFatherId() const</div><div class="ttdoc">Accesseur de Id Parent Méthode permetant d'acceder au Id parent.</div><div class="ttdef"><b>Definition:</b> addcomptedialog.h:42</div></div>
+<div class="ttc" id="aclass_add_compte_dialog_html_a1f866b20ee7e3345203ab821375f7e3f"><div class="ttname"><a href="class_add_compte_dialog.html#a1f866b20ee7e3345203ab821375f7e3f">AddCompteDialog::getSolde</a></div><div class="ttdeci">QString getSolde() const</div><div class="ttdoc">Accesseur de Solde Méthode permetant d'acceder au solde du compte.</div><div class="ttdef"><b>Definition:</b> addcomptedialog.h:77</div></div>
+<div class="ttc" id="aclass_add_compte_dialog_html_ad02aea8c9d5c936f45896dd9f342079b"><div class="ttname"><a href="class_add_compte_dialog.html#ad02aea8c9d5c936f45896dd9f342079b">AddCompteDialog::setType</a></div><div class="ttdeci">void setType(QString t)</div><div class="ttdoc">Setter de Type Méthode permetant de modifier le type du compte.</div><div class="ttdef"><b>Definition:</b> addcomptedialog.h:119</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_36c96ca2805967986e213251ddd17d13.html">Ruochen</a></li><li class="navelem"><b>addcomptedialog.h</b></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

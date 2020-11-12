@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1587682468 source:c:\users\sebas\desktop\projets\projet lo21\main.cpp
+	<iostream>
+	"compte.h"
+
+1587682007 c:\users\sebas\desktop\projets\projet lo21\compte.h
+	<iostream>
+	<string>
+	<vector>
+
+1587682558 source:c:\users\sebas\desktop\projets\projet lo21\compte.cpp
+	<iostream>
+	<string>
+	<iterator>
+	"compte.h"
+
+1589651275 source:c:\users\sebas\desktop\projets\projet lo21 composite\main.cpp
+	<iostream>
+	"compte.h"
+	"menu.h"
+
+1589651248 c:\users\sebas\desktop\projets\projet lo21 composite\compte.h
+	<iostream>
+	<string>
+	<vector>
+	<map>
+
+1589651904 source:c:\users\sebas\desktop\projets\projet lo21 composite\compte.cpp
+	<iostream>
+	<string>
+	<iterator>
+	"compte.h"
+
+1588332398 c:\users\sebas\desktop\projets\projet lo21 composite\menu.h
+	"compte.h"
+

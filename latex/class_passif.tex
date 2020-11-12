@@ -1,0 +1,106 @@
+\hypertarget{class_passif}{}\doxysection{Référence de la classe Passif}
+\label{class_passif}\index{Passif@{Passif}}
+
+
+\mbox{\hyperlink{class_compte}{Compte}} de type \char`\"{}\+Passif\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$compte.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Passif\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_passif}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_compte}{Compte}} $\ast$ \mbox{\hyperlink{class_passif_acd77505d93f98d3b11794cdb5a23404c}{Clone}} () const
+\begin{DoxyCompactList}\small\item\em Cloner compte~\newline
+. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_passif_ad4b9dc57567e66e3bf96875038c2f563}{Passif}} (const std\+::string \&nom, const int \&num)
+\begin{DoxyCompactList}\small\item\em Constructeur~\newline
+. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_passif_ab875c25ab9bed1bdcb545ccaf4d49b15}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Getter de type~\newline
+. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_passif_a287d115bd8ed0e4355c42df12e6da9b2}{$\sim$\+Passif}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur~\newline
+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membres hérités additionnels}
+
+
+\doxysubsection{Description détaillée}
+\mbox{\hyperlink{class_compte}{Compte}} de type \char`\"{}\+Passif\char`\"{}. 
+
+Le passif d’une association est tout ce qu’elle doit à ses tiers. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_passif_ad4b9dc57567e66e3bf96875038c2f563}\label{class_passif_ad4b9dc57567e66e3bf96875038c2f563}} 
+\index{Passif@{Passif}!Passif@{Passif}}
+\index{Passif@{Passif}!Passif@{Passif}}
+\doxysubsubsection{\texorpdfstring{Passif()}{Passif()}}
+{\footnotesize\ttfamily Passif\+::\+Passif (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nom,  }\item[{const int \&}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur~\newline
+. 
+
+Constructeur de la classe \mbox{\hyperlink{class_passif}{Passif}} 
+\begin{DoxyParams}{Paramètres}
+{\em nom} & \+: nom du compte \\
+\hline
+{\em num} & \+: identifiant du compte \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_passif_a287d115bd8ed0e4355c42df12e6da9b2}\label{class_passif_a287d115bd8ed0e4355c42df12e6da9b2}} 
+\index{Passif@{Passif}!````~Passif@{$\sim$Passif}}
+\index{````~Passif@{$\sim$Passif}!Passif@{Passif}}
+\doxysubsubsection{\texorpdfstring{$\sim$Passif()}{~Passif()}}
+{\footnotesize\ttfamily Passif\+::$\sim$\+Passif (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur~\newline
+. 
+
+destructeur par défaut de la classe \mbox{\hyperlink{class_actif}{Actif}} 
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_passif_acd77505d93f98d3b11794cdb5a23404c}\label{class_passif_acd77505d93f98d3b11794cdb5a23404c}} 
+\index{Passif@{Passif}!Clone@{Clone}}
+\index{Clone@{Clone}!Passif@{Passif}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_compte}{Compte}} $\ast$ Passif\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Cloner compte~\newline
+. 
+
+fonction necessaire au fonctionnement de la factory, elle permet la duplication de compte \mbox{\hyperlink{class_actif}{Actif}} 
+
+Implémente \mbox{\hyperlink{class_compte_a759775c18235933a56721e5cdfd74744}{Compte}}.
+
+\mbox{\Hypertarget{class_passif_ab875c25ab9bed1bdcb545ccaf4d49b15}\label{class_passif_ab875c25ab9bed1bdcb545ccaf4d49b15}} 
+\index{Passif@{Passif}!getType@{getType}}
+\index{getType@{getType}!Passif@{Passif}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Passif\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Getter de type~\newline
+. 
+
+Permet de récupérer le type du compte en chaine de caractère \begin{DoxyReturn}{Renvoie}
+retourne le type du compte 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_compte_a091d77d9e39c25fa0ee7f6ede7eef768}{Compte}}.
+

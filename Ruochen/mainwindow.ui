@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTreeWidget" name="treeWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>741</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>Nom du compte</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>ID</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Solde</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Property</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Type</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuGenerate_PDF">
+     <property name="title">
+      <string>Generate PDF</string>
+     </property>
+     <addaction name="actionFor_transferts"/>
+     <addaction name="actionTransferts_for_one_account"/>
+     <addaction name="actionTransferts_par_Rapprochement"/>
+    </widget>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave_as"/>
+    <addaction name="separator"/>
+    <addaction name="menuGenerate_PDF"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionAdd_account"/>
+    <addaction name="actionDelete_Account"/>
+    <addaction name="actionAdd_Transation"/>
+    <addaction name="separator"/>
+    <addaction name="actionClosure"/>
+    <addaction name="actionRapprochement"/>
+   </widget>
+   <widget class="QMenu" name="menuShow">
+    <property name="title">
+     <string>Show</string>
+    </property>
+    <addaction name="actionShow_all_transation"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuShow"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNew">
+   <property name="text">
+    <string>New Window...</string>
+   </property>
+   <property name="toolTip">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open...</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="text">
+    <string>Save as...</string>
+   </property>
+  </action>
+  <action name="actionAdd_account">
+   <property name="text">
+    <string>Add account...</string>
+   </property>
+  </action>
+  <action name="actionDelete_Account">
+   <property name="text">
+    <string>Delete account</string>
+   </property>
+  </action>
+  <action name="actionOpen_preset_File">
+   <property name="text">
+    <string>Open preset File</string>
+   </property>
+  </action>
+  <action name="actionAdd_Transation">
+   <property name="text">
+    <string>Add Transation</string>
+   </property>
+  </action>
+  <action name="actionClosure">
+   <property name="text">
+    <string>Cloture</string>
+   </property>
+  </action>
+  <action name="actionShow_all_transation">
+   <property name="text">
+    <string>Show all transation</string>
+   </property>
+  </action>
+  <action name="actionFor_transferts">
+   <property name="text">
+    <string>Transferts for all accounts</string>
+   </property>
+  </action>
+  <action name="actionTransferts_for_one_account">
+   <property name="text">
+    <string>Transferts for one account</string>
+   </property>
+  </action>
+  <action name="actionRapprochement">
+   <property name="text">
+    <string>Rapprochement</string>
+   </property>
+  </action>
+  <action name="actionTransferts_par_Rapprochement">
+   <property name="text">
+    <string>Transferts par Rapprochement</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

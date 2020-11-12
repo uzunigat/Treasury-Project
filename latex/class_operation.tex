@@ -1,0 +1,235 @@
+\hypertarget{class_operation}{}\doxysection{Référence de la classe Operation}
+\label{class_operation}\index{Operation@{Operation}}
+
+
+Conteneur d\textquotesingle{}informations sur une opération concernant un \char`\"{}\+Compte réel\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$transaction.\+h$>$}
+
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_operation_adedea3660a9894116cf4806f367f3095}{Check}} ()
+\begin{DoxyCompactList}\small\item\em Vérifier la validité Méthode qui permet de vérifier la validité d\textquotesingle{}une opération en respectant les régles. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_operation_a6e83fe124557fb349b1c48152f890a3f}{get\+Credit}} () const
+\begin{DoxyCompactList}\small\item\em Getter crédit Méthode qui retourne le credit de l\textquotesingle{}opération. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_operation_a095c3d3e9f1d05e5313e0ba70b3f3700}{get\+Debit}} () const
+\begin{DoxyCompactList}\small\item\em Getter Debit Méthode qui retourne le debit de l\textquotesingle{}opération. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_rapprochement}{Rapprochement}} $\ast$ \mbox{\hyperlink{class_operation_ad17de963caa03d291fd5129037bfb45b}{get\+Rapprochement}} () const
+\begin{DoxyCompactList}\small\item\em Getter Raprochement Méthode qui retourne le raprochement de l\textquotesingle{}opération. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_operation_a79a70cf976404583198f458bbabff09c}{set\+Credit}} (double cr)
+\begin{DoxyCompactList}\small\item\em Setter Credit Méthode qui permet de saisir le credit d\textquotesingle{}une opération. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_operation_a753a3cb2cfa735af2c4ca8dd5528d719}{set\+Debit}} (double db)
+\begin{DoxyCompactList}\small\item\em Setter Debit Méthode qui permet de saisir le debit d\textquotesingle{}une opération. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_operation_ac15a6761090903263f777f121fe748b8}{set\+Rapprochement}} (\mbox{\hyperlink{class_rapprochement}{Rapprochement}} $\ast$rp)
+\begin{DoxyCompactList}\small\item\em Setter \mbox{\hyperlink{class_rapprochement}{Rapprochement}} Méthode qui permet de saisir le \mbox{\hyperlink{class_rapprochement}{Rapprochement}} d\textquotesingle{}une opération. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_operation_ac8360e5068a3f8f08f8b2c8eb4936bbe}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Getter id Méthode qui permet de retourner l\textquotesingle{}id d\textquotesingle{}une opération. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_compte}{Compte}} \& \mbox{\hyperlink{class_operation_a5e0e592308a9b111b6b9a817c468dbb7}{get\+Compte}} () const
+\begin{DoxyCompactList}\small\item\em Getter compte Méthode qui permet de retourner le compte auquel une opération est associée. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transaction}{Transaction}} \& \mbox{\hyperlink{class_operation_ad7f9e5c0d4f44144aac5767f0feee7c4}{get\+Transaction}} () const
+\begin{DoxyCompactList}\small\item\em Getter transaction Méthode qui permet de retourner le \mbox{\hyperlink{class_transaction}{Transaction}} auquel une opération est associée. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_operation_a23fda1fdae5024d7c7bc93e4d9597a86}{is\+\_\+frozen}} ()
+\begin{DoxyCompactList}\small\item\em is\+\_\+frozen Méthode qui permet de retourner True si une opération est gelée et False sinon \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_operation_a11a94fa4ceb552bea3f18eb2752cb973}{afficher}} ()
+\begin{DoxyCompactList}\small\item\em Afficher une opération Méthode qui permet d\textquotesingle{}afficher une opération. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_operation_a14089623bd8a73e73375353c3d8a4b6e}{$\sim$\+Operation}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Destructeur de la class Opération. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_operation_a49982aa325e19f0956d42fde9132caa2}{Transaction}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Conteneur d\textquotesingle{}informations sur une opération concernant un \char`\"{}\+Compte réel\char`\"{}. 
+
+Cette classe va nous permettre de stocker les informations relatives aux comptes prenants dans une transaction, notamment le débit, le crédit ainsi que le compte respectif auquel s\textquotesingle{}appliquera l\textquotesingle{}opération dans le contexte de la transaction 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_operation_a14089623bd8a73e73375353c3d8a4b6e}\label{class_operation_a14089623bd8a73e73375353c3d8a4b6e}} 
+\index{Operation@{Operation}!````~Operation@{$\sim$Operation}}
+\index{````~Operation@{$\sim$Operation}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{$\sim$Operation()}{~Operation()}}
+{\footnotesize\ttfamily Operation\+::$\sim$\+Operation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur Destructeur de la class Opération. 
+
+Supprime l\textquotesingle{}opération dans le dictionnaire du compte associé à l\textquotesingle{}appel du destructeur. 
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_operation_a11a94fa4ceb552bea3f18eb2752cb973}\label{class_operation_a11a94fa4ceb552bea3f18eb2752cb973}} 
+\index{Operation@{Operation}!afficher@{afficher}}
+\index{afficher@{afficher}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{afficher()}{afficher()}}
+{\footnotesize\ttfamily void Operation\+::afficher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Afficher une opération Méthode qui permet d\textquotesingle{}afficher une opération. 
+
+Affiche la valeur des variable d\textquotesingle{}une opération dans la console \mbox{\Hypertarget{class_operation_adedea3660a9894116cf4806f367f3095}\label{class_operation_adedea3660a9894116cf4806f367f3095}} 
+\index{Operation@{Operation}!Check@{Check}}
+\index{Check@{Check}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{Check()}{Check()}}
+{\footnotesize\ttfamily bool Operation\+::\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Vérifier la validité Méthode qui permet de vérifier la validité d\textquotesingle{}une opération en respectant les régles. 
+
+\begin{DoxyReturn}{Renvoie}
+True si l\textquotesingle{}opération est valide, False sinon
+\end{DoxyReturn}
+Vérifie toutes les condiions necessaire à la validiter d\textquotesingle{}une opération. \mbox{\Hypertarget{class_operation_a5e0e592308a9b111b6b9a817c468dbb7}\label{class_operation_a5e0e592308a9b111b6b9a817c468dbb7}} 
+\index{Operation@{Operation}!getCompte@{getCompte}}
+\index{getCompte@{getCompte}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{getCompte()}{getCompte()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_compte}{Compte}}\& Operation\+::get\+Compte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter compte Méthode qui permet de retourner le compte auquel une opération est associée. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne l\textquotesingle{}id d\textquotesingle{}une opération 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_a6e83fe124557fb349b1c48152f890a3f}\label{class_operation_a6e83fe124557fb349b1c48152f890a3f}} 
+\index{Operation@{Operation}!getCredit@{getCredit}}
+\index{getCredit@{getCredit}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{getCredit()}{getCredit()}}
+{\footnotesize\ttfamily double Operation\+::get\+Credit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter crédit Méthode qui retourne le credit de l\textquotesingle{}opération. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne le crédit de l\textquotesingle{}opération du type double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_a095c3d3e9f1d05e5313e0ba70b3f3700}\label{class_operation_a095c3d3e9f1d05e5313e0ba70b3f3700}} 
+\index{Operation@{Operation}!getDebit@{getDebit}}
+\index{getDebit@{getDebit}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{getDebit()}{getDebit()}}
+{\footnotesize\ttfamily double Operation\+::get\+Debit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter Debit Méthode qui retourne le debit de l\textquotesingle{}opération. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne le debit de l\textquotesingle{}opération du type double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_ac8360e5068a3f8f08f8b2c8eb4936bbe}\label{class_operation_ac8360e5068a3f8f08f8b2c8eb4936bbe}} 
+\index{Operation@{Operation}!getId@{getId}}
+\index{getId@{getId}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Operation\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter id Méthode qui permet de retourner l\textquotesingle{}id d\textquotesingle{}une opération. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne l\textquotesingle{}id d\textquotesingle{}une opération 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_ad17de963caa03d291fd5129037bfb45b}\label{class_operation_ad17de963caa03d291fd5129037bfb45b}} 
+\index{Operation@{Operation}!getRapprochement@{getRapprochement}}
+\index{getRapprochement@{getRapprochement}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{getRapprochement()}{getRapprochement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_rapprochement}{Rapprochement}}$\ast$ Operation\+::get\+Rapprochement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter Raprochement Méthode qui retourne le raprochement de l\textquotesingle{}opération. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne le raprochement du type Raprochement$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_ad7f9e5c0d4f44144aac5767f0feee7c4}\label{class_operation_ad7f9e5c0d4f44144aac5767f0feee7c4}} 
+\index{Operation@{Operation}!getTransaction@{getTransaction}}
+\index{getTransaction@{getTransaction}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{getTransaction()}{getTransaction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transaction}{Transaction}}\& Operation\+::get\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter transaction Méthode qui permet de retourner le \mbox{\hyperlink{class_transaction}{Transaction}} auquel une opération est associée. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne l\textquotesingle{}id d\textquotesingle{}une opération 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_a23fda1fdae5024d7c7bc93e4d9597a86}\label{class_operation_a23fda1fdae5024d7c7bc93e4d9597a86}} 
+\index{Operation@{Operation}!is\_frozen@{is\_frozen}}
+\index{is\_frozen@{is\_frozen}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{is\_frozen()}{is\_frozen()}}
+{\footnotesize\ttfamily bool Operation\+::is\+\_\+frozen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+is\+\_\+frozen Méthode qui permet de retourner True si une opération est gelée et False sinon 
+
+\begin{DoxyReturn}{Renvoie}
+True si l\textquotesingle{}opération est gelée et False sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_operation_a79a70cf976404583198f458bbabff09c}\label{class_operation_a79a70cf976404583198f458bbabff09c}} 
+\index{Operation@{Operation}!setCredit@{setCredit}}
+\index{setCredit@{setCredit}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{setCredit()}{setCredit()}}
+{\footnotesize\ttfamily void Operation\+::set\+Credit (\begin{DoxyParamCaption}\item[{double}]{cr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter Credit Méthode qui permet de saisir le credit d\textquotesingle{}une opération. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em cr} & crédit à mettre dans l\textquotesingle{}opération \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_operation_a753a3cb2cfa735af2c4ca8dd5528d719}\label{class_operation_a753a3cb2cfa735af2c4ca8dd5528d719}} 
+\index{Operation@{Operation}!setDebit@{setDebit}}
+\index{setDebit@{setDebit}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{setDebit()}{setDebit()}}
+{\footnotesize\ttfamily void Operation\+::set\+Debit (\begin{DoxyParamCaption}\item[{double}]{db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter Debit Méthode qui permet de saisir le debit d\textquotesingle{}une opération. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em db} & debit à mettre dans l\textquotesingle{}opération \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_operation_ac15a6761090903263f777f121fe748b8}\label{class_operation_ac15a6761090903263f777f121fe748b8}} 
+\index{Operation@{Operation}!setRapprochement@{setRapprochement}}
+\index{setRapprochement@{setRapprochement}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{setRapprochement()}{setRapprochement()}}
+{\footnotesize\ttfamily void Operation\+::set\+Rapprochement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_rapprochement}{Rapprochement}} $\ast$}]{rp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter \mbox{\hyperlink{class_rapprochement}{Rapprochement}} Méthode qui permet de saisir le \mbox{\hyperlink{class_rapprochement}{Rapprochement}} d\textquotesingle{}une opération. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em rp} & Raprochement à mettre dans l\textquotesingle{}opération du type Rapprochement$\ast$ \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions amies et associées}
+\mbox{\Hypertarget{class_operation_a49982aa325e19f0956d42fde9132caa2}\label{class_operation_a49982aa325e19f0956d42fde9132caa2}} 
+\index{Operation@{Operation}!Transaction@{Transaction}}
+\index{Transaction@{Transaction}!Operation@{Operation}}
+\doxysubsubsection{\texorpdfstring{Transaction}{Transaction}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_transaction}{Transaction}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+seule une transaction possède le droit de créer une opération. 

@@ -1,0 +1,136 @@
+\hypertarget{class_compte_manager}{}\doxysection{Référence de la classe Compte\+Manager}
+\label{class_compte_manager}\index{CompteManager@{CompteManager}}
+
+
+Classe qui s\textquotesingle{}occupe de la gestion des comptes.  
+
+
+
+
+{\ttfamily \#include $<$compte.\+h$>$}
+
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_compte_manager_a7548158d80208c50a8f3b5ef630308f4}{Afficher}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher l\textquotesingle{}arbre des comptes dans la console~\newline
+. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_compte_abstrait}{Compte\+Abstrait}} $\ast$ \mbox{\hyperlink{class_compte_manager_a7571687507836fc8f78cc33a44b956c7}{Get\+Compte}} (int id)
+\begin{DoxyCompactList}\small\item\em Permet de chercher un compte dans l\textquotesingle{}arborescence à partir de son identifiant. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_compte_manager_a451db4581ed8a96a1f6ae3f44c395a70}{creer\+\_\+compte}} (int id\+\_\+dossier, std\+::string nom, std\+::string type, bool virtuel)
+\begin{DoxyCompactList}\small\item\em Permet de creer un compte dans un dossier. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_compte_manager_a96c810e95acda3ed82450b3f2e72c4a2}{supprimer\+\_\+compte}} (int id)
+\begin{DoxyCompactList}\small\item\em Permet de supprimer un compte dans l\textquotesingle{}arborescence à partir de son identifiant. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_compte_manager_a03a0bbe924a3991d547617bbdbe58640}{get\+Id\+Max}} () const
+\begin{DoxyCompactList}\small\item\em Getter de l\textquotesingle{}id à \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_compte_manager_a604a156a7de1199c3b4ec37177db572c}{solde\+\_\+reset}} ()
+\begin{DoxyCompactList}\small\item\em Permet de remettre à zero le solde de tout les compte dans l\textquotesingle{}arborescence. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_compte_manager_a17ffef420b3b6c430e65d7d9455b3657}{Compte\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de la classe \mbox{\hyperlink{class_compte_manager}{Compte\+Manager}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Classe qui s\textquotesingle{}occupe de la gestion des comptes. 
+
+Cette fonction gère entièrement les comptes à gérer par le logiciel et contient la racine de notre arborescence 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_compte_manager_a17ffef420b3b6c430e65d7d9455b3657}\label{class_compte_manager_a17ffef420b3b6c430e65d7d9455b3657}} 
+\index{CompteManager@{CompteManager}!CompteManager@{CompteManager}}
+\index{CompteManager@{CompteManager}!CompteManager@{CompteManager}}
+\doxysubsubsection{\texorpdfstring{CompteManager()}{CompteManager()}}
+{\footnotesize\ttfamily Compte\+Manager\+::\+Compte\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut de la classe \mbox{\hyperlink{class_compte_manager}{Compte\+Manager}}. 
+
+Le constructeur de comptemanager permet d\textquotesingle{}initialiser la factory en y enregistrant les différents types de compte. 
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_compte_manager_a7548158d80208c50a8f3b5ef630308f4}\label{class_compte_manager_a7548158d80208c50a8f3b5ef630308f4}} 
+\index{CompteManager@{CompteManager}!Afficher@{Afficher}}
+\index{Afficher@{Afficher}!CompteManager@{CompteManager}}
+\doxysubsubsection{\texorpdfstring{Afficher()}{Afficher()}}
+{\footnotesize\ttfamily void Compte\+Manager\+::\+Afficher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}afficher l\textquotesingle{}arbre des comptes dans la console~\newline
+. 
+
+Redéfinition de la fonction afficher du \char`\"{}compte racine\char`\"{} contenu dans notre comptemanager. \mbox{\Hypertarget{class_compte_manager_a451db4581ed8a96a1f6ae3f44c395a70}\label{class_compte_manager_a451db4581ed8a96a1f6ae3f44c395a70}} 
+\index{CompteManager@{CompteManager}!creer\_compte@{creer\_compte}}
+\index{creer\_compte@{creer\_compte}!CompteManager@{CompteManager}}
+\doxysubsubsection{\texorpdfstring{creer\_compte()}{creer\_compte()}}
+{\footnotesize\ttfamily bool Compte\+Manager\+::creer\+\_\+compte (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+dossier,  }\item[{std\+::string}]{nom,  }\item[{std\+::string}]{type,  }\item[{bool}]{virtuel }\end{DoxyParamCaption})}
+
+
+
+Permet de creer un compte dans un dossier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id\+\_\+dossier} & \+: id du \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} dans lequel créer un compte \\
+\hline
+{\em nom} & \+: nom du compte à créer \\
+\hline
+{\em type} & \+: type du compte, utilisation de la factory pour créer le compte à partir de son nom \\
+\hline
+{\em virtuel} & \+: booleen permettant de choisir si le compte est virtuel (true) ou réel (false) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+retourne true en cas de succès, else sinon
+\end{DoxyReturn}
+Effecue une recherche du \char`\"{}compte dossier\char`\"{} dans lequel créer un \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} ou \mbox{\hyperlink{class_compte}{Compte}},~\newline
+si le \char`\"{}compte dossier\char`\"{} est trouvé, une vérification de son type est effectuée grâce à un cast.~\newline
+le \char`\"{}\+Compte\char`\"{} est alors crée par la factory si il est réel. \mbox{\Hypertarget{class_compte_manager_a7571687507836fc8f78cc33a44b956c7}\label{class_compte_manager_a7571687507836fc8f78cc33a44b956c7}} 
+\index{CompteManager@{CompteManager}!GetCompte@{GetCompte}}
+\index{GetCompte@{GetCompte}!CompteManager@{CompteManager}}
+\doxysubsubsection{\texorpdfstring{GetCompte()}{GetCompte()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_compte_abstrait}{Compte\+Abstrait}} $\ast$ Compte\+Manager\+::\+Get\+Compte (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Permet de chercher un compte dans l\textquotesingle{}arborescence à partir de son identifiant. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne un pointeur vers le compte trouvé, nullptr sinon
+\end{DoxyReturn}
+Appel de la méthode Compte\+Virtuel\+::getcompte() depuis le \char`\"{}compte racine\char`\"{}. \mbox{\Hypertarget{class_compte_manager_a03a0bbe924a3991d547617bbdbe58640}\label{class_compte_manager_a03a0bbe924a3991d547617bbdbe58640}} 
+\index{CompteManager@{CompteManager}!getIdMax@{getIdMax}}
+\index{getIdMax@{getIdMax}!CompteManager@{CompteManager}}
+\doxysubsubsection{\texorpdfstring{getIdMax()}{getIdMax()}}
+{\footnotesize\ttfamily unsigned int Compte\+Manager\+::get\+Id\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter de l\textquotesingle{}id à 
+
+er au prochain compte crée \begin{DoxyReturn}{Renvoie}
+retourne true en cas de succès, else sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_compte_manager_a604a156a7de1199c3b4ec37177db572c}\label{class_compte_manager_a604a156a7de1199c3b4ec37177db572c}} 
+\index{CompteManager@{CompteManager}!solde\_reset@{solde\_reset}}
+\index{solde\_reset@{solde\_reset}!CompteManager@{CompteManager}}
+\doxysubsubsection{\texorpdfstring{solde\_reset()}{solde\_reset()}}
+{\footnotesize\ttfamily void Compte\+Manager\+::solde\+\_\+reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet de remettre à zero le solde de tout les compte dans l\textquotesingle{}arborescence. 
+
+\mbox{\Hypertarget{class_compte_manager_a96c810e95acda3ed82450b3f2e72c4a2}\label{class_compte_manager_a96c810e95acda3ed82450b3f2e72c4a2}} 
+\index{CompteManager@{CompteManager}!supprimer\_compte@{supprimer\_compte}}
+\index{supprimer\_compte@{supprimer\_compte}!CompteManager@{CompteManager}}
+\doxysubsubsection{\texorpdfstring{supprimer\_compte()}{supprimer\_compte()}}
+{\footnotesize\ttfamily bool Compte\+Manager\+::supprimer\+\_\+compte (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Permet de supprimer un compte dans l\textquotesingle{}arborescence à partir de son identifiant. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne true en cas de succès, else sinon 
+\end{DoxyReturn}

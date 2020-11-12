@@ -1,0 +1,238 @@
+\hypertarget{class_transaction_manager}{}\doxysection{Référence de la classe Transaction\+Manager}
+\label{class_transaction_manager}\index{TransactionManager@{TransactionManager}}
+
+
+Gestionnaire de transactions.  
+
+
+
+
+{\ttfamily \#include $<$transaction.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Transaction\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_transaction_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_transaction_manager_a0a1f86ea242d831402306babbca8729f}{Transaction\+Manager}} ()=default
+\begin{DoxyCompactList}\small\item\em Constructeur Constructeur de la classe \mbox{\hyperlink{class_transaction_manager}{Transaction\+Manager}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transaction}{Transaction}} $\ast$ \mbox{\hyperlink{class_transaction_manager_a8fdd1c49b75396a75f422d67edfb0178}{creer\+Transaction}} (int y, int m, int d, const std\+::string \&ref, const std\+::string \&memo)
+\begin{DoxyCompactList}\small\item\em Creer une \mbox{\hyperlink{class_transaction}{Transaction}} Méthode qui permet de creer une Transactio. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_transaction_manager_a9531422e4c98cb696a896a98eaf91b14}{ajouter\+\_\+transaction}} (\mbox{\hyperlink{class_transaction}{Transaction}} $\ast$transaction)
+\begin{DoxyCompactList}\small\item\em Ajoute une transaction au \mbox{\hyperlink{struct_transfert}{Transfert}} Manager Méthode qui permet d\textquotesingle{}ajouter une transaction au Transfert\+Manager en créditant et débitant chaque compte. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_transaction_manager_a006e70ddf37ff47f33a69367c51bf692}{ajouter\+\_\+transaction2}} (\mbox{\hyperlink{class_transaction}{Transaction}} $\ast$transaction)
+\begin{DoxyCompactList}\small\item\em Ajoute une transaction au \mbox{\hyperlink{struct_transfert}{Transfert}} Manager Méthode qui permet d\textquotesingle{}ajouter une transaction au Transfert\+Manager sans créditer ni débiter les comptes associés. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transaction_manager_a8c5579102c973c8c537cf281b5dca312}{afficher}} () const
+\begin{DoxyCompactList}\small\item\em Afficher tous les transactions Méthode qui permet d\textquotesingle{}afficher tous les transactions. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_transaction_manager_a65cc07f1405ca829d4d51f0f6c57cea1}{supprimer\+\_\+transaction}} (int id)
+\begin{DoxyCompactList}\small\item\em Supprimer une transaction Méthode qui permet de supprimer une transaction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transaction}{Transaction}} $\ast$ \mbox{\hyperlink{class_transaction_manager_afc8cc821996ebb832595c17410c2a91f}{retirer\+\_\+transaction}} (int id)
+\begin{DoxyCompactList}\small\item\em Retirer une transaction Méthode qui enlève une transaction du transaction manager et annule ses opération sans la supprimer (renvoi un pointeur de transaction) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transaction}{Transaction}} $\ast$ \mbox{\hyperlink{class_transaction_manager_a1296344d7c2b4d038668f505cc6b1fe3}{recherche\+\_\+transaction}} (int id)
+\begin{DoxyCompactList}\small\item\em Rechercher une transaction Méthode qui cherche une transaction à partir de l\textquotesingle{}id du transaction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_transaction_manager_a3e14072d0a0e3a188f98bd847f3bd793}{verifier\+Reference}} (const std\+::string ref)
+\begin{DoxyCompactList}\small\item\em Verification de reference Méthode qui cherche dans la liste des transactions si une réference est valide ou pas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transaction_manager_a1f62794027078c462361abbc885fcee9}{recalculer\+\_\+solde}} (\mbox{\hyperlink{class_compte_manager}{Compte\+Manager}} \&cm)
+\begin{DoxyCompactList}\small\item\em Recalculer le solde des Transactions. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_transaction_manager_a5d19d3128dd2323b716ce1581b3de4ec}{getidmax}} ()
+\begin{DoxyCompactList}\small\item\em Getter d\textquotesingle{}id\+Max du Transfert\+Manager Méthode qui retourne l\textquotesingle{}id\+Max des transaction (La taille des transactions) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Gestionnaire de transactions. 
+
+Cette classe s\textquotesingle{}occupe du stockage, de la création ainsi que la vérification des transactions saisies par l\textquotesingle{}utilisateur 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_transaction_manager_a0a1f86ea242d831402306babbca8729f}\label{class_transaction_manager_a0a1f86ea242d831402306babbca8729f}} 
+\index{TransactionManager@{TransactionManager}!TransactionManager@{TransactionManager}}
+\index{TransactionManager@{TransactionManager}!TransactionManager@{TransactionManager}}
+\doxysubsubsection{\texorpdfstring{TransactionManager()}{TransactionManager()}}
+{\footnotesize\ttfamily Transaction\+Manager\+::\+Transaction\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Constructeur Constructeur de la classe \mbox{\hyperlink{class_transaction_manager}{Transaction\+Manager}}. 
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_transaction_manager_a8c5579102c973c8c537cf281b5dca312}\label{class_transaction_manager_a8c5579102c973c8c537cf281b5dca312}} 
+\index{TransactionManager@{TransactionManager}!afficher@{afficher}}
+\index{afficher@{afficher}!TransactionManager@{TransactionManager}}
+\doxysubsubsection{\texorpdfstring{afficher()}{afficher()}}
+{\footnotesize\ttfamily void Transaction\+Manager\+::afficher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Afficher tous les transactions Méthode qui permet d\textquotesingle{}afficher tous les transactions. 
+
+Appel la méthode \mbox{\hyperlink{class_transaction_manager_a8c5579102c973c8c537cf281b5dca312}{afficher()}} de chaque transaction contenues dans le dictionaire de transaction. \mbox{\Hypertarget{class_transaction_manager_a9531422e4c98cb696a896a98eaf91b14}\label{class_transaction_manager_a9531422e4c98cb696a896a98eaf91b14}} 
+\index{TransactionManager@{TransactionManager}!ajouter\_transaction@{ajouter\_transaction}}
+\index{ajouter\_transaction@{ajouter\_transaction}!TransactionManager@{TransactionManager}}
+\doxysubsubsection{\texorpdfstring{ajouter\_transaction()}{ajouter\_transaction()}}
+{\footnotesize\ttfamily bool Transaction\+Manager\+::ajouter\+\_\+transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transaction}{Transaction}} $\ast$}]{transaction }\end{DoxyParamCaption})}
+
+
+
+Ajoute une transaction au \mbox{\hyperlink{struct_transfert}{Transfert}} Manager Méthode qui permet d\textquotesingle{}ajouter une transaction au Transfert\+Manager en créditant et débitant chaque compte. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em transaction} & \mbox{\hyperlink{class_transaction}{Transaction}} à ajouter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retourne True si la transaction est bien ajouté et False sinon
+\end{DoxyReturn}
+Ajouter transaction permet de sauvegarde une transaction dans le transactionmanager l\textquotesingle{}ajoutant à son dictionnaire.~\newline
+Cette méthode applique la transaction aux comptes concernés en créditant ou débitant leurs solde. \mbox{\Hypertarget{class_transaction_manager_a006e70ddf37ff47f33a69367c51bf692}\label{class_transaction_manager_a006e70ddf37ff47f33a69367c51bf692}} 
+\index{TransactionManager@{TransactionManager}!ajouter\_transaction2@{ajouter\_transaction2}}
+\index{ajouter\_transaction2@{ajouter\_transaction2}!TransactionManager@{TransactionManager}}
+\doxysubsubsection{\texorpdfstring{ajouter\_transaction2()}{ajouter\_transaction2()}}
+{\footnotesize\ttfamily bool Transaction\+Manager\+::ajouter\+\_\+transaction2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transaction}{Transaction}} $\ast$}]{transaction }\end{DoxyParamCaption})}
+
+
+
+Ajoute une transaction au \mbox{\hyperlink{struct_transfert}{Transfert}} Manager Méthode qui permet d\textquotesingle{}ajouter une transaction au Transfert\+Manager sans créditer ni débiter les comptes associés. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em transaction} & \mbox{\hyperlink{class_transaction}{Transaction}} à ajouter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retourne True si la transaction est bien ajouté et False sinon
+\end{DoxyReturn}
+cette methode permet l\textquotesingle{}ajout d\textquotesingle{}une transaction directement au dictionnaire de transaction sans appliquer la transaction. \mbox{\Hypertarget{class_transaction_manager_a8fdd1c49b75396a75f422d67edfb0178}\label{class_transaction_manager_a8fdd1c49b75396a75f422d67edfb0178}} 
+\index{TransactionManager@{TransactionManager}!creerTransaction@{creerTransaction}}
+\index{creerTransaction@{creerTransaction}!TransactionManager@{TransactionManager}}
+\doxysubsubsection{\texorpdfstring{creerTransaction()}{creerTransaction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transaction}{Transaction}} $\ast$ Transaction\+Manager\+::creer\+Transaction (\begin{DoxyParamCaption}\item[{int}]{y,  }\item[{int}]{m,  }\item[{int}]{d,  }\item[{const std\+::string \&}]{ref,  }\item[{const std\+::string \&}]{memo }\end{DoxyParamCaption})}
+
+
+
+Creer une \mbox{\hyperlink{class_transaction}{Transaction}} Méthode qui permet de creer une Transactio. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em y} & \+: Année de création \\
+\hline
+{\em m} & Mois de création \\
+\hline
+{\em d} & \+: Jour de création \\
+\hline
+{\em ref} & Reference de la \mbox{\hyperlink{class_transaction}{Transaction}} \\
+\hline
+{\em \+\_\+memo} & Intitule de la \mbox{\hyperlink{class_transaction}{Transaction}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retourne la \mbox{\hyperlink{class_transaction}{Transaction}} géneré vide du type Transaction$\ast$
+\end{DoxyReturn}
+Créer une transaction par l\textquotesingle{}intermédiaire du \mbox{\hyperlink{class_transaction_manager}{Transaction\+Manager}} sans l\textquotesingle{}enregistrer dans la liste des transactions. \mbox{\Hypertarget{class_transaction_manager_a5d19d3128dd2323b716ce1581b3de4ec}\label{class_transaction_manager_a5d19d3128dd2323b716ce1581b3de4ec}} 
+\index{TransactionManager@{TransactionManager}!getidmax@{getidmax}}
+\index{getidmax@{getidmax}!TransactionManager@{TransactionManager}}
+\doxysubsubsection{\texorpdfstring{getidmax()}{getidmax()}}
+{\footnotesize\ttfamily int Transaction\+Manager\+::getidmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter d\textquotesingle{}id\+Max du Transfert\+Manager Méthode qui retourne l\textquotesingle{}id\+Max des transaction (La taille des transactions) 
+
+\begin{DoxyReturn}{Renvoie}
+Taille des transactions du type int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_transaction_manager_a1f62794027078c462361abbc885fcee9}\label{class_transaction_manager_a1f62794027078c462361abbc885fcee9}} 
+\index{TransactionManager@{TransactionManager}!recalculer\_solde@{recalculer\_solde}}
+\index{recalculer\_solde@{recalculer\_solde}!TransactionManager@{TransactionManager}}
+\doxysubsubsection{\texorpdfstring{recalculer\_solde()}{recalculer\_solde()}}
+{\footnotesize\ttfamily void Transaction\+Manager\+::recalculer\+\_\+solde (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_compte_manager}{Compte\+Manager}} \&}]{cm }\end{DoxyParamCaption})}
+
+
+
+Recalculer le solde des Transactions. 
+
+\mbox{\hyperlink{class_transaction_manager_a1f62794027078c462361abbc885fcee9}{Transaction\+Manager\+::recalculer\+\_\+solde}}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em cm} & reference à valider dans la liste des transactions\\
+\hline
+\end{DoxyParams}
+Remet à zero le solde de tout les comptes grâce à \mbox{\hyperlink{class_compte_manager_a604a156a7de1199c3b4ec37177db572c}{Compte\+Manager\+::solde\+\_\+reset}} puis parcours le dictionnaire de transaction et réapplique les crédit et débit de chaque opération à chaque compte \mbox{\Hypertarget{class_transaction_manager_a1296344d7c2b4d038668f505cc6b1fe3}\label{class_transaction_manager_a1296344d7c2b4d038668f505cc6b1fe3}} 
+\index{TransactionManager@{TransactionManager}!recherche\_transaction@{recherche\_transaction}}
+\index{recherche\_transaction@{recherche\_transaction}!TransactionManager@{TransactionManager}}
+\doxysubsubsection{\texorpdfstring{recherche\_transaction()}{recherche\_transaction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transaction}{Transaction}} $\ast$ Transaction\+Manager\+::recherche\+\_\+transaction (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Rechercher une transaction Méthode qui cherche une transaction à partir de l\textquotesingle{}id du transaction. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & id du transaction à rechercher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Transaction$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_transaction_manager_afc8cc821996ebb832595c17410c2a91f}\label{class_transaction_manager_afc8cc821996ebb832595c17410c2a91f}} 
+\index{TransactionManager@{TransactionManager}!retirer\_transaction@{retirer\_transaction}}
+\index{retirer\_transaction@{retirer\_transaction}!TransactionManager@{TransactionManager}}
+\doxysubsubsection{\texorpdfstring{retirer\_transaction()}{retirer\_transaction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transaction}{Transaction}} $\ast$ Transaction\+Manager\+::retirer\+\_\+transaction (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Retirer une transaction Méthode qui enlève une transaction du transaction manager et annule ses opération sans la supprimer (renvoi un pointeur de transaction) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & id du transaction à retirer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Transaction$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_transaction_manager_a65cc07f1405ca829d4d51f0f6c57cea1}\label{class_transaction_manager_a65cc07f1405ca829d4d51f0f6c57cea1}} 
+\index{TransactionManager@{TransactionManager}!supprimer\_transaction@{supprimer\_transaction}}
+\index{supprimer\_transaction@{supprimer\_transaction}!TransactionManager@{TransactionManager}}
+\doxysubsubsection{\texorpdfstring{supprimer\_transaction()}{supprimer\_transaction()}}
+{\footnotesize\ttfamily bool Transaction\+Manager\+::supprimer\+\_\+transaction (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Supprimer une transaction Méthode qui permet de supprimer une transaction. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & id du transaction à supprimer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+True si la \mbox{\hyperlink{class_transaction}{Transaction}} est bien suprimé, False sinon
+\end{DoxyReturn}
+effectue une recherche par id d\textquotesingle{}une transaction et la supprime en annulant ses opération et en la supprimant du dictionnaire. \mbox{\Hypertarget{class_transaction_manager_a3e14072d0a0e3a188f98bd847f3bd793}\label{class_transaction_manager_a3e14072d0a0e3a188f98bd847f3bd793}} 
+\index{TransactionManager@{TransactionManager}!verifierReference@{verifierReference}}
+\index{verifierReference@{verifierReference}!TransactionManager@{TransactionManager}}
+\doxysubsubsection{\texorpdfstring{verifierReference()}{verifierReference()}}
+{\footnotesize\ttfamily bool Transaction\+Manager\+::verifier\+Reference (\begin{DoxyParamCaption}\item[{const std\+::string}]{ref }\end{DoxyParamCaption})}
+
+
+
+Verification de reference Méthode qui cherche dans la liste des transactions si une réference est valide ou pas. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ref} & reference à valider dans la liste des transactions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+True si la réference n\textquotesingle{}est pas répeté, False sinon 
+\end{DoxyReturn}

@@ -1,0 +1,106 @@
+\hypertarget{class_recette}{}\doxysection{Référence de la classe Recette}
+\label{class_recette}\index{Recette@{Recette}}
+
+
+\mbox{\hyperlink{class_compte}{Compte}} de type \char`\"{}\+Recette\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$compte.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Recette\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_recette}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_compte}{Compte}} $\ast$ \mbox{\hyperlink{class_recette_afa012df665095e1a4b2ac32a89d0750b}{Clone}} () const
+\begin{DoxyCompactList}\small\item\em Cloner compte~\newline
+. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_recette_a3cd11f9592097e2de13e1a6437064790}{Recette}} (const std\+::string \&nom, const int \&num)
+\begin{DoxyCompactList}\small\item\em Constructeur~\newline
+. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_recette_a3ac8664a99a44ecd88f45357a776fa99}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Getter de type~\newline
+. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_recette_ad8d984d455c5f0c40bd16009ca32c266}{$\sim$\+Recette}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur~\newline
+destructeur par défaut de la classe \mbox{\hyperlink{class_recette}{Recette}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membres hérités additionnels}
+
+
+\doxysubsection{Description détaillée}
+\mbox{\hyperlink{class_compte}{Compte}} de type \char`\"{}\+Recette\char`\"{}. 
+
+Les recettes (produits) sont des ressources pour l’association. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_recette_a3cd11f9592097e2de13e1a6437064790}\label{class_recette_a3cd11f9592097e2de13e1a6437064790}} 
+\index{Recette@{Recette}!Recette@{Recette}}
+\index{Recette@{Recette}!Recette@{Recette}}
+\doxysubsubsection{\texorpdfstring{Recette()}{Recette()}}
+{\footnotesize\ttfamily Recette\+::\+Recette (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nom,  }\item[{const int \&}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur~\newline
+. 
+
+Constructeur de la classe \mbox{\hyperlink{class_recette}{Recette}} 
+\begin{DoxyParams}{Paramètres}
+{\em nom} & \+: nom du compte \\
+\hline
+{\em num} & \+: identifiant du compte \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_recette_ad8d984d455c5f0c40bd16009ca32c266}\label{class_recette_ad8d984d455c5f0c40bd16009ca32c266}} 
+\index{Recette@{Recette}!````~Recette@{$\sim$Recette}}
+\index{````~Recette@{$\sim$Recette}!Recette@{Recette}}
+\doxysubsubsection{\texorpdfstring{$\sim$Recette()}{~Recette()}}
+{\footnotesize\ttfamily Recette\+::$\sim$\+Recette (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur~\newline
+destructeur par défaut de la classe \mbox{\hyperlink{class_recette}{Recette}}. 
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_recette_afa012df665095e1a4b2ac32a89d0750b}\label{class_recette_afa012df665095e1a4b2ac32a89d0750b}} 
+\index{Recette@{Recette}!Clone@{Clone}}
+\index{Clone@{Clone}!Recette@{Recette}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_compte}{Compte}} $\ast$ Recette\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Cloner compte~\newline
+. 
+
+fonction necessaire au fonctionnement de la factory, elle permet la duplication de compte \mbox{\hyperlink{class_actif}{Actif}} 
+
+Implémente \mbox{\hyperlink{class_compte_a759775c18235933a56721e5cdfd74744}{Compte}}.
+
+\mbox{\Hypertarget{class_recette_a3ac8664a99a44ecd88f45357a776fa99}\label{class_recette_a3ac8664a99a44ecd88f45357a776fa99}} 
+\index{Recette@{Recette}!getType@{getType}}
+\index{getType@{getType}!Recette@{Recette}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Recette\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Getter de type~\newline
+. 
+
+Permet de récupérer le type du compte en chaine de caractère \begin{DoxyReturn}{Renvoie}
+retourne le type du compte 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_compte_a091d77d9e39c25fa0ee7f6ede7eef768}{Compte}}.
+

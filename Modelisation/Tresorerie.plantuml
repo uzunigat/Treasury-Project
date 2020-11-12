@@ -1,0 +1,310 @@
+@startuml
+
+title ProjetTresorerie
+
+'class
+
+
+class CompteManager  {
+    -root: CompteVirtuel
+    -factory: FactoryCompte
+    -id_max: unsigned int
+    -filename: String
+.. Méthodes  ..
+    + Afficher() : void
+    + GetCompte(string& id) : CompteAbstrait*
+    + creer_compte(string& id_dossier, string& nom, string& type, bool virtuel) : bool
+    + supprimer_compte(String& id) : bool
+    + getIdMax() const: unsigned int
+    + solde_reset(): void
+
+.. Constructeur  ..
+   - CompteManager()
+}
+
+
+abstract class CompteAbstrait <<abstract>>{
+
+  # id : String
+  # m_nom : String
+  # pere: CompteAvstrait*
+  - m_taille: const int
+  .. Méthodes  ..
+  + getId() const: int
+  + {abstract} getTaille() const: int
+  + getNom() : String const
+  + {abstract} getSolde() const: double
+  + {abstract} getType() const: String 
+  + {abstract} Afficher(int) const: void
+  + {abstract} Afficher_operation const: void 
+  + {abstract} getCompte(num: string): CompteAbstrait*
+  + getPere() const: CompteAbstrait*
+  + setPere(compte: CompteAbstrait* ): void
+  + {abstract} Add(file: CompteVirtuel*): CompteVirtuel&
+  + {abstract} Add(file: Compte*): void
+  + {abstract} Transferer(double Transfert) : double
+  + {abstract} debiter(const double&) : void
+  + {abstract} crediter(const double&) : void
+  + {abstract} SupprimirCompte(num: string&): bool
+  + {abstract} Rapprocher(y: int, m: int, d: int, nom: string, desc: string): void
+  + {abstract} afficher_rapprochement(id: int): void
+  + {abstract} afficher_rapprochement(): void
+  + LastRaprochemment(): QDate
+  + {abstract} supprimer_compte(num: int): bool
+  + {abstract} is_deletable(): bool
+  + {abstract} solde_reset(): bool
+.. Constructeur ..
+  - CompteAbstrait(const String&, const String&)
+  - ~CompteAbstrait()
+
+}
+
+class Compte {
+
+  # solde : double
+  # listRaprochement: QMultiMap <QDate, operation*>
+.. Méthodes  ..
+    + Afficher(int n=0) const: void
+    + Afficher_operation() const: void
+    + afficher_rapprochement(id: int): void
+    + afficher_rapprochement();
+    + Last_Rapprochement(: Rapprochement*;
+    + {abstract} crediter(credit: double): double
+    + {abstract} debiter(debit: double): double
+    + {abstract} transferer(transfert: double): double
+    + {abstract} getType() const: string
+    + getSolde()const: double
+    + supprimer_op(id: int): bool
+    + is_deletable(): bool
+    + solde_reset(): void
+.. Constructeur ..
+  - Compte(const String&, const String&)
+  - ~Compte()
+}
+
+class CompteVirtuel <<Composite>>{
+    
+    #m_listfichier: vector<CompteAbstrait*>
+    #_type: string 
+.. Méthodes ..
+    + getType() const : string
+    + getCompte(string num): CompteAbstrait*
+    + getTaille() const: int
+    + getSolde() cons: double
+    + Afficher(n: int) const: void;
+    + Afficher_operation() const: void
+    + Add(file: CompteVirtuel*): CompteVirtuel&
+    + Add(file: Compte*): void
+    + supprimer_compte(num: int): bool
+    + is_deletable(): bool
+    + solde_reset() void
+
+.. Constructeur ..
+    CompteVirtuel(const string& nom, const string& num, const string& type)
+}
+
+class Actifs{
+.. Méthodes ..
+    + getType() const: string
+    + Clone() const: Compte*
+    + crediter(credit: double): double
+    + debiter(debit: double): double
+    + transferer(tranfert: double): double
+.. Constructeur  ..
+  -Actifs(const string& nom, const string& num)
+}
+
+class Passifs{
+.. Méthodes ..
+  + getType() const: string
+  + clone: const Compte*
+.. Constructeur  ..
+  -Passifs(const string& nom, const string& num)
+}
+
+class Depenses{
+.. Méthodes ..
+  + Transferer(double Transfert) : double
+  + debiter(const double&) : void
+  + crediter(const double&) : void
+  + getType() const: string
+  + clone: const Compte*
+.. Constructeur  ..
+  -Depenses(const string& nom, const string& num)
+}
+
+class Recettes{
+.. Méthodes ..
+  + getType() const: string
+  + clone: const Compte*
+.. Constructeur  ..
+  -Recettes(const string& nom, const string& num)
+}
+
+class FactoryCompte <<Factory>>{
+
+    +map: {static} map<string, Compte*>
+.. Méthodes ..
+    +{static} Register (const string& key, COmpte* obj): void
+    +Create (const String& key) const: Compte*
+
+}
+
+note left: Ce Class permet de creer (avec la méthode creerCompte()) Des differents comptes.
+
+class Transaction{
+    - id: int
+    - id_op: int
+    - date: Qdate
+    - reference: string
+    - memo: string
+    - save: bool;
+.. Méthodes ..
+        + add(debit: double, credit: double,  compte: CompteAbstrait*, intitule: QString): Operation&
+        + getId(): int
+        + getReference() const: const string &
+        + getDate() const: QDate
+        + getMemo() const: string
+        + Check() const: bool
+        + afficher(): void
+        + supprimer_op(id: int): bool
+        + recherche_op(id: int): Operation*
+        + getSize(): int
+        + is_frozen(): bool
+.. Contructeur ..
+  + Transaction(idmax: int, y: int, m: int, d: int, ref: string, _memo: string)
+  + ~Transaction();
+}
+
+
+class TransactionManager {
+  - transferts vector<Transaction*>
+  - filename: string
+  - ListTransaction: QMultiMap <QDate, Transaction*>
+.. Methodes ..
+    + getidmax(): int
+    + creerTransaction(y: int,m: int, d: int, ref: const string&, memo: const string&): Transaction*
+    + ajouter_transaction(Transaction* transaction): bool
+    + ajouter_transaction2(Transaction* transaction). bool
+    + afficher() const: void
+    + supprimer_transaction(id: int): bool
+    + retirer_transaction(id: int): Transaction*
+    + recherche_transaction(id: int): Transaction*
+    + verifierReference(ref: const string&): bool
+    + recalculer_solde(CompteManager& cm): void
+.. Constructeurs ..
+  - TransactionManager()
+  - ~TransactionManager()
+}
+
+class Operation{
+
+    -id: int
+    -credit: double
+    -debit: double
+    - compte: Compte*
+    - transaction: TRansaction*
+    - intitule: QString
+    - rapprochement: Rapprochement*
+    
+.. Méthodes ..
+    + Check(): bool
+    + getCredit() const: double
+    + getDebit() const: double
+    + getRapprochement() const:Rapprochement*      
+    + setCredit(cr: double): void
+    + setDebit(db: double): void
+    + setRapprochement(rp: Raprochemment* ): void
+    + getId() const: int
+    + getCompte() const: Compte& 
+    + is_frozen(): bool
+    + afficher(): void
+.. Constructeur ..
+    - Operation(id: int, debit: double, credit: double ,C: Compte*, T: Transaction* , intitule: QString)
+    - Operation(const Operation&) = delete;
+    + ~Operation()
+}
+
+class Rapprochement {
+    - id: int
+    - date: QDate
+    - nom: QString
+    - desc: string
+    - compte: Compte*
+    - solde: double
+    + {static} int id_max;
+.. Méthodes ..
+    + Afficher(): void
+    + getDate(): QDate
+    + getNom(): string
+    + getDesc(): string
+    + setSolde(s: double): void
+    + getId(): int
+.. Constructeur ..
+    - Rapprochement()=default;
+    - Rapprochement(const Rapprochement&)
+    - Rapprochement& operator=(const Rapprochement& tm)
+    + Rapprochement(date: QDate,nom: string, desc: string, compte: Compte*, solde: double)
+}
+
+class MainWindow{
+
+.. Méthodes ..
+   + openXML(filename: QString, first_load: bool): void
+   + listDom(docElem: QDomElement&,first_time: bool): void
+   + openXMLTransactions(filename: QString, first_load: bool): void
+   + popAddWindow(father_id: QString, type: QString): void
+   + AddXml() const: void
+   + deleteXML(id: QString) const: void
+   + addToTree(father_id: QString, id: QString, nom: QString, prop: QString, type: QString, solde: QString): void
+   + deleteFromTree(id: const QString): void
+   + PopChoisirPassifWindow(): void
+   + writeXmlFile_attributes(filename: const QString&): void
+   + writeXmlFile_subnodes(filename: const WString&): void
+   + print_header_transactios(painter: QPainter&): void
+   + operations_PDF( printer: QPrinter&,  painter: QPainter&,  trans: Transaction*): void
+   + operations_PDF(printer: QPrinter&,  painter: QPainter&,  trans: Transaction*, id: String): void
+   + setNom_first(n: QString): void
+   + getNom_first() const: const QString
+   + setSolde_first(s: double): void
+   + getSolde_first() const: QString
+   + setId_first(id: QString): void
+   + getId_first() const: QString
+   + cloture(): bool
+.. Constructeur ..
+   + MainWindow(parent: QWidget*)
+   + ~MainWindow();
+
+
+}
+
+'Associations
+
+FactoryCompte -up-> Passifs
+FactoryCompte -up-> Actifs
+FactoryCompte -up-> Depenses
+FactoryCompte -up-> Recettes
+
+Recettes -up-|>  Compte: < gere
+Depenses -up-|>  Compte: < gere
+Actifs -up-|>  Compte: < gere
+Passifs -up-|>  Compte: < gere
+
+Compte -up-|> CompteAbstrait
+CompteVirtuel -up-|> CompteAbstrait
+
+Transaction "*" -down-* "1" TransactionManager
+CompteAbstrait "1" *-- "*" CompteVirtuel
+
+TransactionManager "1" -left-* "1" MainWindow
+CompteManager "1" -right-* "1" MainWindow
+
+CompteManager "1" -down- "1..*" CompteAbstrait: lié à
+
+Operation "*" -right- "1" Transaction: < composé de
+Operation "*" -down-"1" Compte: > fait réference à
+
+Rapprochement -right- Compte
+
+
+@enduml

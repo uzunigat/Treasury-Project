@@ -1,0 +1,315 @@
+\hypertarget{class_compte_virtuel}{}\doxysection{Référence de la classe Compte\+Virtuel}
+\label{class_compte_virtuel}\index{CompteVirtuel@{CompteVirtuel}}
+
+
+Dossier de \mbox{\hyperlink{class_compte}{Compte}}.  
+
+
+
+
+{\ttfamily \#include $<$compte.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Compte\+Virtuel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_compte_virtuel}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_compte_virtuel_aa37139f6586c837d9fac90c4ab90f12b}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Permet de connaitre le type du compte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_compte_virtuel_aef08ad382130c97f934125712bc9cd1a}{Afficher}} (int n=0) const
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher un \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} dans la console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_compte_virtuel_accbb32016a7f8979b081c73c6045aa2d}{Afficher\+\_\+operation}} () const
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher les opération des sous comptes. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_compte_virtuel_ae285995d06ce68cfbd88262a7b23033d}{get\+Solde}} () const
+\begin{DoxyCompactList}\small\item\em Permet de connaitre la somme du solde des sous compte d\textquotesingle{}un \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} \& \mbox{\hyperlink{class_compte_virtuel_a74be389925f8790c07db43e700894da5}{Add}} (\mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} $\ast$file)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}ajouter un sous \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_compte_abstrait}{Compte\+Abstrait}} $\ast$ \mbox{\hyperlink{class_compte_virtuel_a0681751d5260473bf3fbde736fbc9d73}{Get\+Compte}} (int num)
+\begin{DoxyCompactList}\small\item\em Permet de rechercher un compte parmis les fils d\textquotesingle{}un \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_compte_virtuel_a74edcd417d7571b8a7f92a4e7183f039}{Add}} (\mbox{\hyperlink{class_compte}{Compte}} $\ast$file)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}ajouter un sous \mbox{\hyperlink{class_compte}{Compte}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_compte_virtuel_a3535db1f965cf5efbd1907173b6efcb1}{supprimer\+\_\+compte}} (int num)
+\begin{DoxyCompactList}\small\item\em Permet supprimer un compte à partir de son identifiant. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_compte_virtuel_a92cc9b63087b11608979f92b7361f603}{is\+\_\+deletable}} ()
+\begin{DoxyCompactList}\small\item\em vérifie si les sous comptes n\textquotesingle{}ont pas d\textquotesingle{}opérations et donc si ce dossier est supprimable \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_compte_virtuel_a6b14c7364b185aa3d1bdf47cf30d2ba7}{solde\+\_\+reset}} ()
+\begin{DoxyCompactList}\small\item\em Remet le solde de tout les comptes fils à 0~\newline
+. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_compte_virtuel_a17a187e97ab62a1fc606cc8cec489dc8}{Compte\+Virtuel}} (const std\+::string \&nom, const int \&num, const std\+::string \&type)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_compte_virtuel_aff3f5f179594631ecd1a3cfcd5a6c8c4}{$\sim$\+Compte\+Virtuel}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur~\newline
+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_compte_abstrait}{Compte\+Abstrait}} $\ast$ $>$ \mbox{\hyperlink{class_compte_virtuel_a6f6bf607d5272050434971bbf141557f}{m\+\_\+listfichier}}
+\begin{DoxyCompactList}\small\item\em Vecteur contenant la liste des fils du compte. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_compte_virtuel_a775800965c7ba340643c769253027101}{\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Tpe du compte en chaine de caractère. \end{DoxyCompactList}\item 
+friend \mbox{\hyperlink{class_compte_virtuel_a39c5b5bfeaf399680d12d58e2254eec1}{Compte\+Manager}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Dossier de \mbox{\hyperlink{class_compte}{Compte}}. 
+
+Un Comptevirtuel est un compte qui n’est destiné qu’à regrouper des sous-\/compte sans enregistrer d’opération 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_compte_virtuel_a17a187e97ab62a1fc606cc8cec489dc8}\label{class_compte_virtuel_a17a187e97ab62a1fc606cc8cec489dc8}} 
+\index{CompteVirtuel@{CompteVirtuel}!CompteVirtuel@{CompteVirtuel}}
+\index{CompteVirtuel@{CompteVirtuel}!CompteVirtuel@{CompteVirtuel}}
+\doxysubsubsection{\texorpdfstring{CompteVirtuel()}{CompteVirtuel()}}
+{\footnotesize\ttfamily Compte\+Virtuel\+::\+Compte\+Virtuel (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nom,  }\item[{const int \&}]{num,  }\item[{const std\+::string \&}]{type }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+Constructeur de la classe \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} 
+\begin{DoxyParams}{Paramètres}
+{\em nom} & \+: nom du compte \\
+\hline
+{\em num} & \+: id du compte \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_compte_virtuel_aff3f5f179594631ecd1a3cfcd5a6c8c4}\label{class_compte_virtuel_aff3f5f179594631ecd1a3cfcd5a6c8c4}} 
+\index{CompteVirtuel@{CompteVirtuel}!````~CompteVirtuel@{$\sim$CompteVirtuel}}
+\index{````~CompteVirtuel@{$\sim$CompteVirtuel}!CompteVirtuel@{CompteVirtuel}}
+\doxysubsubsection{\texorpdfstring{$\sim$CompteVirtuel()}{~CompteVirtuel()}}
+{\footnotesize\ttfamily Compte\+Virtuel\+::$\sim$\+Compte\+Virtuel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur~\newline
+. 
+
+Desttructeur par default
+
+La destruction d\textquotesingle{}un compte virtuel entraine la suppression de ses fils,~\newline
+un parcours du vecteur de sous compte est necessaire. 
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_compte_virtuel_a74edcd417d7571b8a7f92a4e7183f039}\label{class_compte_virtuel_a74edcd417d7571b8a7f92a4e7183f039}} 
+\index{CompteVirtuel@{CompteVirtuel}!Add@{Add}}
+\index{Add@{Add}!CompteVirtuel@{CompteVirtuel}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Compte\+Virtuel\+::\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_compte}{Compte}} $\ast$}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Permet d\textquotesingle{}ajouter un sous \mbox{\hyperlink{class_compte}{Compte}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em file} & \+: pointeur vers le sous compte\\
+\hline
+\end{DoxyParams}
+L\textquotesingle{}ajout d\textquotesingle{}un fils se fait par vérification de son type,~\newline
+ si le fils est de même type que le dossier, alors il est ajouté au vecteur de compteabstrait du comptevirtuel. lors de l\textquotesingle{}ajout du fils,~\newline
+ le pointeur de père du fils est initialisé et un pointeur vers le fils est ajouté à m\+\_\+listfichier. 
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_a5c6369582292204fdc4b5ca486707faa}{Compte\+Abstrait}}.
+
+\mbox{\Hypertarget{class_compte_virtuel_a74be389925f8790c07db43e700894da5}\label{class_compte_virtuel_a74be389925f8790c07db43e700894da5}} 
+\index{CompteVirtuel@{CompteVirtuel}!Add@{Add}}
+\index{Add@{Add}!CompteVirtuel@{CompteVirtuel}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} \& Compte\+Virtuel\+::\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} $\ast$}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Permet d\textquotesingle{}ajouter un sous \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em file} & \+: pointeur vers le sous compte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retourne un pointeur vers le fils ajouté
+\end{DoxyReturn}
+Pour ajouter un fils, le fils doit avoir le même type que son compte père,~\newline
+une vérification est donc effectuée, la contrainte n\textquotesingle{}est pas respecté pour l\textquotesingle{}ajout d\textquotesingle{}un fils dans le compte racine. 
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_ac7140b776a3b281e7825b8faacccd246}{Compte\+Abstrait}}.
+
+\mbox{\Hypertarget{class_compte_virtuel_aef08ad382130c97f934125712bc9cd1a}\label{class_compte_virtuel_aef08ad382130c97f934125712bc9cd1a}} 
+\index{CompteVirtuel@{CompteVirtuel}!Afficher@{Afficher}}
+\index{Afficher@{Afficher}!CompteVirtuel@{CompteVirtuel}}
+\doxysubsubsection{\texorpdfstring{Afficher()}{Afficher()}}
+{\footnotesize\ttfamily void Compte\+Virtuel\+::\+Afficher (\begin{DoxyParamCaption}\item[{int}]{n = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Permet d\textquotesingle{}afficher un \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} dans la console. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em n} & \+: niveau du compte dans l\textquotesingle{}arborescence \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_aba9838693aa02cc50e99567412ccf8ef}{Compte\+Abstrait}}.
+
+\mbox{\Hypertarget{class_compte_virtuel_accbb32016a7f8979b081c73c6045aa2d}\label{class_compte_virtuel_accbb32016a7f8979b081c73c6045aa2d}} 
+\index{CompteVirtuel@{CompteVirtuel}!Afficher\_operation@{Afficher\_operation}}
+\index{Afficher\_operation@{Afficher\_operation}!CompteVirtuel@{CompteVirtuel}}
+\doxysubsubsection{\texorpdfstring{Afficher\_operation()}{Afficher\_operation()}}
+{\footnotesize\ttfamily void Compte\+Virtuel\+::\+Afficher\+\_\+operation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Permet d\textquotesingle{}afficher les opération des sous comptes. 
+
+un \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} ne possède pas d\textquotesingle{}opération, en revanche il peut afficher celle de ses fils. 
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_a7dd9a4dd3e019a12e9fab15b48983f5a}{Compte\+Abstrait}}.
+
+\mbox{\Hypertarget{class_compte_virtuel_a0681751d5260473bf3fbde736fbc9d73}\label{class_compte_virtuel_a0681751d5260473bf3fbde736fbc9d73}} 
+\index{CompteVirtuel@{CompteVirtuel}!GetCompte@{GetCompte}}
+\index{GetCompte@{GetCompte}!CompteVirtuel@{CompteVirtuel}}
+\doxysubsubsection{\texorpdfstring{GetCompte()}{GetCompte()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_compte_abstrait}{Compte\+Abstrait}} $\ast$ Compte\+Virtuel\+::\+Get\+Compte (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Permet de rechercher un compte parmis les fils d\textquotesingle{}un \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em num} & \+: identifiant du sous compte\\
+\hline
+\end{DoxyParams}
+Rehderche un compte de manière récursive grâce à l\textquotesingle{}appel de la fonction Get\+Compte des sous \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} si le compte recherché n\textquotesingle{}est pas trouvé dans m\+\_\+listfichier.~\newline
+Un cas particulier pour le \char`\"{}compte racine\char`\"{} étant donné que ce compte ne peut pas se trouver dans ses fils. 
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_a7bd402e172f5734c2debca608436f644}{Compte\+Abstrait}}.
+
+\mbox{\Hypertarget{class_compte_virtuel_ae285995d06ce68cfbd88262a7b23033d}\label{class_compte_virtuel_ae285995d06ce68cfbd88262a7b23033d}} 
+\index{CompteVirtuel@{CompteVirtuel}!getSolde@{getSolde}}
+\index{getSolde@{getSolde}!CompteVirtuel@{CompteVirtuel}}
+\doxysubsubsection{\texorpdfstring{getSolde()}{getSolde()}}
+{\footnotesize\ttfamily double Compte\+Virtuel\+::get\+Solde (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Permet de connaitre la somme du solde des sous compte d\textquotesingle{}un \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}}. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne la valeur du solde calculé
+\end{DoxyReturn}
+Un Comptevirtuel ne possède pas d\textquotesingle{}attribut solde, son solde est calculé en faisant la somme de celui de ses fils,~\newline
+pour chaque fils de type \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}}, le solde est recalculé de manière récursive. 
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_af6e1907fcb28cfbf2c342a20bfce1e95}{Compte\+Abstrait}}.
+
+\mbox{\Hypertarget{class_compte_virtuel_aa37139f6586c837d9fac90c4ab90f12b}\label{class_compte_virtuel_aa37139f6586c837d9fac90c4ab90f12b}} 
+\index{CompteVirtuel@{CompteVirtuel}!getType@{getType}}
+\index{getType@{getType}!CompteVirtuel@{CompteVirtuel}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Compte\+Virtuel\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Permet de connaitre le type du compte. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+type} & \+: type du compte en chaine de caractère \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_a8e993336a307777eb0fd472bdab68bd4}{Compte\+Abstrait}}.
+
+\mbox{\Hypertarget{class_compte_virtuel_a92cc9b63087b11608979f92b7361f603}\label{class_compte_virtuel_a92cc9b63087b11608979f92b7361f603}} 
+\index{CompteVirtuel@{CompteVirtuel}!is\_deletable@{is\_deletable}}
+\index{is\_deletable@{is\_deletable}!CompteVirtuel@{CompteVirtuel}}
+\doxysubsubsection{\texorpdfstring{is\_deletable()}{is\_deletable()}}
+{\footnotesize\ttfamily bool Compte\+Virtuel\+::is\+\_\+deletable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+vérifie si les sous comptes n\textquotesingle{}ont pas d\textquotesingle{}opérations et donc si ce dossier est supprimable 
+
+\begin{DoxyReturn}{Renvoie}
+Retourne true si tout les fils non aucunes opération liée
+\end{DoxyReturn}
+verifie si tout les fils du \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} sont supprimables, c\textquotesingle{}est à dire qu\textquotesingle{}ils n\textquotesingle{}ont occunes opération liées. 
+
+Implémente \mbox{\hyperlink{class_compte_abstrait_a38421e18885c318f0fc8da6f85e1a493}{Compte\+Abstrait}}.
+
+\mbox{\Hypertarget{class_compte_virtuel_a6b14c7364b185aa3d1bdf47cf30d2ba7}\label{class_compte_virtuel_a6b14c7364b185aa3d1bdf47cf30d2ba7}} 
+\index{CompteVirtuel@{CompteVirtuel}!solde\_reset@{solde\_reset}}
+\index{solde\_reset@{solde\_reset}!CompteVirtuel@{CompteVirtuel}}
+\doxysubsubsection{\texorpdfstring{solde\_reset()}{solde\_reset()}}
+{\footnotesize\ttfamily void Compte\+Virtuel\+::solde\+\_\+reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Remet le solde de tout les comptes fils à 0~\newline
+. 
+
+fonction récursive qui appelle les fonctions solde\+\_\+reset de ses fils 
+
+Implémente \mbox{\hyperlink{class_compte_abstrait_a8a99bac3fc10f87d33b462a52f993448}{Compte\+Abstrait}}.
+
+\mbox{\Hypertarget{class_compte_virtuel_a3535db1f965cf5efbd1907173b6efcb1}\label{class_compte_virtuel_a3535db1f965cf5efbd1907173b6efcb1}} 
+\index{CompteVirtuel@{CompteVirtuel}!supprimer\_compte@{supprimer\_compte}}
+\index{supprimer\_compte@{supprimer\_compte}!CompteVirtuel@{CompteVirtuel}}
+\doxysubsubsection{\texorpdfstring{supprimer\_compte()}{supprimer\_compte()}}
+{\footnotesize\ttfamily bool Compte\+Virtuel\+::supprimer\+\_\+compte (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Permet supprimer un compte à partir de son identifiant. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em num} & \+: identifiant du compte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+retourne true en cas de succès false sinon
+\end{DoxyReturn}
+La fonction supprimer compte parcours l\textquotesingle{}aborescence d\textquotesingle{}un \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}},~\newline
+dès que le compte recherché est trouvé, il est supprimé du vecteur m\+\_\+listfichier et est supprimé. 
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_ac7ce537ed7c1bd389ec83f8fabd273be}{Compte\+Abstrait}}.
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_compte_virtuel_a775800965c7ba340643c769253027101}\label{class_compte_virtuel_a775800965c7ba340643c769253027101}} 
+\index{CompteVirtuel@{CompteVirtuel}!\_type@{\_type}}
+\index{\_type@{\_type}!CompteVirtuel@{CompteVirtuel}}
+\doxysubsubsection{\texorpdfstring{\_type}{\_type}}
+{\footnotesize\ttfamily std\+::string Compte\+Virtuel\+::\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Tpe du compte en chaine de caractère. 
+
+\mbox{\Hypertarget{class_compte_virtuel_a39c5b5bfeaf399680d12d58e2254eec1}\label{class_compte_virtuel_a39c5b5bfeaf399680d12d58e2254eec1}} 
+\index{CompteVirtuel@{CompteVirtuel}!CompteManager@{CompteManager}}
+\index{CompteManager@{CompteManager}!CompteVirtuel@{CompteVirtuel}}
+\doxysubsubsection{\texorpdfstring{CompteManager}{CompteManager}}
+{\footnotesize\ttfamily friend Compte\+Virtuel\+::\+Compte\+Manager\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_compte_virtuel_a6f6bf607d5272050434971bbf141557f}\label{class_compte_virtuel_a6f6bf607d5272050434971bbf141557f}} 
+\index{CompteVirtuel@{CompteVirtuel}!m\_listfichier@{m\_listfichier}}
+\index{m\_listfichier@{m\_listfichier}!CompteVirtuel@{CompteVirtuel}}
+\doxysubsubsection{\texorpdfstring{m\_listfichier}{m\_listfichier}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_compte_abstrait}{Compte\+Abstrait}}$\ast$$>$ Compte\+Virtuel\+::m\+\_\+listfichier\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Vecteur contenant la liste des fils du compte. 
+

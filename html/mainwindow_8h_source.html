@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tresorerie_LO21:  Fichier source de Ruochen/mainwindow.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Tresorerie_LO21
+   </div>
+   <div id="projectbrief">gestion de trésorerie pour une association</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('mainwindow_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">mainwindow.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef MAINWINDOW_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define MAINWINDOW_H</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QTreeWidget&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QDomElement&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QFile&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QPrinter&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QPainter&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;addcomptedialog.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;choisirpassifdialog.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;addtransfertdialog.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;viewalltransfert.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;rapprochementdialog.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;saisirrapprochementdialog.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;compte.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;transaction.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;QT_BEGIN_NAMESPACE</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> { <span class="keyword">class </span><a class="code" href="class_main_window.html">MainWindow</a>; }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;QT_END_NAMESPACE</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_main_window.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_main_window.html">MainWindow</a> : <span class="keyword">public</span> QMainWindow</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#aa3ffb43aef15cee778b4e7b8d49ff0a6">listDom</a>(QDomElement&amp; docElem,<span class="keywordtype">bool</span> first_time);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ad83097c1b0948d8a6e4475492fe603e4">openXML</a>(QString fileName,<span class="keywordtype">bool</span> first_load);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#acc843fdda776bdecaf3f1e81c72f9385">openXMLTransactions</a>(QString fileName,<span class="keywordtype">bool</span> first_load);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#af7dec6c97369074794a50cc7ed0b40d9">popAddWindow</a>(QString father_id, QString type);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a94fb520b46cb04045f4d806f2d24d66a">popRapprochementWindow</a>(QString <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a4eda0ffd0b7f46fad01e13c8bca69cf0">popSaisirRapprochement</a>(QString <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="class_main_window.html#a19b8ffa1cf5e9cb61e3f543b663da4fa">  105</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a19b8ffa1cf5e9cb61e3f543b663da4fa">AddXml</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ac6b2b909ce0216353ca0b4457d30fa87">deleteXML</a>(QString <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#aeae218f6eeb2162159ac5e40c0f72092">addToTree</a>(QString father_id, QString <span class="keywordtype">id</span>, QString nom, QString prop, QString type, QString solde=NULL);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ad7c890a95b3e6c99084c772ba42df3b4">deleteFromTree</a>(<span class="keyword">const</span> QString <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a327dc4ae98d21f740345606feb1a7346">PopChoisirPassifWindow</a>();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ab824e974fd8a3490487deb48b1b2d240">writeXmlFile_attributes</a>(<span class="keyword">const</span> QString&amp; filename);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a931a0ab199b4355332868f2a20f0a9d0">writeXmlFile_subnodes</a>(<span class="keyword">const</span> QString&amp; filename);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a54be790e8a4b1847b77c4b7d689e0444">print_header_transactios</a>(QPainter&amp; painter);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a00223ecb9cbeadc5f3f756a59f8f1a98">print_header_rapprochement</a>(QPainter&amp; painter);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a2ea9bfd7c2bb9a4bdf0e7736b7e9f219">operations_PDF</a>(QPrinter&amp; printer, QPainter&amp; painter, <a class="code" href="class_transaction.html">Transaction</a>* trans);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ae841ed2f7972d99bd5524ce19f61c5df">rapprochement_PDF</a>(<a class="code" href="class_rapprochement.html">Rapprochement</a>* rap);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a2ea9bfd7c2bb9a4bdf0e7736b7e9f219">operations_PDF</a>(QPrinter&amp; printer, QPainter&amp; painter, <a class="code" href="class_transaction.html">Transaction</a>* trans, std::string <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="class_main_window.html#a71b870343ae9785abe59c6a15dccd617">  195</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a71b870343ae9785abe59c6a15dccd617">setNom_first</a>(QString n){nom_actif_first = n;}</div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="class_main_window.html#aefdd90910f3b4c4ffcb24fffcfa35bec">  196</a></span>&#160;    <span class="keyword">const</span> QString <a class="code" href="class_main_window.html#aefdd90910f3b4c4ffcb24fffcfa35bec">getNom_first</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> nom_actif_first;}</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="class_main_window.html#a4d47c77e349c2b038a91fe0567ffbb73">  198</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a4d47c77e349c2b038a91fe0567ffbb73">setSolde_first</a>(<span class="keywordtype">double</span> s){solde_actif_first = s;}</div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="class_main_window.html#a5a72bb4af6cfe1c2b8ef0ae0e97a3b73">  199</a></span>&#160;    QString <a class="code" href="class_main_window.html#a5a72bb4af6cfe1c2b8ef0ae0e97a3b73">getSolde_first</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> QString::number(solde_actif_first);}</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="class_main_window.html#a84f04f2f2a2f1457cbf1ab85937e7102">  201</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a84f04f2f2a2f1457cbf1ab85937e7102">setId_first</a>(QString <span class="keywordtype">id</span>) {id_father_first= id;}</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="class_main_window.html#a427a8b5bdb2cc88e8f5fa38c5e274a6b">  202</a></span>&#160;    QString <a class="code" href="class_main_window.html#a427a8b5bdb2cc88e8f5fa38c5e274a6b">getId_first</a>()<span class="keyword"> const</span>{<span class="keywordflow">return</span> id_father_first;}</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_main_window.html#ad5d2dcdedd4a1d416b5896f3565c1609">cloture</a>();</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    Ui::MainWindow *ui;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    QString filename;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="class_add_compte_dialog.html">AddCompteDialog</a> *AddWindow;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <a class="code" href="class_choisir_passif_dialog.html">ChoisirPassifDialog</a> *ChoisirPassifWindow;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="class_add_transfert_dialog.html">AddTransfertDialog</a>* AddTransfertWindow;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <a class="code" href="class_rapprochementdialog.html">Rapprochementdialog</a>* rapWindow;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <a class="code" href="class_saisir_rapprochement_dialog.html">SaisirRapprochementDialog</a>* saiRapWin;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <a class="code" href="class_view_all_transfert.html">ViewAllTransfert</a>* viewTransfertWindow;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="class_compte_manager.html">CompteManager</a>* cm;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="class_transaction_manager.html">TransactionManager</a>* tm;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordtype">int</span> count_compte = 1;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keyword">const</span> QString compte_tmp = <span class="stringliteral">&quot;Compte_tmp.xml&quot;</span>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keyword">const</span> QString transfert_tmp = <span class="stringliteral">&quot;Transfert_tmp.xml&quot;</span>;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">int</span> ligne;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">bool</span> create_actif;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordtype">double</span> montant_initial;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">int</span> id_selected;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordtype">bool</span> no_passif = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    QString nom_actif_first;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">double</span> solde_actif_first;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    QString id_father_first;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">void</span> on_actionNew_triggered();</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">void</span> on_actionAdd_account_triggered();</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">void</span> on_actionOpen_triggered();</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">void</span> Add_accepted();</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">void</span> on_actionDelete_Account_triggered();</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordtype">void</span> on_actionSave_as_triggered();</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">void</span> on_actionClosure_triggered();</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">void</span> on_actionRapprochement_triggered();</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordtype">void</span> handlePassifAccepted(QString);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">void</span> on_actionAdd_Transation_triggered();</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordtype">void</span> on_actionShow_all_transation_triggered();</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordtype">void</span> on_actionFor_transferts_triggered();</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordtype">void</span> on_actionTransferts_for_one_account_triggered();</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordtype">void</span> addWindow_finished(<span class="keywordtype">int</span> result);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">void</span> refresh_transaction();</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">void</span> on_actionTransferts_par_Rapprochement_triggered();</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;};</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="preprocessor">#endif // MAINWINDOW_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_add_compte_dialog_html"><div class="ttname"><a href="class_add_compte_dialog.html">AddCompteDialog</a></div><div class="ttdoc">Cette classe vous permet de gérer la génération d'un compte.</div><div class="ttdef"><b>Definition:</b> addcomptedialog.h:17</div></div>
+<div class="ttc" id="aclass_main_window_html_aa3ffb43aef15cee778b4e7b8d49ff0a6"><div class="ttname"><a href="class_main_window.html#aa3ffb43aef15cee778b4e7b8d49ff0a6">MainWindow::listDom</a></div><div class="ttdeci">void listDom(QDomElement &amp;docElem, bool first_time)</div><div class="ttdoc">Accesor a las etiquetas de un archivo de cuentas xml Méthode pour lire une liste d'étiquettes de comp...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:391</div></div>
+<div class="ttc" id="aclass_main_window_html_a427a8b5bdb2cc88e8f5fa38c5e274a6b"><div class="ttname"><a href="class_main_window.html#a427a8b5bdb2cc88e8f5fa38c5e274a6b">MainWindow::getId_first</a></div><div class="ttdeci">QString getId_first() const</div><div class="ttdef"><b>Definition:</b> mainwindow.h:202</div></div>
+<div class="ttc" id="aclass_main_window_html_a4eda0ffd0b7f46fad01e13c8bca69cf0"><div class="ttname"><a href="class_main_window.html#a4eda0ffd0b7f46fad01e13c8bca69cf0">MainWindow::popSaisirRapprochement</a></div><div class="ttdeci">void popSaisirRapprochement(QString id)</div><div class="ttdoc">Ouvrir fenêtre &quot;Saisir Rapprochement&quot; Méthode pour ouvrir une nouvelle fenêtre pour génerer un rappro...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:517</div></div>
+<div class="ttc" id="aclass_main_window_html_a5a72bb4af6cfe1c2b8ef0ae0e97a3b73"><div class="ttname"><a href="class_main_window.html#a5a72bb4af6cfe1c2b8ef0ae0e97a3b73">MainWindow::getSolde_first</a></div><div class="ttdeci">QString getSolde_first() const</div><div class="ttdef"><b>Definition:</b> mainwindow.h:199</div></div>
+<div class="ttc" id="aclass_transaction_html"><div class="ttname"><a href="class_transaction.html">Transaction</a></div><div class="ttdoc">Conteneur d'opérations et d'informations.</div><div class="ttdef"><b>Definition:</b> transaction.h:165</div></div>
+<div class="ttc" id="aclass_transaction_manager_html"><div class="ttname"><a href="class_transaction_manager.html">TransactionManager</a></div><div class="ttdoc">Gestionnaire de transactions.</div><div class="ttdef"><b>Definition:</b> transaction.h:310</div></div>
+<div class="ttc" id="aclass_rapprochementdialog_html"><div class="ttname"><a href="class_rapprochementdialog.html">Rapprochementdialog</a></div><div class="ttdoc">Cette classe est utilisée pour génerer un rapprochement des comptes.</div><div class="ttdef"><b>Definition:</b> rapprochementdialog.h:17</div></div>
+<div class="ttc" id="aclass_saisir_rapprochement_dialog_html"><div class="ttname"><a href="class_saisir_rapprochement_dialog.html">SaisirRapprochementDialog</a></div><div class="ttdoc">Cette classe est utilisée pour saisir un rapprochement et aprés génerer un pdf.</div><div class="ttdef"><b>Definition:</b> saisirrapprochementdialog.h:16</div></div>
+<div class="ttc" id="aclass_main_window_html_a19b8ffa1cf5e9cb61e3f543b663da4fa"><div class="ttname"><a href="class_main_window.html#a19b8ffa1cf5e9cb61e3f543b663da4fa">MainWindow::AddXml</a></div><div class="ttdeci">void AddXml() const</div><div class="ttdoc">Ajouter Méthode pour.</div></div>
+<div class="ttc" id="aclass_main_window_html_ad83097c1b0948d8a6e4475492fe603e4"><div class="ttname"><a href="class_main_window.html#ad83097c1b0948d8a6e4475492fe603e4">MainWindow::openXML</a></div><div class="ttdeci">void openXML(QString fileName, bool first_load)</div><div class="ttdoc">Ouvrir fichier Comptes.xml Méthode pour lire un fichier Comptes.xml sous un format spécial.</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:290</div></div>
+<div class="ttc" id="aclass_main_window_html_a71b870343ae9785abe59c6a15dccd617"><div class="ttname"><a href="class_main_window.html#a71b870343ae9785abe59c6a15dccd617">MainWindow::setNom_first</a></div><div class="ttdeci">void setNom_first(QString n)</div><div class="ttdef"><b>Definition:</b> mainwindow.h:195</div></div>
+<div class="ttc" id="aclass_main_window_html_a00223ecb9cbeadc5f3f756a59f8f1a98"><div class="ttname"><a href="class_main_window.html#a00223ecb9cbeadc5f3f756a59f8f1a98">MainWindow::print_header_rapprochement</a></div><div class="ttdeci">void print_header_rapprochement(QPainter &amp;painter)</div><div class="ttdoc">Dessiner header du PDF pour un rapprochement Méthode qui permet de dessiner dans un objet du type Pai...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:1610</div></div>
+<div class="ttc" id="aclass_main_window_html_a84f04f2f2a2f1457cbf1ab85937e7102"><div class="ttname"><a href="class_main_window.html#a84f04f2f2a2f1457cbf1ab85937e7102">MainWindow::setId_first</a></div><div class="ttdeci">void setId_first(QString id)</div><div class="ttdef"><b>Definition:</b> mainwindow.h:201</div></div>
+<div class="ttc" id="aclass_choisir_passif_dialog_html"><div class="ttname"><a href="class_choisir_passif_dialog.html">ChoisirPassifDialog</a></div><div class="ttdoc">Cette classe vous permet de Afficher une interface graphique quand on a besoin d'une compte passif.</div><div class="ttdef"><b>Definition:</b> choisirpassifdialog.h:16</div></div>
+<div class="ttc" id="aclass_view_all_transfert_html"><div class="ttname"><a href="class_view_all_transfert.html">ViewAllTransfert</a></div><div class="ttdoc">Cette classe vous permet de Afficher tous les transactions du TransfertManager.</div><div class="ttdef"><b>Definition:</b> viewalltransfert.h:19</div></div>
+<div class="ttc" id="aclass_add_transfert_dialog_html"><div class="ttname"><a href="class_add_transfert_dialog.html">AddTransfertDialog</a></div><div class="ttdoc">Cette classe vous permet de Ajouter des Transactions à travers d'une interface graphique.</div><div class="ttdef"><b>Definition:</b> addtransfertdialog.h:24</div></div>
+<div class="ttc" id="aclass_main_window_html_a2ea9bfd7c2bb9a4bdf0e7736b7e9f219"><div class="ttname"><a href="class_main_window.html#a2ea9bfd7c2bb9a4bdf0e7736b7e9f219">MainWindow::operations_PDF</a></div><div class="ttdeci">void operations_PDF(QPrinter &amp;printer, QPainter &amp;painter, Transaction *trans)</div><div class="ttdoc">Écrire opérations dans un PDF Méthode qui permet d'écrire dans un PDF une liste des opérations à part...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:1171</div></div>
+<div class="ttc" id="aclass_main_window_html_ad7c890a95b3e6c99084c772ba42df3b4"><div class="ttname"><a href="class_main_window.html#ad7c890a95b3e6c99084c772ba42df3b4">MainWindow::deleteFromTree</a></div><div class="ttdeci">void deleteFromTree(const QString id)</div><div class="ttdoc">Enlever un élément à un QTreeWidget Méthode qui permet d'enlever un compte, à partir d'un id,...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:687</div></div>
+<div class="ttc" id="aclass_main_window_html_aeae218f6eeb2162159ac5e40c0f72092"><div class="ttname"><a href="class_main_window.html#aeae218f6eeb2162159ac5e40c0f72092">MainWindow::addToTree</a></div><div class="ttdeci">void addToTree(QString father_id, QString id, QString nom, QString prop, QString type, QString solde=NULL)</div><div class="ttdoc">Ajouter un élément à un QTreeWidget Méthode qui permet d'ajouter un compte, à partir d'un id,...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:636</div></div>
+<div class="ttc" id="aclass_compte_manager_html"><div class="ttname"><a href="class_compte_manager.html">CompteManager</a></div><div class="ttdoc">Classe qui s'occupe de la gestion des comptes.</div><div class="ttdef"><b>Definition:</b> compte.h:618</div></div>
+<div class="ttc" id="aclass_main_window_html_a327dc4ae98d21f740345606feb1a7346"><div class="ttname"><a href="class_main_window.html#a327dc4ae98d21f740345606feb1a7346">MainWindow::PopChoisirPassifWindow</a></div><div class="ttdeci">void PopChoisirPassifWindow()</div><div class="ttdoc">Ouvrir fenetre &quot;PassifWindow&quot; Méthode pour ouvrir une nouvelle fenêtre pour saisir les parametres du ...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:692</div></div>
+<div class="ttc" id="aclass_main_window_html_a931a0ab199b4355332868f2a20f0a9d0"><div class="ttname"><a href="class_main_window.html#a931a0ab199b4355332868f2a20f0a9d0">MainWindow::writeXmlFile_subnodes</a></div><div class="ttdeci">void writeXmlFile_subnodes(const QString &amp;filename)</div><div class="ttdoc">Écrire Transactions.xml Méthode qui permet d'écrire dans un fichier Transactions.xml les balises avec...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:916</div></div>
+<div class="ttc" id="aclass_main_window_html_af7dec6c97369074794a50cc7ed0b40d9"><div class="ttname"><a href="class_main_window.html#af7dec6c97369074794a50cc7ed0b40d9">MainWindow::popAddWindow</a></div><div class="ttdeci">void popAddWindow(QString father_id, QString type)</div><div class="ttdoc">Ouvrir fenêtre &quot;AddWindow&quot; Méthode pour ouvrir une nouvelle fenêtre pour saisir les parametres du com...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:442</div></div>
+<div class="ttc" id="aclass_main_window_html_a94fb520b46cb04045f4d806f2d24d66a"><div class="ttname"><a href="class_main_window.html#a94fb520b46cb04045f4d806f2d24d66a">MainWindow::popRapprochementWindow</a></div><div class="ttdeci">void popRapprochementWindow(QString id)</div><div class="ttdoc">Ouvrir fenêtre &quot;Rapprochement&quot; Méthode pour ouvrir une nouvelle fenêtre pour saisir les parametres du...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:491</div></div>
+<div class="ttc" id="aclass_main_window_html_a4d47c77e349c2b038a91fe0567ffbb73"><div class="ttname"><a href="class_main_window.html#a4d47c77e349c2b038a91fe0567ffbb73">MainWindow::setSolde_first</a></div><div class="ttdeci">void setSolde_first(double s)</div><div class="ttdef"><b>Definition:</b> mainwindow.h:198</div></div>
+<div class="ttc" id="aclass_main_window_html_ad5d2dcdedd4a1d416b5896f3565c1609"><div class="ttname"><a href="class_main_window.html#ad5d2dcdedd4a1d416b5896f3565c1609">MainWindow::cloture</a></div><div class="ttdeci">bool cloture()</div><div class="ttdoc">Créer une cloture Méthode qui permet de faire une clôture des comptes.</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:1332</div></div>
+<div class="ttc" id="aclass_rapprochement_html"><div class="ttname"><a href="class_rapprochement.html">Rapprochement</a></div><div class="ttdoc">Le rapprochement d'un Compte consiste à figer des transactions passées.</div><div class="ttdef"><b>Definition:</b> transaction.h:421</div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> addcomptedialog.h:6</div></div>
+<div class="ttc" id="aclass_main_window_html_ab824e974fd8a3490487deb48b1b2d240"><div class="ttname"><a href="class_main_window.html#ab824e974fd8a3490487deb48b1b2d240">MainWindow::writeXmlFile_attributes</a></div><div class="ttdeci">void writeXmlFile_attributes(const QString &amp;filename)</div><div class="ttdoc">Écrire Comptes.xml Méthode qui permet d'écrire dans un fichier Comptes.xml les balises avec ses attri...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:821</div></div>
+<div class="ttc" id="aclass_main_window_html_ac6b2b909ce0216353ca0b4457d30fa87"><div class="ttname"><a href="class_main_window.html#ac6b2b909ce0216353ca0b4457d30fa87">MainWindow::deleteXML</a></div><div class="ttdeci">void deleteXML(QString id) const</div><div class="ttdoc">Enlever une compte directement du fichier XML Méthode pour supprimer une Compte directement du fichie...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:650</div></div>
+<div class="ttc" id="aclass_main_window_html_aefdd90910f3b4c4ffcb24fffcfa35bec"><div class="ttname"><a href="class_main_window.html#aefdd90910f3b4c4ffcb24fffcfa35bec">MainWindow::getNom_first</a></div><div class="ttdeci">const QString getNom_first() const</div><div class="ttdef"><b>Definition:</b> mainwindow.h:196</div></div>
+<div class="ttc" id="aclass_main_window_html"><div class="ttname"><a href="class_main_window.html">MainWindow</a></div><div class="ttdoc">Cette classe est utilisée pour gérer la fenêtre principale du programme.</div><div class="ttdef"><b>Definition:</b> mainwindow.h:33</div></div>
+<div class="ttc" id="aclass_main_window_html_a996c5a2b6f77944776856f08ec30858d"><div class="ttname"><a href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow::MainWindow</a></div><div class="ttdeci">MainWindow(QWidget *parent=nullptr)</div><div class="ttdoc">Constructeur de la class MainWindow Constructeur de la class MainWindow.</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:26</div></div>
+<div class="ttc" id="aclass_main_window_html_ae841ed2f7972d99bd5524ce19f61c5df"><div class="ttname"><a href="class_main_window.html#ae841ed2f7972d99bd5524ce19f61c5df">MainWindow::rapprochement_PDF</a></div><div class="ttdeci">void rapprochement_PDF(Rapprochement *rap)</div><div class="ttdoc">Écrire rapprochement dans un PDF Méthode qui permet d'écrire dans un PDF une liste des opérations rap...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:1521</div></div>
+<div class="ttc" id="aclass_main_window_html_acc843fdda776bdecaf3f1e81c72f9385"><div class="ttname"><a href="class_main_window.html#acc843fdda776bdecaf3f1e81c72f9385">MainWindow::openXMLTransactions</a></div><div class="ttdeci">void openXMLTransactions(QString fileName, bool first_load)</div><div class="ttdoc">Ouvrir fichier Transactions.xml Méthode pour lire un fichier Transactions.xml sous un format spécial.</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:314</div></div>
+<div class="ttc" id="aclass_main_window_html_ae98d00a93bc118200eeef9f9bba1dba7"><div class="ttname"><a href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">MainWindow::~MainWindow</a></div><div class="ttdeci">~MainWindow()</div><div class="ttdoc">Destructeur Destructeur de la class MainWindow.</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:48</div></div>
+<div class="ttc" id="aclass_main_window_html_a54be790e8a4b1847b77c4b7d689e0444"><div class="ttname"><a href="class_main_window.html#a54be790e8a4b1847b77c4b7d689e0444">MainWindow::print_header_transactios</a></div><div class="ttdeci">void print_header_transactios(QPainter &amp;painter)</div><div class="ttdoc">Dessiner header du PDF Méthode qui permet de dessiner dans un objet du type Painter un header pour af...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:1141</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_36c96ca2805967986e213251ddd17d13.html">Ruochen</a></li><li class="navelem"><b>mainwindow.h</b></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

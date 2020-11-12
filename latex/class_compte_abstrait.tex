@@ -1,0 +1,377 @@
+\hypertarget{class_compte_abstrait}{}\doxysection{Référence de la classe Compte\+Abstrait}
+\label{class_compte_abstrait}\index{CompteAbstrait@{CompteAbstrait}}
+
+
+Classe abstraite permettant d\textquotesingle{}implémenter les comptes réels et virtuels.  
+
+
+
+
+{\ttfamily \#include $<$compte.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Compte\+Abstrait\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_compte_abstrait}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_compte_abstrait_ab07fba7a758991ce11b82a4c4befe354}{Get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Getter de l\textquotesingle{}identifiant du compte. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_compte_abstrait_a60deed3a986e1d99b6441651cebed024}{get\+Nom}} () const
+\begin{DoxyCompactList}\small\item\em Getter du nom de compte. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_compte_abstrait_a8e993336a307777eb0fd472bdab68bd4}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em définition virtuelle du getter de type, utile pour comptes de tout types \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_compte_abstrait_af6e1907fcb28cfbf2c342a20bfce1e95}{get\+Solde}} () const
+\begin{DoxyCompactList}\small\item\em définition virtuelle du getter de solde \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_compte_abstrait_aba9838693aa02cc50e99567412ccf8ef}{Afficher}} (int n=0) const
+\begin{DoxyCompactList}\small\item\em définition virtuelle de la fonction Afficher, qui permet d\textquotesingle{}afficher tout type de compte \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_compte_abstrait_a7dd9a4dd3e019a12e9fab15b48983f5a}{Afficher\+\_\+operation}} () const
+\begin{DoxyCompactList}\small\item\em définition virtuelle de la fonction Afficher\+\_\+opération~\newline
+\end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_compte_abstrait}{Compte\+Abstrait}} $\ast$ \mbox{\hyperlink{class_compte_abstrait_a7bd402e172f5734c2debca608436f644}{Get\+Compte}} (int num)
+\begin{DoxyCompactList}\small\item\em définition virtuelle de la fonction Get\+Compte~\newline
+\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_compte_abstrait_a25b051a5f1d627815cadc12597d719f2}{set\+Pere}} (\mbox{\hyperlink{class_compte_abstrait}{Compte\+Abstrait}} $\ast$compte)
+\begin{DoxyCompactList}\small\item\em intitialiser le père d\textquotesingle{}un compte~\newline
+\end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_compte_abstrait}{Compte\+Abstrait}} $\ast$ \mbox{\hyperlink{class_compte_abstrait_a6b5659486323e1bc3eb74d35fdffc72f}{get\+Pere}} () const
+\item 
+virtual \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} \& \mbox{\hyperlink{class_compte_abstrait_ac7140b776a3b281e7825b8faacccd246}{Add}} (\mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} $\ast$file)
+\begin{DoxyCompactList}\small\item\em définition virtuelle de la fonction Add \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_compte_abstrait_a5c6369582292204fdc4b5ca486707faa}{Add}} (\mbox{\hyperlink{class_compte}{Compte}} $\ast$file)
+\begin{DoxyCompactList}\small\item\em définition virtuelle de la fonction Add \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_compte_abstrait_a0e7547d29d7b630ff1fbc3f67d78953b}{crediter}} (double credit)
+\item 
+virtual double \mbox{\hyperlink{class_compte_abstrait_a9e477c6974f4924efd67842e1a23acea}{debiter}} (double debit)
+\item 
+virtual double \mbox{\hyperlink{class_compte_abstrait_a393031e157fa7eb7ce32fd4529af8d2b}{transferer}} (double transfert)
+\item 
+virtual void \mbox{\hyperlink{class_compte_abstrait_aeaee0b95ffa864c03a10db1687ca6405}{rapprocher}} (int y, int m, int d, std\+::string nom, std\+::string desc)
+\item 
+virtual void \mbox{\hyperlink{class_compte_abstrait_a58c22f19173c489c5eda194b5e8de7d4}{afficher\+\_\+rapprochement}} (int \mbox{\hyperlink{class_compte_abstrait_ab154e19e9fe360ef95c3910ce5317ff2}{id}})
+\item 
+virtual void \mbox{\hyperlink{class_compte_abstrait_a9a7bf3a8d01a5c5c5de5e6c6c18aab78}{afficher\+\_\+rapprochement}} ()
+\item 
+Q\+Date \mbox{\hyperlink{class_compte_abstrait_a4686a966deac73c896d4ef2434318115}{Last\+\_\+\+Rapprochement}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_compte_abstrait_ac7ce537ed7c1bd389ec83f8fabd273be}{supprimer\+\_\+compte}} (int num)
+\item 
+virtual bool \mbox{\hyperlink{class_compte_abstrait_a38421e18885c318f0fc8da6f85e1a493}{is\+\_\+deletable}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_compte_abstrait_a8a99bac3fc10f87d33b462a52f993448}{solde\+\_\+reset}} ()=0
+\item 
+virtual \mbox{\hyperlink{class_compte_abstrait_a322b7ffae3bf59df18b86d67ebc4ec76}{$\sim$\+Compte\+Abstrait}} ()=0
+\item 
+\mbox{\hyperlink{class_compte_abstrait_a1239bdd02d35198d28be675f79ca5692}{Compte\+Abstrait}} (const std\+::string \&nom, const int \&num)
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_compte_abstrait_a5ad30221038dd4a5a8148f28105452a3}{m\+\_\+nom}}
+\begin{DoxyCompactList}\small\item\em Nom du compte, commun à tout les types de compte. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_compte_abstrait_ab154e19e9fe360ef95c3910ce5317ff2}{id}}
+\begin{DoxyCompactList}\small\item\em identifiant du compte \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_compte_abstrait}{Compte\+Abstrait}} $\ast$ \mbox{\hyperlink{class_compte_abstrait_aedc07531eeb01e209f1f51c062ea9d94}{Pere}} =nullptr
+\begin{DoxyCompactList}\small\item\em pointeur vers le père du compte initialisé à nullptr \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Classe abstraite permettant d\textquotesingle{}implémenter les comptes réels et virtuels. 
+
+Cette classe à été implémenté pour le design pattern composite,~\newline
+ il s\textquotesingle{}agit de l\textquotesingle{}interface de \mbox{\hyperlink{class_compte}{Compte}} et \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_compte_abstrait_a322b7ffae3bf59df18b86d67ebc4ec76}\label{class_compte_abstrait_a322b7ffae3bf59df18b86d67ebc4ec76}} 
+\index{CompteAbstrait@{CompteAbstrait}!````~CompteAbstrait@{$\sim$CompteAbstrait}}
+\index{````~CompteAbstrait@{$\sim$CompteAbstrait}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{$\sim$CompteAbstrait()}{~CompteAbstrait()}}
+{\footnotesize\ttfamily Compte\+Abstrait\+::$\sim$\+Compte\+Abstrait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_compte_abstrait_a1239bdd02d35198d28be675f79ca5692}\label{class_compte_abstrait_a1239bdd02d35198d28be675f79ca5692}} 
+\index{CompteAbstrait@{CompteAbstrait}!CompteAbstrait@{CompteAbstrait}}
+\index{CompteAbstrait@{CompteAbstrait}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{CompteAbstrait()}{CompteAbstrait()}}
+{\footnotesize\ttfamily Compte\+Abstrait\+::\+Compte\+Abstrait (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nom,  }\item[{const int \&}]{num }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_compte_abstrait_a5c6369582292204fdc4b5ca486707faa}\label{class_compte_abstrait_a5c6369582292204fdc4b5ca486707faa}} 
+\index{CompteAbstrait@{CompteAbstrait}!Add@{Add}}
+\index{Add@{Add}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Compte\+Abstrait\+::\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_compte}{Compte}} $\ast$}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+définition virtuelle de la fonction Add 
+
+
+
+Réimplémentée dans \mbox{\hyperlink{class_compte_virtuel_a74edcd417d7571b8a7f92a4e7183f039}{Compte\+Virtuel}}.
+
+\mbox{\Hypertarget{class_compte_abstrait_ac7140b776a3b281e7825b8faacccd246}\label{class_compte_abstrait_ac7140b776a3b281e7825b8faacccd246}} 
+\index{CompteAbstrait@{CompteAbstrait}!Add@{Add}}
+\index{Add@{Add}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}}\& Compte\+Abstrait\+::\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} $\ast$}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+définition virtuelle de la fonction Add 
+
+
+
+Réimplémentée dans \mbox{\hyperlink{class_compte_virtuel_a74be389925f8790c07db43e700894da5}{Compte\+Virtuel}}.
+
+\mbox{\Hypertarget{class_compte_abstrait_aba9838693aa02cc50e99567412ccf8ef}\label{class_compte_abstrait_aba9838693aa02cc50e99567412ccf8ef}} 
+\index{CompteAbstrait@{CompteAbstrait}!Afficher@{Afficher}}
+\index{Afficher@{Afficher}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{Afficher()}{Afficher()}}
+{\footnotesize\ttfamily void Compte\+Abstrait\+::\+Afficher (\begin{DoxyParamCaption}\item[{int}]{n = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+définition virtuelle de la fonction Afficher, qui permet d\textquotesingle{}afficher tout type de compte 
+
+
+
+Réimplémentée dans \mbox{\hyperlink{class_compte_virtuel_aef08ad382130c97f934125712bc9cd1a}{Compte\+Virtuel}}, et \mbox{\hyperlink{class_compte_a3f9fb8a0b3ed392a6f226bcff74899bf}{Compte}}.
+
+\mbox{\Hypertarget{class_compte_abstrait_a7dd9a4dd3e019a12e9fab15b48983f5a}\label{class_compte_abstrait_a7dd9a4dd3e019a12e9fab15b48983f5a}} 
+\index{CompteAbstrait@{CompteAbstrait}!Afficher\_operation@{Afficher\_operation}}
+\index{Afficher\_operation@{Afficher\_operation}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{Afficher\_operation()}{Afficher\_operation()}}
+{\footnotesize\ttfamily virtual void Compte\+Abstrait\+::\+Afficher\+\_\+operation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+définition virtuelle de la fonction Afficher\+\_\+opération~\newline
+
+
+Permet d\textquotesingle{}afficher toute les opérations des \mbox{\hyperlink{class_compte}{Compte}} dans un \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} 
+
+Réimplémentée dans \mbox{\hyperlink{class_compte_virtuel_accbb32016a7f8979b081c73c6045aa2d}{Compte\+Virtuel}}, et \mbox{\hyperlink{class_compte_af74ed3b9b4cdef6101491cd23d324b7a}{Compte}}.
+
+\mbox{\Hypertarget{class_compte_abstrait_a9a7bf3a8d01a5c5c5de5e6c6c18aab78}\label{class_compte_abstrait_a9a7bf3a8d01a5c5c5de5e6c6c18aab78}} 
+\index{CompteAbstrait@{CompteAbstrait}!afficher\_rapprochement@{afficher\_rapprochement}}
+\index{afficher\_rapprochement@{afficher\_rapprochement}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{afficher\_rapprochement()}{afficher\_rapprochement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Compte\+Abstrait\+::afficher\+\_\+rapprochement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Réimplémentée dans \mbox{\hyperlink{class_compte_a3b5a2c02bf435afcb0d778f46ed6c3fb}{Compte}}.
+
+\mbox{\Hypertarget{class_compte_abstrait_a58c22f19173c489c5eda194b5e8de7d4}\label{class_compte_abstrait_a58c22f19173c489c5eda194b5e8de7d4}} 
+\index{CompteAbstrait@{CompteAbstrait}!afficher\_rapprochement@{afficher\_rapprochement}}
+\index{afficher\_rapprochement@{afficher\_rapprochement}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{afficher\_rapprochement()}{afficher\_rapprochement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Compte\+Abstrait\+::afficher\+\_\+rapprochement (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Réimplémentée dans \mbox{\hyperlink{class_compte_a125516741de6af2bb841d636dcf216c7}{Compte}}.
+
+\mbox{\Hypertarget{class_compte_abstrait_a0e7547d29d7b630ff1fbc3f67d78953b}\label{class_compte_abstrait_a0e7547d29d7b630ff1fbc3f67d78953b}} 
+\index{CompteAbstrait@{CompteAbstrait}!crediter@{crediter}}
+\index{crediter@{crediter}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{crediter()}{crediter()}}
+{\footnotesize\ttfamily virtual double Compte\+Abstrait\+::crediter (\begin{DoxyParamCaption}\item[{double}]{credit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Réimplémentée dans \mbox{\hyperlink{class_depense_a5d1a8e14f6b33e60d9e8b66a6568f8cd}{Depense}}, \mbox{\hyperlink{class_actif_aad90323f964f016ab70579851cc26b1e}{Actif}}, et \mbox{\hyperlink{class_compte_a54105331d3b546315fdab2641a3b9232}{Compte}}.
+
+\mbox{\Hypertarget{class_compte_abstrait_a9e477c6974f4924efd67842e1a23acea}\label{class_compte_abstrait_a9e477c6974f4924efd67842e1a23acea}} 
+\index{CompteAbstrait@{CompteAbstrait}!debiter@{debiter}}
+\index{debiter@{debiter}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{debiter()}{debiter()}}
+{\footnotesize\ttfamily virtual double Compte\+Abstrait\+::debiter (\begin{DoxyParamCaption}\item[{double}]{debit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Réimplémentée dans \mbox{\hyperlink{class_depense_aa1dee30e6c9b52c8491a42a286b1db0a}{Depense}}, \mbox{\hyperlink{class_actif_a4b6daedba6dd63e828820fa59777eb7a}{Actif}}, et \mbox{\hyperlink{class_compte_a733c756bb92930047279c74337af168e}{Compte}}.
+
+\mbox{\Hypertarget{class_compte_abstrait_a7bd402e172f5734c2debca608436f644}\label{class_compte_abstrait_a7bd402e172f5734c2debca608436f644}} 
+\index{CompteAbstrait@{CompteAbstrait}!GetCompte@{GetCompte}}
+\index{GetCompte@{GetCompte}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{GetCompte()}{GetCompte()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_compte_abstrait}{Compte\+Abstrait}}$\ast$ Compte\+Abstrait\+::\+Get\+Compte (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+définition virtuelle de la fonction Get\+Compte~\newline
+
+
+Permet d\textquotesingle{}utiliser la fonction Get\+Compte d\textquotesingle{}un \mbox{\hyperlink{class_compte_virtuel}{Compte\+Virtuel}} sans avoir à le caster 
+
+Réimplémentée dans \mbox{\hyperlink{class_compte_virtuel_a0681751d5260473bf3fbde736fbc9d73}{Compte\+Virtuel}}.
+
+\mbox{\Hypertarget{class_compte_abstrait_ab07fba7a758991ce11b82a4c4befe354}\label{class_compte_abstrait_ab07fba7a758991ce11b82a4c4befe354}} 
+\index{CompteAbstrait@{CompteAbstrait}!GetId@{GetId}}
+\index{GetId@{GetId}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{GetId()}{GetId()}}
+{\footnotesize\ttfamily int Compte\+Abstrait\+::\+Get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter de l\textquotesingle{}identifiant du compte. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne l\textquotesingle{}identifiant du compte 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_compte_abstrait_a60deed3a986e1d99b6441651cebed024}\label{class_compte_abstrait_a60deed3a986e1d99b6441651cebed024}} 
+\index{CompteAbstrait@{CompteAbstrait}!getNom@{getNom}}
+\index{getNom@{getNom}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{getNom()}{getNom()}}
+{\footnotesize\ttfamily std\+::string Compte\+Abstrait\+::get\+Nom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter du nom de compte. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne le nom du compte 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_compte_abstrait_a6b5659486323e1bc3eb74d35fdffc72f}\label{class_compte_abstrait_a6b5659486323e1bc3eb74d35fdffc72f}} 
+\index{CompteAbstrait@{CompteAbstrait}!getPere@{getPere}}
+\index{getPere@{getPere}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{getPere()}{getPere()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_compte_abstrait}{Compte\+Abstrait}}$\ast$ Compte\+Abstrait\+::get\+Pere (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Renvoie}
+retourne le père du compte 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_compte_abstrait_af6e1907fcb28cfbf2c342a20bfce1e95}\label{class_compte_abstrait_af6e1907fcb28cfbf2c342a20bfce1e95}} 
+\index{CompteAbstrait@{CompteAbstrait}!getSolde@{getSolde}}
+\index{getSolde@{getSolde}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{getSolde()}{getSolde()}}
+{\footnotesize\ttfamily virtual double Compte\+Abstrait\+::get\+Solde (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+définition virtuelle du getter de solde 
+
+
+
+Réimplémentée dans \mbox{\hyperlink{class_compte_virtuel_ae285995d06ce68cfbd88262a7b23033d}{Compte\+Virtuel}}, et \mbox{\hyperlink{class_compte_a543600a0bfd9b2436f1ec1df794623b0}{Compte}}.
+
+\mbox{\Hypertarget{class_compte_abstrait_a8e993336a307777eb0fd472bdab68bd4}\label{class_compte_abstrait_a8e993336a307777eb0fd472bdab68bd4}} 
+\index{CompteAbstrait@{CompteAbstrait}!getType@{getType}}
+\index{getType@{getType}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily virtual std\+::string Compte\+Abstrait\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+définition virtuelle du getter de type, utile pour comptes de tout types 
+
+
+
+Réimplémentée dans \mbox{\hyperlink{class_compte_a091d77d9e39c25fa0ee7f6ede7eef768}{Compte}}, \mbox{\hyperlink{class_depense_a6ab860f16158dc29eb123d5216796365}{Depense}}, \mbox{\hyperlink{class_recette_a3ac8664a99a44ecd88f45357a776fa99}{Recette}}, \mbox{\hyperlink{class_passif_ab875c25ab9bed1bdcb545ccaf4d49b15}{Passif}}, \mbox{\hyperlink{class_actif_affdddb6c8e82c601af0e3bcdb520053b}{Actif}}, et \mbox{\hyperlink{class_compte_virtuel_aa37139f6586c837d9fac90c4ab90f12b}{Compte\+Virtuel}}.
+
+\mbox{\Hypertarget{class_compte_abstrait_a38421e18885c318f0fc8da6f85e1a493}\label{class_compte_abstrait_a38421e18885c318f0fc8da6f85e1a493}} 
+\index{CompteAbstrait@{CompteAbstrait}!is\_deletable@{is\_deletable}}
+\index{is\_deletable@{is\_deletable}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{is\_deletable()}{is\_deletable()}}
+{\footnotesize\ttfamily virtual bool Compte\+Abstrait\+::is\+\_\+deletable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implémenté dans \mbox{\hyperlink{class_compte_virtuel_a92cc9b63087b11608979f92b7361f603}{Compte\+Virtuel}}, et \mbox{\hyperlink{class_compte_a632425a7df6217e8806dcf34967d7c3b}{Compte}}.
+
+\mbox{\Hypertarget{class_compte_abstrait_a4686a966deac73c896d4ef2434318115}\label{class_compte_abstrait_a4686a966deac73c896d4ef2434318115}} 
+\index{CompteAbstrait@{CompteAbstrait}!Last\_Rapprochement@{Last\_Rapprochement}}
+\index{Last\_Rapprochement@{Last\_Rapprochement}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{Last\_Rapprochement()}{Last\_Rapprochement()}}
+{\footnotesize\ttfamily Q\+Date Compte\+Abstrait\+::\+Last\+\_\+\+Rapprochement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_compte_abstrait_aeaee0b95ffa864c03a10db1687ca6405}\label{class_compte_abstrait_aeaee0b95ffa864c03a10db1687ca6405}} 
+\index{CompteAbstrait@{CompteAbstrait}!rapprocher@{rapprocher}}
+\index{rapprocher@{rapprocher}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{rapprocher()}{rapprocher()}}
+{\footnotesize\ttfamily virtual void Compte\+Abstrait\+::rapprocher (\begin{DoxyParamCaption}\item[{int}]{y,  }\item[{int}]{m,  }\item[{int}]{d,  }\item[{std\+::string}]{nom,  }\item[{std\+::string}]{desc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Réimplémentée dans \mbox{\hyperlink{class_compte_a7fa4650bd64f6a8ada375f48c133a2c9}{Compte}}.
+
+\mbox{\Hypertarget{class_compte_abstrait_a25b051a5f1d627815cadc12597d719f2}\label{class_compte_abstrait_a25b051a5f1d627815cadc12597d719f2}} 
+\index{CompteAbstrait@{CompteAbstrait}!setPere@{setPere}}
+\index{setPere@{setPere}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{setPere()}{setPere()}}
+{\footnotesize\ttfamily void Compte\+Abstrait\+::set\+Pere (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_compte_abstrait}{Compte\+Abstrait}} $\ast$}]{compte }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+intitialiser le père d\textquotesingle{}un compte~\newline
+
+
+\mbox{\Hypertarget{class_compte_abstrait_a8a99bac3fc10f87d33b462a52f993448}\label{class_compte_abstrait_a8a99bac3fc10f87d33b462a52f993448}} 
+\index{CompteAbstrait@{CompteAbstrait}!solde\_reset@{solde\_reset}}
+\index{solde\_reset@{solde\_reset}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{solde\_reset()}{solde\_reset()}}
+{\footnotesize\ttfamily virtual void Compte\+Abstrait\+::solde\+\_\+reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implémenté dans \mbox{\hyperlink{class_compte_virtuel_a6b14c7364b185aa3d1bdf47cf30d2ba7}{Compte\+Virtuel}}, et \mbox{\hyperlink{class_compte_ad47271fe2835e057f528f74427bb8dea}{Compte}}.
+
+\mbox{\Hypertarget{class_compte_abstrait_ac7ce537ed7c1bd389ec83f8fabd273be}\label{class_compte_abstrait_ac7ce537ed7c1bd389ec83f8fabd273be}} 
+\index{CompteAbstrait@{CompteAbstrait}!supprimer\_compte@{supprimer\_compte}}
+\index{supprimer\_compte@{supprimer\_compte}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{supprimer\_compte()}{supprimer\_compte()}}
+{\footnotesize\ttfamily virtual bool Compte\+Abstrait\+::supprimer\+\_\+compte (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Réimplémentée dans \mbox{\hyperlink{class_compte_virtuel_a3535db1f965cf5efbd1907173b6efcb1}{Compte\+Virtuel}}.
+
+\mbox{\Hypertarget{class_compte_abstrait_a393031e157fa7eb7ce32fd4529af8d2b}\label{class_compte_abstrait_a393031e157fa7eb7ce32fd4529af8d2b}} 
+\index{CompteAbstrait@{CompteAbstrait}!transferer@{transferer}}
+\index{transferer@{transferer}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{transferer()}{transferer()}}
+{\footnotesize\ttfamily virtual double Compte\+Abstrait\+::transferer (\begin{DoxyParamCaption}\item[{double}]{transfert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Réimplémentée dans \mbox{\hyperlink{class_depense_aa79008936a4f3ae2ca236c36da07aead}{Depense}}, \mbox{\hyperlink{class_actif_ae9f74c5c6510bbd2622271531d4fdcf5}{Actif}}, et \mbox{\hyperlink{class_compte_af68bf34b9ffc7f71cbd790e38a9cffce}{Compte}}.
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_compte_abstrait_ab154e19e9fe360ef95c3910ce5317ff2}\label{class_compte_abstrait_ab154e19e9fe360ef95c3910ce5317ff2}} 
+\index{CompteAbstrait@{CompteAbstrait}!id@{id}}
+\index{id@{id}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int Compte\+Abstrait\+::id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+identifiant du compte 
+
+\mbox{\Hypertarget{class_compte_abstrait_a5ad30221038dd4a5a8148f28105452a3}\label{class_compte_abstrait_a5ad30221038dd4a5a8148f28105452a3}} 
+\index{CompteAbstrait@{CompteAbstrait}!m\_nom@{m\_nom}}
+\index{m\_nom@{m\_nom}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{m\_nom}{m\_nom}}
+{\footnotesize\ttfamily std\+::string Compte\+Abstrait\+::m\+\_\+nom\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Nom du compte, commun à tout les types de compte. 
+
+\mbox{\Hypertarget{class_compte_abstrait_aedc07531eeb01e209f1f51c062ea9d94}\label{class_compte_abstrait_aedc07531eeb01e209f1f51c062ea9d94}} 
+\index{CompteAbstrait@{CompteAbstrait}!Pere@{Pere}}
+\index{Pere@{Pere}!CompteAbstrait@{CompteAbstrait}}
+\doxysubsubsection{\texorpdfstring{Pere}{Pere}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_compte_abstrait}{Compte\+Abstrait}}$\ast$ Compte\+Abstrait\+::\+Pere =nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+pointeur vers le père du compte initialisé à nullptr 
+

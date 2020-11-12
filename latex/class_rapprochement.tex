@@ -1,0 +1,161 @@
+\hypertarget{class_rapprochement}{}\doxysection{Référence de la classe Rapprochement}
+\label{class_rapprochement}\index{Rapprochement@{Rapprochement}}
+
+
+Le rapprochement d\textquotesingle{}un \mbox{\hyperlink{class_compte}{Compte}} consiste à figer des transactions passées.  
+
+
+
+
+{\ttfamily \#include $<$transaction.\+h$>$}
+
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rapprochement_ae3856477a0399516626b32f90510b6c9}{Rapprochement}} (Q\+Date date, std\+::string nom, std\+::string desc, \mbox{\hyperlink{class_compte}{Compte}} $\ast$compte, double solde)
+\begin{DoxyCompactList}\small\item\em Constructor de la class \mbox{\hyperlink{class_rapprochement}{Rapprochement}} Méthode qui permet de créer un rapprochement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rapprochement_af5af94d5811aaf307e7f2ae8cd6785bb}{Afficher}} ()
+\begin{DoxyCompactList}\small\item\em Afficher une \mbox{\hyperlink{class_rapprochement}{Rapprochement}} Méthode qui permet d\textquotesingle{}afficher un raprochement. \end{DoxyCompactList}\item 
+Q\+Date \mbox{\hyperlink{class_rapprochement_a5a4217393d949cb5f42c41129a847f40}{get\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Getter date Méthode qui permet de retourner la date du rapprochement. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_rapprochement_a624b273b912940f3224c55de24b187f5}{get\+Nom}} ()
+\begin{DoxyCompactList}\small\item\em Getter Nom Méthode qui permet de retourner le nom du rapprochement. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_rapprochement_ad8ed8aacd0908b189b0f7885b9728d1b}{get\+Desc}} ()
+\begin{DoxyCompactList}\small\item\em Getter Description Méthode qui permet de retourner la description du rapprochement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rapprochement_a986e584e6e6094fd9a14d5b2a7622782}{set\+Solde}} (double s)
+\begin{DoxyCompactList}\small\item\em Setter Solde Méthode qui permet de saisir le solde du rapprochement. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_rapprochement_a7614818576398ac4937f4f9e9bd99196}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Getter id Méthode qui permet de retourner l\textquotesingle{}a description\textquotesingle{}id du rapprochement. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_compte}{Compte}} $\ast$ \mbox{\hyperlink{class_rapprochement_a744c0c6e64bcfc1140cf42451f8ebd93}{get\+Compte}} () const
+\begin{DoxyCompactList}\small\item\em Getter compte Méthode qui permet de retourner la compte associé au rapprochement. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_rapprochement_a1803caeb27039a23b029c1108808418c}{get\+Solde}} () const
+\begin{DoxyCompactList}\small\item\em Getter solde Méthode qui permet de retourner le solde associé au rapprochement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_rapprochement_a6dab578d5f48b4eb91d1a4b315c19077}{id\+\_\+max}} =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Le rapprochement d\textquotesingle{}un \mbox{\hyperlink{class_compte}{Compte}} consiste à figer des transactions passées. 
+
+Cette classe permet de comparer les opérations saisies dans le logiciel avec les opérations effectuées réellement sur le compte bancaire 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_rapprochement_ae3856477a0399516626b32f90510b6c9}\label{class_rapprochement_ae3856477a0399516626b32f90510b6c9}} 
+\index{Rapprochement@{Rapprochement}!Rapprochement@{Rapprochement}}
+\index{Rapprochement@{Rapprochement}!Rapprochement@{Rapprochement}}
+\doxysubsubsection{\texorpdfstring{Rapprochement()}{Rapprochement()}}
+{\footnotesize\ttfamily Rapprochement\+::\+Rapprochement (\begin{DoxyParamCaption}\item[{Q\+Date}]{date,  }\item[{std\+::string}]{nom,  }\item[{std\+::string}]{desc,  }\item[{\mbox{\hyperlink{class_compte}{Compte}} $\ast$}]{compte,  }\item[{double}]{solde }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la class \mbox{\hyperlink{class_rapprochement}{Rapprochement}} Méthode qui permet de créer un rapprochement. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em date} & \+: Date de la création du rapprochement \\
+\hline
+{\em nom} & Nom du rapprochement \\
+\hline
+{\em desc} & \+: Description du rapprochement \\
+\hline
+{\em compte} & \mbox{\hyperlink{class_compte}{Compte}} a rapprocher \\
+\hline
+{\em solde} & Solde du rapprochement \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_rapprochement_af5af94d5811aaf307e7f2ae8cd6785bb}\label{class_rapprochement_af5af94d5811aaf307e7f2ae8cd6785bb}} 
+\index{Rapprochement@{Rapprochement}!Afficher@{Afficher}}
+\index{Afficher@{Afficher}!Rapprochement@{Rapprochement}}
+\doxysubsubsection{\texorpdfstring{Afficher()}{Afficher()}}
+{\footnotesize\ttfamily void Rapprochement\+::\+Afficher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Afficher une \mbox{\hyperlink{class_rapprochement}{Rapprochement}} Méthode qui permet d\textquotesingle{}afficher un raprochement. 
+
+Affiche l\textquotesingle{}ensemble des opérations concernant un rapprochement dans un compte,~\newline
+si le pointeur de rapprochement dans une opération est le même que le reapprochement à afficher, alors on affiche l\textquotesingle{}opération. \mbox{\Hypertarget{class_rapprochement_a744c0c6e64bcfc1140cf42451f8ebd93}\label{class_rapprochement_a744c0c6e64bcfc1140cf42451f8ebd93}} 
+\index{Rapprochement@{Rapprochement}!getCompte@{getCompte}}
+\index{getCompte@{getCompte}!Rapprochement@{Rapprochement}}
+\doxysubsubsection{\texorpdfstring{getCompte()}{getCompte()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_compte}{Compte}}$\ast$ Rapprochement\+::get\+Compte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter compte Méthode qui permet de retourner la compte associé au rapprochement. 
+
+\mbox{\Hypertarget{class_rapprochement_a5a4217393d949cb5f42c41129a847f40}\label{class_rapprochement_a5a4217393d949cb5f42c41129a847f40}} 
+\index{Rapprochement@{Rapprochement}!getDate@{getDate}}
+\index{getDate@{getDate}!Rapprochement@{Rapprochement}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily Q\+Date Rapprochement\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter date Méthode qui permet de retourner la date du rapprochement. 
+
+\mbox{\Hypertarget{class_rapprochement_ad8ed8aacd0908b189b0f7885b9728d1b}\label{class_rapprochement_ad8ed8aacd0908b189b0f7885b9728d1b}} 
+\index{Rapprochement@{Rapprochement}!getDesc@{getDesc}}
+\index{getDesc@{getDesc}!Rapprochement@{Rapprochement}}
+\doxysubsubsection{\texorpdfstring{getDesc()}{getDesc()}}
+{\footnotesize\ttfamily std\+::string Rapprochement\+::get\+Desc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter Description Méthode qui permet de retourner la description du rapprochement. 
+
+\mbox{\Hypertarget{class_rapprochement_a7614818576398ac4937f4f9e9bd99196}\label{class_rapprochement_a7614818576398ac4937f4f9e9bd99196}} 
+\index{Rapprochement@{Rapprochement}!getId@{getId}}
+\index{getId@{getId}!Rapprochement@{Rapprochement}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Rapprochement\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter id Méthode qui permet de retourner l\textquotesingle{}a description\textquotesingle{}id du rapprochement. 
+
+\mbox{\Hypertarget{class_rapprochement_a624b273b912940f3224c55de24b187f5}\label{class_rapprochement_a624b273b912940f3224c55de24b187f5}} 
+\index{Rapprochement@{Rapprochement}!getNom@{getNom}}
+\index{getNom@{getNom}!Rapprochement@{Rapprochement}}
+\doxysubsubsection{\texorpdfstring{getNom()}{getNom()}}
+{\footnotesize\ttfamily std\+::string Rapprochement\+::get\+Nom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter Nom Méthode qui permet de retourner le nom du rapprochement. 
+
+\mbox{\Hypertarget{class_rapprochement_a1803caeb27039a23b029c1108808418c}\label{class_rapprochement_a1803caeb27039a23b029c1108808418c}} 
+\index{Rapprochement@{Rapprochement}!getSolde@{getSolde}}
+\index{getSolde@{getSolde}!Rapprochement@{Rapprochement}}
+\doxysubsubsection{\texorpdfstring{getSolde()}{getSolde()}}
+{\footnotesize\ttfamily double Rapprochement\+::get\+Solde (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter solde Méthode qui permet de retourner le solde associé au rapprochement. 
+
+\mbox{\Hypertarget{class_rapprochement_a986e584e6e6094fd9a14d5b2a7622782}\label{class_rapprochement_a986e584e6e6094fd9a14d5b2a7622782}} 
+\index{Rapprochement@{Rapprochement}!setSolde@{setSolde}}
+\index{setSolde@{setSolde}!Rapprochement@{Rapprochement}}
+\doxysubsubsection{\texorpdfstring{setSolde()}{setSolde()}}
+{\footnotesize\ttfamily void Rapprochement\+::set\+Solde (\begin{DoxyParamCaption}\item[{double}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter Solde Méthode qui permet de saisir le solde du rapprochement. 
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_rapprochement_a6dab578d5f48b4eb91d1a4b315c19077}\label{class_rapprochement_a6dab578d5f48b4eb91d1a4b315c19077}} 
+\index{Rapprochement@{Rapprochement}!id\_max@{id\_max}}
+\index{id\_max@{id\_max}!Rapprochement@{Rapprochement}}
+\doxysubsubsection{\texorpdfstring{id\_max}{id\_max}}
+{\footnotesize\ttfamily int Rapprochement\+::id\+\_\+max =0\hspace{0.3cm}{\ttfamily [static]}}
+

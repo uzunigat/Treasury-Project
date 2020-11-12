@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tresorerie_LO21:  Fichier source de Ruochen/transaction.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Tresorerie_LO21
+   </div>
+   <div id="projectbrief">gestion de trésorerie pour une association</div>
+  </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('transaction_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">transaction.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef TRANSACTION_H_INCLUDED</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define TRANSACTION_H_INCLUDED</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QDate&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;QMultiMap&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">class </span><a class="code" href="class_transaction.html">Transaction</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span><a class="code" href="class_compte.html">Compte</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">class </span><a class="code" href="class_compte_abstrait.html">CompteAbstrait</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">class </span><a class="code" href="class_rapprochement.html">Rapprochement</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">class </span><a class="code" href="class_compte_manager.html">CompteManager</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_operation.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_operation.html">Operation</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">int</span> id;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">double</span> debit,credit;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="class_compte.html">Compte</a>* compte;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="class_transaction.html">Transaction</a>* transaction;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        QString intitule;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="class_rapprochement.html">Rapprochement</a>* rapprochement=<span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_operation.html#a49982aa325e19f0956d42fde9132caa2">   49</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_transaction.html">Transaction</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="class_operation.html">Operation</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>,<span class="keywordtype">double</span> debit,<span class="keywordtype">double</span> credit,<a class="code" href="class_compte.html">Compte</a>* C,<a class="code" href="class_transaction.html">Transaction</a>* T,QString intitule=<span class="stringliteral">&quot;&quot;</span>):id(id),debit(debit),credit(credit),compte(C),transaction(T),intitule(intitule){};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="class_operation.html">Operation</a>(<span class="keyword">const</span> <a class="code" href="class_operation.html">Operation</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_operation.html#adedea3660a9894116cf4806f367f3095">Check</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_operation.html#a6e83fe124557fb349b1c48152f890a3f">   81</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_operation.html#a6e83fe124557fb349b1c48152f890a3f">getCredit</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> credit;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_operation.html#a095c3d3e9f1d05e5313e0ba70b3f3700">   88</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_operation.html#a095c3d3e9f1d05e5313e0ba70b3f3700">getDebit</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> debit;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_operation.html#ad17de963caa03d291fd5129037bfb45b">   95</a></span>&#160;        <a class="code" href="class_rapprochement.html">Rapprochement</a>* <a class="code" href="class_operation.html#ad17de963caa03d291fd5129037bfb45b">getRapprochement</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> rapprochement;}</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_operation.html#a79a70cf976404583198f458bbabff09c">  102</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_operation.html#a79a70cf976404583198f458bbabff09c">setCredit</a>(<span class="keywordtype">double</span> cr){credit=cr;}</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_operation.html#a753a3cb2cfa735af2c4ca8dd5528d719">  109</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_operation.html#a753a3cb2cfa735af2c4ca8dd5528d719">setDebit</a>(<span class="keywordtype">double</span> db){debit=db;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_operation.html#ac15a6761090903263f777f121fe748b8">  116</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_operation.html#ac15a6761090903263f777f121fe748b8">setRapprochement</a>(<a class="code" href="class_rapprochement.html">Rapprochement</a>* rp){rapprochement=rp;}</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_operation.html#ac8360e5068a3f8f08f8b2c8eb4936bbe">  123</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_operation.html#ac8360e5068a3f8f08f8b2c8eb4936bbe">getId</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> id;}</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="class_operation.html#a5e0e592308a9b111b6b9a817c468dbb7">  130</a></span>&#160;        <a class="code" href="class_compte.html">Compte</a>&amp; <a class="code" href="class_operation.html#a5e0e592308a9b111b6b9a817c468dbb7">getCompte</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> *compte;}</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="class_operation.html#ad7f9e5c0d4f44144aac5767f0feee7c4">  137</a></span>&#160;        <a class="code" href="class_transaction.html">Transaction</a>&amp; <a class="code" href="class_operation.html#ad7f9e5c0d4f44144aac5767f0feee7c4">getTransaction</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> *transaction;}</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="class_operation.html#a23fda1fdae5024d7c7bc93e4d9597a86">  144</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_operation.html#a23fda1fdae5024d7c7bc93e4d9597a86">is_frozen</a>(){<span class="keywordflow">return</span> rapprochement!=<span class="keyword">nullptr</span>;}</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_operation.html#a11a94fa4ceb552bea3f18eb2752cb973">afficher</a>();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <a class="code" href="class_operation.html#a14089623bd8a73e73375353c3d8a4b6e">~Operation</a>();</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;};</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="class_transaction.html">  164</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_transaction.html">Transaction</a>: <span class="keyword">private</span> std::vector&lt;Operation*&gt;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordtype">int</span> id;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordtype">int</span> id_op=0;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        QDate date;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        std::string reference;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        std::string memo;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keyword">using</span> operations = std::vector&lt;Operation*&gt; ;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="class_transaction.html#aa73c07f1b0ae5f7c0f94c8917cbbfadd">  209</a></span>&#160;        <a class="code" href="class_transaction.html#aa73c07f1b0ae5f7c0f94c8917cbbfadd">Transaction</a>(<span class="keywordtype">int</span> idmax, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> d,std::string ref,std::string _memo):id(idmax),date(y,m,d),reference(ref),memo(_memo){}</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <a class="code" href="class_operation.html">Operation</a>&amp; <a class="code" href="class_transaction.html#a0f25150dd2114a5b352fe1fdd34c409a">add</a>(<span class="keywordtype">double</span> debit,<span class="keywordtype">double</span> credit, <a class="code" href="class_compte_abstrait.html">CompteAbstrait</a>* compte, QString intitule=<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="class_transaction.html#ac2dbf238d579dca4b15b661792a3d2b8">  227</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_transaction.html#ac2dbf238d579dca4b15b661792a3d2b8">getId</a>(){<span class="keywordflow">return</span> id;}</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="class_transaction.html#a5fc4f290cf9c6a7f5acc488e1cfc4a62">  234</a></span>&#160;        <span class="keyword">const</span> std::string&amp; <a class="code" href="class_transaction.html#a5fc4f290cf9c6a7f5acc488e1cfc4a62">getReference</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> reference;}</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno"><a class="line" href="class_transaction.html#ab956b931484bdd9423191e58d8169d37">  241</a></span>&#160;        QDate <a class="code" href="class_transaction.html#ab956b931484bdd9423191e58d8169d37">getDate</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> date;}</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno"><a class="line" href="class_transaction.html#aa884905d8b860cee6d8d488e8918f611">  248</a></span>&#160;        std::string <a class="code" href="class_transaction.html#aa884905d8b860cee6d8d488e8918f611">getMemo</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> memo;}</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_transaction.html#affb53a75f4477b40c9be5a5ca1ad540c">Check</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_transaction.html#ab962f8acb59514c09a342ae4d4269475">afficher</a>();</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_transaction.html#aa54b15c65249c9f2caecaef8ab819f08">supprimer_op</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <a class="code" href="class_operation.html">Operation</a>* <a class="code" href="class_transaction.html#ac993a5ca1efc816db12fe67201f873d7">recherche_op</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <a class="code" href="class_transaction.html#a362b0d2524d0c799165190517192dca9">~Transaction</a>();</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno"><a class="line" href="class_transaction.html#a29b98e72a7ffd965ca1fa4ab9e24cea5">  290</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_transaction.html#a29b98e72a7ffd965ca1fa4ab9e24cea5">getSize</a>(){<span class="keywordflow">return</span> size();}</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_transaction.html#a73ce1b6479fb40928a1549ff68235cef">is_frozen</a>();</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keyword">using</span> operations::begin;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keyword">using</span> operations::end;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;};</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno"><a class="line" href="class_transaction_manager.html">  310</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_transaction_manager.html">TransactionManager</a> : <span class="keyword">private</span> QMultiMap&lt;QDate, Transaction*&gt;{</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    std::string filename;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordtype">int</span> id_max=0;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keyword">using</span> ListeTransaction = QMultiMap&lt;QDate, Transaction*&gt;;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00327"></a><span class="lineno"><a class="line" href="class_transaction_manager.html#a0a1f86ea242d831402306babbca8729f">  327</a></span>&#160;    <a class="code" href="class_transaction_manager.html#a0a1f86ea242d831402306babbca8729f">TransactionManager</a>()=<span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <a class="code" href="class_transaction.html">Transaction</a>* <a class="code" href="class_transaction_manager.html#a8fdd1c49b75396a75f422d67edfb0178">creerTransaction</a>(<span class="keywordtype">int</span> y, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> d, <span class="keyword">const</span> std::string&amp; ref, <span class="keyword">const</span> std::string&amp; memo);</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_transaction_manager.html#a9531422e4c98cb696a896a98eaf91b14">ajouter_transaction</a>(<a class="code" href="class_transaction.html">Transaction</a>* transaction);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_transaction_manager.html#a006e70ddf37ff47f33a69367c51bf692">ajouter_transaction2</a>(<a class="code" href="class_transaction.html">Transaction</a>* transaction);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_transaction_manager.html#a8c5579102c973c8c537cf281b5dca312">afficher</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_transaction_manager.html#a65cc07f1405ca829d4d51f0f6c57cea1">supprimer_transaction</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <a class="code" href="class_transaction.html">Transaction</a>* <a class="code" href="class_transaction_manager.html#afc8cc821996ebb832595c17410c2a91f">retirer_transaction</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <a class="code" href="class_transaction.html">Transaction</a>* <a class="code" href="class_transaction_manager.html#a1296344d7c2b4d038668f505cc6b1fe3">recherche_transaction</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160; </div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_transaction_manager.html#a3e14072d0a0e3a188f98bd847f3bd793">verifierReference</a>(<span class="keyword">const</span> std::string ref);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160; </div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_transaction_manager.html#a1f62794027078c462361abbc885fcee9">recalculer_solde</a>(<a class="code" href="class_compte_manager.html">CompteManager</a>&amp; cm);</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
+<div class="line"><a name="l00407"></a><span class="lineno"><a class="line" href="class_transaction_manager.html#a5d19d3128dd2323b716ce1581b3de4ec">  407</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_transaction_manager.html#a5d19d3128dd2323b716ce1581b3de4ec">getidmax</a>(){<span class="keywordflow">return</span> id_max;}</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="comment">//redéclaration en public des méthodes de Qmultimap</span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keyword">using</span> ListeTransaction::begin;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="keyword">using</span> ListeTransaction::end;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160; </div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;};</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160; </div>
+<div class="line"><a name="l00421"></a><span class="lineno"><a class="line" href="class_rapprochement.html">  421</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_rapprochement.html">Rapprochement</a> {</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordtype">int</span> id;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    QDate date;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160; </div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    std::string nom;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160; </div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    std::string desc;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <a class="code" href="class_compte.html">Compte</a>* compte;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <span class="keywordtype">double</span> solde;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    <span class="comment">//passage en privé des construceurs destructeurs et opérateur d&#39;affectation</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <a class="code" href="class_rapprochement.html">Rapprochement</a>()=<span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <a class="code" href="class_rapprochement.html">Rapprochement</a>(<span class="keyword">const</span> <a class="code" href="class_rapprochement.html">Rapprochement</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <a class="code" href="class_rapprochement.html">Rapprochement</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_rapprochement.html">Rapprochement</a>&amp; tm) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00457"></a><span class="lineno"><a class="line" href="class_rapprochement.html#a6dab578d5f48b4eb91d1a4b315c19077">  457</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_rapprochement.html#a6dab578d5f48b4eb91d1a4b315c19077">id_max</a>;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160; </div>
+<div class="line"><a name="l00468"></a><span class="lineno"><a class="line" href="class_rapprochement.html#ae3856477a0399516626b32f90510b6c9">  468</a></span>&#160;    <a class="code" href="class_rapprochement.html#ae3856477a0399516626b32f90510b6c9">Rapprochement</a>(QDate date,std::string nom, std::string desc, <a class="code" href="class_compte.html">Compte</a>* compte, <span class="keywordtype">double</span> solde):id(<a class="code" href="class_rapprochement.html#a6dab578d5f48b4eb91d1a4b315c19077">id_max</a>++),date(date),nom(nom),desc(desc),compte(compte),solde(solde){}</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160; </div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_rapprochement.html#af5af94d5811aaf307e7f2ae8cd6785bb">Afficher</a>();</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160; </div>
+<div class="line"><a name="l00480"></a><span class="lineno"><a class="line" href="class_rapprochement.html#a5a4217393d949cb5f42c41129a847f40">  480</a></span>&#160;    QDate <a class="code" href="class_rapprochement.html#a5a4217393d949cb5f42c41129a847f40">getDate</a>(){<span class="keywordflow">return</span> date;}</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160; </div>
+<div class="line"><a name="l00486"></a><span class="lineno"><a class="line" href="class_rapprochement.html#a624b273b912940f3224c55de24b187f5">  486</a></span>&#160;    std::string <a class="code" href="class_rapprochement.html#a624b273b912940f3224c55de24b187f5">getNom</a>(){<span class="keywordflow">return</span> nom;}</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160; </div>
+<div class="line"><a name="l00492"></a><span class="lineno"><a class="line" href="class_rapprochement.html#ad8ed8aacd0908b189b0f7885b9728d1b">  492</a></span>&#160;    std::string <a class="code" href="class_rapprochement.html#ad8ed8aacd0908b189b0f7885b9728d1b">getDesc</a>(){<span class="keywordflow">return</span> desc;}</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160; </div>
+<div class="line"><a name="l00498"></a><span class="lineno"><a class="line" href="class_rapprochement.html#a986e584e6e6094fd9a14d5b2a7622782">  498</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_rapprochement.html#a986e584e6e6094fd9a14d5b2a7622782">setSolde</a>(<span class="keywordtype">double</span> s){solde=s;}</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160; </div>
+<div class="line"><a name="l00504"></a><span class="lineno"><a class="line" href="class_rapprochement.html#a7614818576398ac4937f4f9e9bd99196">  504</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_rapprochement.html#a7614818576398ac4937f4f9e9bd99196">getId</a>(){<span class="keywordflow">return</span> id;}</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160; </div>
+<div class="line"><a name="l00510"></a><span class="lineno"><a class="line" href="class_rapprochement.html#a744c0c6e64bcfc1140cf42451f8ebd93">  510</a></span>&#160;    <a class="code" href="class_compte.html">Compte</a>* <a class="code" href="class_rapprochement.html#a744c0c6e64bcfc1140cf42451f8ebd93">getCompte</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span>  compte;}</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160; </div>
+<div class="line"><a name="l00516"></a><span class="lineno"><a class="line" href="class_rapprochement.html#a1803caeb27039a23b029c1108808418c">  516</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_rapprochement.html#a1803caeb27039a23b029c1108808418c">getSolde</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> solde;}</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160; </div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;};</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160; </div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160; </div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160; </div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160; </div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160; </div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160; </div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160; </div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_operation_html_a14089623bd8a73e73375353c3d8a4b6e"><div class="ttname"><a href="class_operation.html#a14089623bd8a73e73375353c3d8a4b6e">Operation::~Operation</a></div><div class="ttdeci">~Operation()</div><div class="ttdoc">Destructeur Destructeur de la class Opération.</div><div class="ttdef"><b>Definition:</b> transaction.cpp:180</div></div>
+<div class="ttc" id="aclass_transaction_html_a0f25150dd2114a5b352fe1fdd34c409a"><div class="ttname"><a href="class_transaction.html#a0f25150dd2114a5b352fe1fdd34c409a">Transaction::add</a></div><div class="ttdeci">Operation &amp; add(double debit, double credit, CompteAbstrait *compte, QString intitule=&quot;&quot;)</div><div class="ttdoc">Ajouter opération Permet d'ajouter une opérations dans une transaction.</div><div class="ttdef"><b>Definition:</b> transaction.cpp:63</div></div>
+<div class="ttc" id="aclass_operation_html_a095c3d3e9f1d05e5313e0ba70b3f3700"><div class="ttname"><a href="class_operation.html#a095c3d3e9f1d05e5313e0ba70b3f3700">Operation::getDebit</a></div><div class="ttdeci">double getDebit() const</div><div class="ttdoc">Getter Debit Méthode qui retourne le debit de l'opération.</div><div class="ttdef"><b>Definition:</b> transaction.h:88</div></div>
+<div class="ttc" id="aclass_rapprochement_html_ae3856477a0399516626b32f90510b6c9"><div class="ttname"><a href="class_rapprochement.html#ae3856477a0399516626b32f90510b6c9">Rapprochement::Rapprochement</a></div><div class="ttdeci">Rapprochement(QDate date, std::string nom, std::string desc, Compte *compte, double solde)</div><div class="ttdoc">Constructor de la class Rapprochement Méthode qui permet de créer un rapprochement.</div><div class="ttdef"><b>Definition:</b> transaction.h:468</div></div>
+<div class="ttc" id="aclass_rapprochement_html_ad8ed8aacd0908b189b0f7885b9728d1b"><div class="ttname"><a href="class_rapprochement.html#ad8ed8aacd0908b189b0f7885b9728d1b">Rapprochement::getDesc</a></div><div class="ttdeci">std::string getDesc()</div><div class="ttdoc">Getter Description Méthode qui permet de retourner la description du rapprochement.</div><div class="ttdef"><b>Definition:</b> transaction.h:492</div></div>
+<div class="ttc" id="aclass_transaction_html_aa54b15c65249c9f2caecaef8ab819f08"><div class="ttname"><a href="class_transaction.html#aa54b15c65249c9f2caecaef8ab819f08">Transaction::supprimer_op</a></div><div class="ttdeci">bool supprimer_op(int id)</div><div class="ttdoc">Supprimer une opération Méthode qui permet de supprimer une opération.</div><div class="ttdef"><b>Definition:</b> transaction.cpp:163</div></div>
+<div class="ttc" id="aclass_rapprochement_html_a6dab578d5f48b4eb91d1a4b315c19077"><div class="ttname"><a href="class_rapprochement.html#a6dab578d5f48b4eb91d1a4b315c19077">Rapprochement::id_max</a></div><div class="ttdeci">static int id_max</div><div class="ttdef"><b>Definition:</b> transaction.h:457</div></div>
+<div class="ttc" id="aclass_rapprochement_html_a744c0c6e64bcfc1140cf42451f8ebd93"><div class="ttname"><a href="class_rapprochement.html#a744c0c6e64bcfc1140cf42451f8ebd93">Rapprochement::getCompte</a></div><div class="ttdeci">Compte * getCompte() const</div><div class="ttdoc">Getter compte Méthode qui permet de retourner la compte associé au rapprochement.</div><div class="ttdef"><b>Definition:</b> transaction.h:510</div></div>
+<div class="ttc" id="aclass_transaction_manager_html_a5d19d3128dd2323b716ce1581b3de4ec"><div class="ttname"><a href="class_transaction_manager.html#a5d19d3128dd2323b716ce1581b3de4ec">TransactionManager::getidmax</a></div><div class="ttdeci">int getidmax()</div><div class="ttdoc">Getter d'idMax du TransfertManager Méthode qui retourne l'idMax des transaction (La taille des transa...</div><div class="ttdef"><b>Definition:</b> transaction.h:407</div></div>
+<div class="ttc" id="aclass_compte_abstrait_html"><div class="ttname"><a href="class_compte_abstrait.html">CompteAbstrait</a></div><div class="ttdoc">Classe abstraite permettant d'implémenter les comptes réels et virtuels.</div><div class="ttdef"><b>Definition:</b> compte.h:36</div></div>
+<div class="ttc" id="aclass_transaction_manager_html_afc8cc821996ebb832595c17410c2a91f"><div class="ttname"><a href="class_transaction_manager.html#afc8cc821996ebb832595c17410c2a91f">TransactionManager::retirer_transaction</a></div><div class="ttdeci">Transaction * retirer_transaction(int id)</div><div class="ttdoc">Retirer une transaction Méthode qui enlève une transaction du transaction manager et annule ses opéra...</div><div class="ttdef"><b>Definition:</b> transaction.cpp:217</div></div>
+<div class="ttc" id="aclass_transaction_html"><div class="ttname"><a href="class_transaction.html">Transaction</a></div><div class="ttdoc">Conteneur d'opérations et d'informations.</div><div class="ttdef"><b>Definition:</b> transaction.h:165</div></div>
+<div class="ttc" id="aclass_transaction_html_ac2dbf238d579dca4b15b661792a3d2b8"><div class="ttname"><a href="class_transaction.html#ac2dbf238d579dca4b15b661792a3d2b8">Transaction::getId</a></div><div class="ttdeci">int getId()</div><div class="ttdoc">Getter id Méthode qui permet de retourner l'id d'une transaction.</div><div class="ttdef"><b>Definition:</b> transaction.h:227</div></div>
+<div class="ttc" id="aclass_rapprochement_html_a7614818576398ac4937f4f9e9bd99196"><div class="ttname"><a href="class_rapprochement.html#a7614818576398ac4937f4f9e9bd99196">Rapprochement::getId</a></div><div class="ttdeci">int getId()</div><div class="ttdoc">Getter id Méthode qui permet de retourner l'a description'id du rapprochement.</div><div class="ttdef"><b>Definition:</b> transaction.h:504</div></div>
+<div class="ttc" id="aclass_operation_html_adedea3660a9894116cf4806f367f3095"><div class="ttname"><a href="class_operation.html#adedea3660a9894116cf4806f367f3095">Operation::Check</a></div><div class="ttdeci">bool Check()</div><div class="ttdoc">Vérifier la validité Méthode qui permet de vérifier la validité d'une opération en respectant les rég...</div><div class="ttdef"><b>Definition:</b> transaction.cpp:23</div></div>
+<div class="ttc" id="aclass_transaction_manager_html"><div class="ttname"><a href="class_transaction_manager.html">TransactionManager</a></div><div class="ttdoc">Gestionnaire de transactions.</div><div class="ttdef"><b>Definition:</b> transaction.h:310</div></div>
+<div class="ttc" id="aclass_operation_html_ad7f9e5c0d4f44144aac5767f0feee7c4"><div class="ttname"><a href="class_operation.html#ad7f9e5c0d4f44144aac5767f0feee7c4">Operation::getTransaction</a></div><div class="ttdeci">Transaction &amp; getTransaction() const</div><div class="ttdoc">Getter transaction Méthode qui permet de retourner le Transaction auquel une opération est associée.</div><div class="ttdef"><b>Definition:</b> transaction.h:137</div></div>
+<div class="ttc" id="aclass_transaction_html_ab956b931484bdd9423191e58d8169d37"><div class="ttname"><a href="class_transaction.html#ab956b931484bdd9423191e58d8169d37">Transaction::getDate</a></div><div class="ttdeci">QDate getDate() const</div><div class="ttdoc">Getter Date Méthode qui permet de retourner la date d'une transaction.</div><div class="ttdef"><b>Definition:</b> transaction.h:241</div></div>
+<div class="ttc" id="aclass_rapprochement_html_a1803caeb27039a23b029c1108808418c"><div class="ttname"><a href="class_rapprochement.html#a1803caeb27039a23b029c1108808418c">Rapprochement::getSolde</a></div><div class="ttdeci">double getSolde() const</div><div class="ttdoc">Getter solde Méthode qui permet de retourner le solde associé au rapprochement.</div><div class="ttdef"><b>Definition:</b> transaction.h:516</div></div>
+<div class="ttc" id="aclass_transaction_manager_html_a8c5579102c973c8c537cf281b5dca312"><div class="ttname"><a href="class_transaction_manager.html#a8c5579102c973c8c537cf281b5dca312">TransactionManager::afficher</a></div><div class="ttdeci">void afficher() const</div><div class="ttdoc">Afficher tous les transactions Méthode qui permet d'afficher tous les transactions.</div><div class="ttdef"><b>Definition:</b> transaction.cpp:153</div></div>
+<div class="ttc" id="aclass_transaction_html_a362b0d2524d0c799165190517192dca9"><div class="ttname"><a href="class_transaction.html#a362b0d2524d0c799165190517192dca9">Transaction::~Transaction</a></div><div class="ttdeci">~Transaction()</div><div class="ttdoc">Destructeur Destructeur de la class Transaction.</div><div class="ttdef"><b>Definition:</b> transaction.cpp:207</div></div>
+<div class="ttc" id="aclass_operation_html_a79a70cf976404583198f458bbabff09c"><div class="ttname"><a href="class_operation.html#a79a70cf976404583198f458bbabff09c">Operation::setCredit</a></div><div class="ttdeci">void setCredit(double cr)</div><div class="ttdoc">Setter Credit Méthode qui permet de saisir le credit d'une opération.</div><div class="ttdef"><b>Definition:</b> transaction.h:102</div></div>
+<div class="ttc" id="aclass_operation_html_ac8360e5068a3f8f08f8b2c8eb4936bbe"><div class="ttname"><a href="class_operation.html#ac8360e5068a3f8f08f8b2c8eb4936bbe">Operation::getId</a></div><div class="ttdeci">int getId() const</div><div class="ttdoc">Getter id Méthode qui permet de retourner l'id d'une opération.</div><div class="ttdef"><b>Definition:</b> transaction.h:123</div></div>
+<div class="ttc" id="aclass_rapprochement_html_a986e584e6e6094fd9a14d5b2a7622782"><div class="ttname"><a href="class_rapprochement.html#a986e584e6e6094fd9a14d5b2a7622782">Rapprochement::setSolde</a></div><div class="ttdeci">void setSolde(double s)</div><div class="ttdoc">Setter Solde Méthode qui permet de saisir le solde du rapprochement.</div><div class="ttdef"><b>Definition:</b> transaction.h:498</div></div>
+<div class="ttc" id="aclass_transaction_html_a73ce1b6479fb40928a1549ff68235cef"><div class="ttname"><a href="class_transaction.html#a73ce1b6479fb40928a1549ff68235cef">Transaction::is_frozen</a></div><div class="ttdeci">bool is_frozen()</div><div class="ttdoc">Retourne si la transaction est gelée Méthode qui permet de savoir si une transaction en gelée.</div><div class="ttdef"><b>Definition:</b> transaction.cpp:274</div></div>
+<div class="ttc" id="aclass_rapprochement_html_af5af94d5811aaf307e7f2ae8cd6785bb"><div class="ttname"><a href="class_rapprochement.html#af5af94d5811aaf307e7f2ae8cd6785bb">Rapprochement::Afficher</a></div><div class="ttdeci">void Afficher()</div><div class="ttdoc">Afficher une Rapprochement Méthode qui permet d'afficher un raprochement.</div><div class="ttdef"><b>Definition:</b> transaction.cpp:262</div></div>
+<div class="ttc" id="aclass_operation_html_a6e83fe124557fb349b1c48152f890a3f"><div class="ttname"><a href="class_operation.html#a6e83fe124557fb349b1c48152f890a3f">Operation::getCredit</a></div><div class="ttdeci">double getCredit() const</div><div class="ttdoc">Getter crédit Méthode qui retourne le credit de l'opération.</div><div class="ttdef"><b>Definition:</b> transaction.h:81</div></div>
+<div class="ttc" id="aclass_transaction_manager_html_a1f62794027078c462361abbc885fcee9"><div class="ttname"><a href="class_transaction_manager.html#a1f62794027078c462361abbc885fcee9">TransactionManager::recalculer_solde</a></div><div class="ttdeci">void recalculer_solde(CompteManager &amp;cm)</div><div class="ttdoc">Recalculer le solde des Transactions.</div><div class="ttdef"><b>Definition:</b> transaction.cpp:297</div></div>
+<div class="ttc" id="aclass_compte_html"><div class="ttname"><a href="class_compte.html">Compte</a></div><div class="ttdoc">compte réel</div><div class="ttdef"><b>Definition:</b> compte.h:139</div></div>
+<div class="ttc" id="aclass_operation_html_a23fda1fdae5024d7c7bc93e4d9597a86"><div class="ttname"><a href="class_operation.html#a23fda1fdae5024d7c7bc93e4d9597a86">Operation::is_frozen</a></div><div class="ttdeci">bool is_frozen()</div><div class="ttdoc">is_frozen Méthode qui permet de retourner True si une opération est gelée et False sinon</div><div class="ttdef"><b>Definition:</b> transaction.h:144</div></div>
+<div class="ttc" id="aclass_transaction_html_aa884905d8b860cee6d8d488e8918f611"><div class="ttname"><a href="class_transaction.html#aa884905d8b860cee6d8d488e8918f611">Transaction::getMemo</a></div><div class="ttdeci">std::string getMemo() const</div><div class="ttdoc">Getter memo Méthode qui permet de retourner le memo d'une transaction.</div><div class="ttdef"><b>Definition:</b> transaction.h:248</div></div>
+<div class="ttc" id="aclass_transaction_manager_html_a65cc07f1405ca829d4d51f0f6c57cea1"><div class="ttname"><a href="class_transaction_manager.html#a65cc07f1405ca829d4d51f0f6c57cea1">TransactionManager::supprimer_transaction</a></div><div class="ttdeci">bool supprimer_transaction(int id)</div><div class="ttdoc">Supprimer une transaction Méthode qui permet de supprimer une transaction.</div><div class="ttdef"><b>Definition:</b> transaction.cpp:187</div></div>
+<div class="ttc" id="aclass_compte_manager_html"><div class="ttname"><a href="class_compte_manager.html">CompteManager</a></div><div class="ttdoc">Classe qui s'occupe de la gestion des comptes.</div><div class="ttdef"><b>Definition:</b> compte.h:618</div></div>
+<div class="ttc" id="aclass_transaction_manager_html_a1296344d7c2b4d038668f505cc6b1fe3"><div class="ttname"><a href="class_transaction_manager.html#a1296344d7c2b4d038668f505cc6b1fe3">TransactionManager::recherche_transaction</a></div><div class="ttdeci">Transaction * recherche_transaction(int id)</div><div class="ttdoc">Rechercher une transaction Méthode qui cherche une transaction à partir de l'id du transaction.</div><div class="ttdef"><b>Definition:</b> transaction.cpp:234</div></div>
+<div class="ttc" id="aclass_transaction_html_ab962f8acb59514c09a342ae4d4269475"><div class="ttname"><a href="class_transaction.html#ab962f8acb59514c09a342ae4d4269475">Transaction::afficher</a></div><div class="ttdeci">void afficher()</div><div class="ttdoc">Afficher une transaction Méthode qui permet d'afficher une transaction.</div><div class="ttdef"><b>Definition:</b> transaction.cpp:142</div></div>
+<div class="ttc" id="aclass_transaction_manager_html_a3e14072d0a0e3a188f98bd847f3bd793"><div class="ttname"><a href="class_transaction_manager.html#a3e14072d0a0e3a188f98bd847f3bd793">TransactionManager::verifierReference</a></div><div class="ttdeci">bool verifierReference(const std::string ref)</div><div class="ttdoc">Verification de reference Méthode qui cherche dans la liste des transactions si une réference est val...</div><div class="ttdef"><b>Definition:</b> transaction.cpp:284</div></div>
+<div class="ttc" id="aclass_transaction_manager_html_a0a1f86ea242d831402306babbca8729f"><div class="ttname"><a href="class_transaction_manager.html#a0a1f86ea242d831402306babbca8729f">TransactionManager::TransactionManager</a></div><div class="ttdeci">TransactionManager()=default</div><div class="ttdoc">Constructeur Constructeur de la classe TransactionManager.</div></div>
+<div class="ttc" id="aclass_transaction_html_ac993a5ca1efc816db12fe67201f873d7"><div class="ttname"><a href="class_transaction.html#ac993a5ca1efc816db12fe67201f873d7">Transaction::recherche_op</a></div><div class="ttdeci">Operation * recherche_op(int id)</div><div class="ttdoc">Chercher une opération Méthode qui permet de chercher une opération.</div><div class="ttdef"><b>Definition:</b> transaction.cpp:246</div></div>
+<div class="ttc" id="aclass_operation_html"><div class="ttname"><a href="class_operation.html">Operation</a></div><div class="ttdoc">Conteneur d'informations sur une opération concernant un &quot;Compte réel&quot;.</div><div class="ttdef"><b>Definition:</b> transaction.h:33</div></div>
+<div class="ttc" id="aclass_transaction_html_a5fc4f290cf9c6a7f5acc488e1cfc4a62"><div class="ttname"><a href="class_transaction.html#a5fc4f290cf9c6a7f5acc488e1cfc4a62">Transaction::getReference</a></div><div class="ttdeci">const std::string &amp; getReference() const</div><div class="ttdoc">Getter Reference Méthode qui permet de retourner la reference d'une transaction.</div><div class="ttdef"><b>Definition:</b> transaction.h:234</div></div>
+<div class="ttc" id="aclass_transaction_html_affb53a75f4477b40c9be5a5ca1ad540c"><div class="ttname"><a href="class_transaction.html#affb53a75f4477b40c9be5a5ca1ad540c">Transaction::Check</a></div><div class="ttdeci">bool Check() const</div><div class="ttdoc">Vérifier la validité Méthode qui permet de vérifier la validité d'une transaction.</div><div class="ttdef"><b>Definition:</b> transaction.cpp:87</div></div>
+<div class="ttc" id="aclass_rapprochement_html"><div class="ttname"><a href="class_rapprochement.html">Rapprochement</a></div><div class="ttdoc">Le rapprochement d'un Compte consiste à figer des transactions passées.</div><div class="ttdef"><b>Definition:</b> transaction.h:421</div></div>
+<div class="ttc" id="aclass_transaction_html_aa73c07f1b0ae5f7c0f94c8917cbbfadd"><div class="ttname"><a href="class_transaction.html#aa73c07f1b0ae5f7c0f94c8917cbbfadd">Transaction::Transaction</a></div><div class="ttdeci">Transaction(int idmax, int y, int m, int d, std::string ref, std::string _memo)</div><div class="ttdoc">Constructeur Constructeur de la classe Transaction.</div><div class="ttdef"><b>Definition:</b> transaction.h:209</div></div>
+<div class="ttc" id="aclass_transaction_html_a29b98e72a7ffd965ca1fa4ab9e24cea5"><div class="ttname"><a href="class_transaction.html#a29b98e72a7ffd965ca1fa4ab9e24cea5">Transaction::getSize</a></div><div class="ttdeci">int getSize()</div><div class="ttdoc">Retourne le nombre des opération Méthode qui permet de retourner la taille du transaction.</div><div class="ttdef"><b>Definition:</b> transaction.h:290</div></div>
+<div class="ttc" id="aclass_operation_html_a753a3cb2cfa735af2c4ca8dd5528d719"><div class="ttname"><a href="class_operation.html#a753a3cb2cfa735af2c4ca8dd5528d719">Operation::setDebit</a></div><div class="ttdeci">void setDebit(double db)</div><div class="ttdoc">Setter Debit Méthode qui permet de saisir le debit d'une opération.</div><div class="ttdef"><b>Definition:</b> transaction.h:109</div></div>
+<div class="ttc" id="aclass_operation_html_a5e0e592308a9b111b6b9a817c468dbb7"><div class="ttname"><a href="class_operation.html#a5e0e592308a9b111b6b9a817c468dbb7">Operation::getCompte</a></div><div class="ttdeci">Compte &amp; getCompte() const</div><div class="ttdoc">Getter compte Méthode qui permet de retourner le compte auquel une opération est associée.</div><div class="ttdef"><b>Definition:</b> transaction.h:130</div></div>
+<div class="ttc" id="aclass_transaction_manager_html_a8fdd1c49b75396a75f422d67edfb0178"><div class="ttname"><a href="class_transaction_manager.html#a8fdd1c49b75396a75f422d67edfb0178">TransactionManager::creerTransaction</a></div><div class="ttdeci">Transaction * creerTransaction(int y, int m, int d, const std::string &amp;ref, const std::string &amp;memo)</div><div class="ttdoc">Creer une Transaction Méthode qui permet de creer une Transactio.</div><div class="ttdef"><b>Definition:</b> transaction.cpp:54</div></div>
+<div class="ttc" id="aclass_operation_html_ad17de963caa03d291fd5129037bfb45b"><div class="ttname"><a href="class_operation.html#ad17de963caa03d291fd5129037bfb45b">Operation::getRapprochement</a></div><div class="ttdeci">Rapprochement * getRapprochement() const</div><div class="ttdoc">Getter Raprochement Méthode qui retourne le raprochement de l'opération.</div><div class="ttdef"><b>Definition:</b> transaction.h:95</div></div>
+<div class="ttc" id="aclass_transaction_manager_html_a006e70ddf37ff47f33a69367c51bf692"><div class="ttname"><a href="class_transaction_manager.html#a006e70ddf37ff47f33a69367c51bf692">TransactionManager::ajouter_transaction2</a></div><div class="ttdeci">bool ajouter_transaction2(Transaction *transaction)</div><div class="ttdoc">Ajoute une transaction au Transfert Manager Méthode qui permet d'ajouter une transaction au Transfert...</div><div class="ttdef"><b>Definition:</b> transaction.cpp:125</div></div>
+<div class="ttc" id="aclass_operation_html_a11a94fa4ceb552bea3f18eb2752cb973"><div class="ttname"><a href="class_operation.html#a11a94fa4ceb552bea3f18eb2752cb973">Operation::afficher</a></div><div class="ttdeci">void afficher()</div><div class="ttdoc">Afficher une opération Méthode qui permet d'afficher une opération.</div><div class="ttdef"><b>Definition:</b> transaction.cpp:135</div></div>
+<div class="ttc" id="aclass_rapprochement_html_a5a4217393d949cb5f42c41129a847f40"><div class="ttname"><a href="class_rapprochement.html#a5a4217393d949cb5f42c41129a847f40">Rapprochement::getDate</a></div><div class="ttdeci">QDate getDate()</div><div class="ttdoc">Getter date Méthode qui permet de retourner la date du rapprochement.</div><div class="ttdef"><b>Definition:</b> transaction.h:480</div></div>
+<div class="ttc" id="aclass_rapprochement_html_a624b273b912940f3224c55de24b187f5"><div class="ttname"><a href="class_rapprochement.html#a624b273b912940f3224c55de24b187f5">Rapprochement::getNom</a></div><div class="ttdeci">std::string getNom()</div><div class="ttdoc">Getter Nom Méthode qui permet de retourner le nom du rapprochement.</div><div class="ttdef"><b>Definition:</b> transaction.h:486</div></div>
+<div class="ttc" id="aclass_operation_html_ac15a6761090903263f777f121fe748b8"><div class="ttname"><a href="class_operation.html#ac15a6761090903263f777f121fe748b8">Operation::setRapprochement</a></div><div class="ttdeci">void setRapprochement(Rapprochement *rp)</div><div class="ttdoc">Setter Rapprochement Méthode qui permet de saisir le Rapprochement d'une opération.</div><div class="ttdef"><b>Definition:</b> transaction.h:116</div></div>
+<div class="ttc" id="aclass_transaction_manager_html_a9531422e4c98cb696a896a98eaf91b14"><div class="ttname"><a href="class_transaction_manager.html#a9531422e4c98cb696a896a98eaf91b14">TransactionManager::ajouter_transaction</a></div><div class="ttdeci">bool ajouter_transaction(Transaction *transaction)</div><div class="ttdoc">Ajoute une transaction au Transfert Manager Méthode qui permet d'ajouter une transaction au Transfert...</div><div class="ttdef"><b>Definition:</b> transaction.cpp:106</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_36c96ca2805967986e213251ddd17d13.html">Ruochen</a></li><li class="navelem"><b>transaction.h</b></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

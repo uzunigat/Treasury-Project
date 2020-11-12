@@ -1,0 +1,10 @@
+debug/compte.o
+debug/addcomptedialog.o
+debug/addtransfertdialog.o
+debug/choisirpassifdialog.o
+debug/main.o
+debug/mainwindow.o
+debug/moc_addcomptedialog.o
+debug/moc_addtransfertdialog.o
+debug/moc_choisirpassifdialog.o
+debug/moc_mainwindow.o

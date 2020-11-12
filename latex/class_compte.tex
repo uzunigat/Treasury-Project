@@ -1,0 +1,468 @@
+\hypertarget{class_compte}{}\doxysection{Référence de la classe Compte}
+\label{class_compte}\index{Compte@{Compte}}
+
+
+compte réel  
+
+
+
+
+{\ttfamily \#include $<$compte.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Compte\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.917808cm]{class_compte}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_compte_a7fa4650bd64f6a8ada375f48c133a2c9}{rapprocher}} (int y, int m, int d, std\+::string nom, std\+::string desc)
+\begin{DoxyCompactList}\small\item\em Permet de rapprocher un compte. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_operation}{Operation}} \& \mbox{\hyperlink{class_compte_a6f7999688bd05d6e83d06df1ef9df750}{add\+\_\+operation}} (\mbox{\hyperlink{class_operation}{Operation}} $\ast$operation)
+\begin{DoxyCompactList}\small\item\em Ajouter une opération. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_compte}{Compte}} $\ast$ \mbox{\hyperlink{class_compte_a759775c18235933a56721e5cdfd74744}{Clone}} () const =0
+\begin{DoxyCompactList}\small\item\em Cloner un compte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_compte_a3f9fb8a0b3ed392a6f226bcff74899bf}{Afficher}} (int n=0) const
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher un compte dans la console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_compte_af74ed3b9b4cdef6101491cd23d324b7a}{Afficher\+\_\+operation}} () const
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher les opérations d\textquotesingle{}un compte dans la console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_compte_a125516741de6af2bb841d636dcf216c7}{afficher\+\_\+rapprochement}} (int \mbox{\hyperlink{class_compte_abstrait_ab154e19e9fe360ef95c3910ce5317ff2}{id}})
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher un rapprochement d\textquotesingle{}un compte dans la console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_compte_a3b5a2c02bf435afcb0d778f46ed6c3fb}{afficher\+\_\+rapprochement}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher tout les rapprochements d\textquotesingle{}un compte dans la console. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_rapprochement}{Rapprochement}} $\ast$ \mbox{\hyperlink{class_compte_a957c8791add5788ddd3b6c0d34ed51af}{Last\+\_\+\+Rapprochement}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher le dernier rpprochement d\textquotesingle{}un compte dans la console. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_compte_a54105331d3b546315fdab2641a3b9232}{crediter}} (double credit)
+\begin{DoxyCompactList}\small\item\em Permet de créditer un compte. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_compte_a733c756bb92930047279c74337af168e}{debiter}} (double debit)
+\begin{DoxyCompactList}\small\item\em Permet de débiter un compte. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_compte_af68bf34b9ffc7f71cbd790e38a9cffce}{transferer}} (double transfert)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}éffectuer de faire une opération directement sur le solde d\textquotesingle{}un compte. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_compte_a091d77d9e39c25fa0ee7f6ede7eef768}{get\+Type}} () const =0
+\begin{DoxyCompactList}\small\item\em Méthode virtuelle afin de determiner le type des objet hérités. \end{DoxyCompactList}\item 
+Q\+Multi\+Map$<$ Q\+Date, \mbox{\hyperlink{class_rapprochement}{Rapprochement}} $\ast$ $>$ \mbox{\hyperlink{class_compte_adb24029f5caadcc63803e468a724d45f}{get\+List\+Rapprochement}} () const
+\begin{DoxyCompactList}\small\item\em Permet de retourner la liste de rapprochement d\textquotesingle{}un compte. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_compte_a543600a0bfd9b2436f1ec1df794623b0}{get\+Solde}} () const
+\begin{DoxyCompactList}\small\item\em Permet de retourner le solde d\textquotesingle{}un compte. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_compte_aee543c7a6eb8cdffdee4f4d1ed6f8db5}{supprimer\+\_\+op}} (int \mbox{\hyperlink{class_compte_abstrait_ab154e19e9fe360ef95c3910ce5317ff2}{id}})
+\begin{DoxyCompactList}\small\item\em Permet de supprimer une opération. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_compte_acc5a78eb825d34996a48fdeb3bbe1f95}{Compte}} (const std\+::string \&nom, const int \&num)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_compte_a632425a7df6217e8806dcf34967d7c3b}{is\+\_\+deletable}} ()
+\begin{DoxyCompactList}\small\item\em Permet de savoir si le compte est supprimable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_compte_ad47271fe2835e057f528f74427bb8dea}{solde\+\_\+reset}} ()
+\begin{DoxyCompactList}\small\item\em Remete à zero le solde d\textquotesingle{}un compte et supprime ses opérations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_compte_a15a9dd06b34b949817f2ca345ed3ebd5}{$\sim$\+Compte}} ()
+\begin{DoxyCompactList}\small\item\em Destucteur Par défaut de la classe \mbox{\hyperlink{class_compte}{Compte}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Types protégés}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_compte_a6721a7aac44643a8b706196c1b7c5d96}{Operations}} = Q\+Multi\+Map$<$ Q\+Date, \mbox{\hyperlink{class_operation}{Operation}} $\ast$ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_compte_a91d76a02b311e171cf117ea39efbf9a1}{solde}} = 0
+\begin{DoxyCompactList}\small\item\em solde défini et initialisé à 0 \end{DoxyCompactList}\item 
+Q\+Multi\+Map$<$ Q\+Date, \mbox{\hyperlink{class_rapprochement}{Rapprochement}} $\ast$ $>$ \mbox{\hyperlink{class_compte_a6fb0a5fe71dd67700fb9311587ed07a4}{List\+Rapprochement}}
+\begin{DoxyCompactList}\small\item\em dictionnaire des rapprochement pouvant contenir plusieurs fois la même clé \end{DoxyCompactList}\item 
+friend \mbox{\hyperlink{class_compte_a84122605191c03e4e3b25dc07b45c87f}{Compte\+Manager}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+compte réel 
+
+compte pouvant participer à des transactions et ayant un solde propre 
+
+\doxysubsection{Documentation des définitions de type membres}
+\mbox{\Hypertarget{class_compte_a6721a7aac44643a8b706196c1b7c5d96}\label{class_compte_a6721a7aac44643a8b706196c1b7c5d96}} 
+\index{Compte@{Compte}!Operations@{Operations}}
+\index{Operations@{Operations}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{Operations}{Operations}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{class_compte_a6721a7aac44643a8b706196c1b7c5d96}{Compte\+::\+Operations}} =  Q\+Multi\+Map$<$Q\+Date, \mbox{\hyperlink{class_operation}{Operation}}$\ast$$>$\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_compte_acc5a78eb825d34996a48fdeb3bbe1f95}\label{class_compte_acc5a78eb825d34996a48fdeb3bbe1f95}} 
+\index{Compte@{Compte}!Compte@{Compte}}
+\index{Compte@{Compte}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{Compte()}{Compte()}}
+{\footnotesize\ttfamily Compte\+::\+Compte (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nom,  }\item[{const int \&}]{num }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+Constructeur de la classe \mbox{\hyperlink{class_compte}{Compte}} 
+\begin{DoxyParams}{Paramètres}
+{\em nom} & \+: nom du compte \\
+\hline
+{\em num} & \+: id du compte \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_compte_a15a9dd06b34b949817f2ca345ed3ebd5}\label{class_compte_a15a9dd06b34b949817f2ca345ed3ebd5}} 
+\index{Compte@{Compte}!````~Compte@{$\sim$Compte}}
+\index{````~Compte@{$\sim$Compte}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{$\sim$Compte()}{~Compte()}}
+{\footnotesize\ttfamily Compte\+::$\sim$\+Compte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destucteur Par défaut de la classe \mbox{\hyperlink{class_compte}{Compte}}. 
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_compte_a6f7999688bd05d6e83d06df1ef9df750}\label{class_compte_a6f7999688bd05d6e83d06df1ef9df750}} 
+\index{Compte@{Compte}!add\_operation@{add\_operation}}
+\index{add\_operation@{add\_operation}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{add\_operation()}{add\_operation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_operation}{Operation}} \& Compte\+::add\+\_\+operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_operation}{Operation}} $\ast$}]{operation }\end{DoxyParamCaption})}
+
+
+
+Ajouter une opération. 
+
+Permet d\textquotesingle{}ajouter une opération au map d\textquotesingle{}opération d\textquotesingle{}un compte 
+\begin{DoxyParams}{Paramètres}
+{\em operation} & pointeur vers l\textquotesingle{}opération à ajouter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_compte_a3f9fb8a0b3ed392a6f226bcff74899bf}\label{class_compte_a3f9fb8a0b3ed392a6f226bcff74899bf}} 
+\index{Compte@{Compte}!Afficher@{Afficher}}
+\index{Afficher@{Afficher}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{Afficher()}{Afficher()}}
+{\footnotesize\ttfamily void Compte\+::\+Afficher (\begin{DoxyParamCaption}\item[{int}]{n = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Permet d\textquotesingle{}afficher un compte dans la console. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em n} & \+: niveau dans l\textquotesingle{}aborescence du compte \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_aba9838693aa02cc50e99567412ccf8ef}{Compte\+Abstrait}}.
+
+\mbox{\Hypertarget{class_compte_af74ed3b9b4cdef6101491cd23d324b7a}\label{class_compte_af74ed3b9b4cdef6101491cd23d324b7a}} 
+\index{Compte@{Compte}!Afficher\_operation@{Afficher\_operation}}
+\index{Afficher\_operation@{Afficher\_operation}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{Afficher\_operation()}{Afficher\_operation()}}
+{\footnotesize\ttfamily void Compte\+::\+Afficher\+\_\+operation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Permet d\textquotesingle{}afficher les opérations d\textquotesingle{}un compte dans la console. 
+
+Appel les méthodes \mbox{\hyperlink{class_compte_a3f9fb8a0b3ed392a6f226bcff74899bf}{Afficher()}} de chaque opération d\textquotesingle{}un compte en parcourant son disctionnaire d\textquotesingle{}opération. 
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_a7dd9a4dd3e019a12e9fab15b48983f5a}{Compte\+Abstrait}}.
+
+\mbox{\Hypertarget{class_compte_a3b5a2c02bf435afcb0d778f46ed6c3fb}\label{class_compte_a3b5a2c02bf435afcb0d778f46ed6c3fb}} 
+\index{Compte@{Compte}!afficher\_rapprochement@{afficher\_rapprochement}}
+\index{afficher\_rapprochement@{afficher\_rapprochement}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{afficher\_rapprochement()}{afficher\_rapprochement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Compte\+::afficher\+\_\+rapprochement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Permet d\textquotesingle{}afficher tout les rapprochements d\textquotesingle{}un compte dans la console. 
+
+Parcours le dictionnaire de rapprochement d\textquotesingle{}un \char`\"{}compte reel\char`\"{}, et Affiche chaque rapprochement dans la console grâce à la méthode \mbox{\hyperlink{class_rapprochement_af5af94d5811aaf307e7f2ae8cd6785bb}{Rapprochement\+::\+Afficher()}} 
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_a9a7bf3a8d01a5c5c5de5e6c6c18aab78}{Compte\+Abstrait}}.
+
+\mbox{\Hypertarget{class_compte_a125516741de6af2bb841d636dcf216c7}\label{class_compte_a125516741de6af2bb841d636dcf216c7}} 
+\index{Compte@{Compte}!afficher\_rapprochement@{afficher\_rapprochement}}
+\index{afficher\_rapprochement@{afficher\_rapprochement}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{afficher\_rapprochement()}{afficher\_rapprochement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Compte\+::afficher\+\_\+rapprochement (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Permet d\textquotesingle{}afficher un rapprochement d\textquotesingle{}un compte dans la console. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & \+: id du rapprochement à afficher\\
+\hline
+\end{DoxyParams}
+Recherche le rapprochement d\textquotesingle{}un \char`\"{}compte reel\char`\"{} à partir de son id,~\newline
+ appel la méthode \mbox{\hyperlink{class_compte_a3f9fb8a0b3ed392a6f226bcff74899bf}{Afficher()}} du rapprochement en cas de succès. 
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_a58c22f19173c489c5eda194b5e8de7d4}{Compte\+Abstrait}}.
+
+\mbox{\Hypertarget{class_compte_a759775c18235933a56721e5cdfd74744}\label{class_compte_a759775c18235933a56721e5cdfd74744}} 
+\index{Compte@{Compte}!Clone@{Clone}}
+\index{Clone@{Clone}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_compte}{Compte}}$\ast$ Compte\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Cloner un compte. 
+
+définiton virtuelle de la fonction Clone, implémentée pour le design pattern factory 
+
+Implémenté dans \mbox{\hyperlink{class_depense_aa2386e454570b40ff221a4da35b1c90d}{Depense}}, \mbox{\hyperlink{class_recette_afa012df665095e1a4b2ac32a89d0750b}{Recette}}, \mbox{\hyperlink{class_passif_acd77505d93f98d3b11794cdb5a23404c}{Passif}}, et \mbox{\hyperlink{class_actif_a7f9cfacda7e2a454f828f57be8d4f3ca}{Actif}}.
+
+\mbox{\Hypertarget{class_compte_a54105331d3b546315fdab2641a3b9232}\label{class_compte_a54105331d3b546315fdab2641a3b9232}} 
+\index{Compte@{Compte}!crediter@{crediter}}
+\index{crediter@{crediter}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{crediter()}{crediter()}}
+{\footnotesize\ttfamily virtual double Compte\+::crediter (\begin{DoxyParamCaption}\item[{double}]{credit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Permet de créditer un compte. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em credit} & \+: montant à créditer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retourne le solde actualisé du compte 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_a0e7547d29d7b630ff1fbc3f67d78953b}{Compte\+Abstrait}}.
+
+
+
+Réimplémentée dans \mbox{\hyperlink{class_depense_a5d1a8e14f6b33e60d9e8b66a6568f8cd}{Depense}}, et \mbox{\hyperlink{class_actif_aad90323f964f016ab70579851cc26b1e}{Actif}}.
+
+\mbox{\Hypertarget{class_compte_a733c756bb92930047279c74337af168e}\label{class_compte_a733c756bb92930047279c74337af168e}} 
+\index{Compte@{Compte}!debiter@{debiter}}
+\index{debiter@{debiter}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{debiter()}{debiter()}}
+{\footnotesize\ttfamily virtual double Compte\+::debiter (\begin{DoxyParamCaption}\item[{double}]{debit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Permet de débiter un compte. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em debit} & \+: montant à débiter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retourne le solde actualisé du compte 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_a9e477c6974f4924efd67842e1a23acea}{Compte\+Abstrait}}.
+
+
+
+Réimplémentée dans \mbox{\hyperlink{class_depense_aa1dee30e6c9b52c8491a42a286b1db0a}{Depense}}, et \mbox{\hyperlink{class_actif_a4b6daedba6dd63e828820fa59777eb7a}{Actif}}.
+
+\mbox{\Hypertarget{class_compte_adb24029f5caadcc63803e468a724d45f}\label{class_compte_adb24029f5caadcc63803e468a724d45f}} 
+\index{Compte@{Compte}!getListRapprochement@{getListRapprochement}}
+\index{getListRapprochement@{getListRapprochement}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{getListRapprochement()}{getListRapprochement()}}
+{\footnotesize\ttfamily Q\+Multi\+Map$<$Q\+Date, \mbox{\hyperlink{class_rapprochement}{Rapprochement}}$\ast$$>$ Compte\+::get\+List\+Rapprochement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Permet de retourner la liste de rapprochement d\textquotesingle{}un compte. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em transfert} & \+: montant à transférer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retourne le solde actualisé du compte 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_compte_a543600a0bfd9b2436f1ec1df794623b0}\label{class_compte_a543600a0bfd9b2436f1ec1df794623b0}} 
+\index{Compte@{Compte}!getSolde@{getSolde}}
+\index{getSolde@{getSolde}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{getSolde()}{getSolde()}}
+{\footnotesize\ttfamily double Compte\+::get\+Solde (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Permet de retourner le solde d\textquotesingle{}un compte. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em transfert} & \+: montant à transférer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retourne le solde actualisé du compte 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_af6e1907fcb28cfbf2c342a20bfce1e95}{Compte\+Abstrait}}.
+
+\mbox{\Hypertarget{class_compte_a091d77d9e39c25fa0ee7f6ede7eef768}\label{class_compte_a091d77d9e39c25fa0ee7f6ede7eef768}} 
+\index{Compte@{Compte}!getType@{getType}}
+\index{getType@{getType}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily virtual std\+::string Compte\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Méthode virtuelle afin de determiner le type des objet hérités. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_a8e993336a307777eb0fd472bdab68bd4}{Compte\+Abstrait}}.
+
+
+
+Implémenté dans \mbox{\hyperlink{class_depense_a6ab860f16158dc29eb123d5216796365}{Depense}}, \mbox{\hyperlink{class_recette_a3ac8664a99a44ecd88f45357a776fa99}{Recette}}, \mbox{\hyperlink{class_passif_ab875c25ab9bed1bdcb545ccaf4d49b15}{Passif}}, et \mbox{\hyperlink{class_actif_affdddb6c8e82c601af0e3bcdb520053b}{Actif}}.
+
+\mbox{\Hypertarget{class_compte_a632425a7df6217e8806dcf34967d7c3b}\label{class_compte_a632425a7df6217e8806dcf34967d7c3b}} 
+\index{Compte@{Compte}!is\_deletable@{is\_deletable}}
+\index{is\_deletable@{is\_deletable}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{is\_deletable()}{is\_deletable()}}
+{\footnotesize\ttfamily bool Compte\+::is\+\_\+deletable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Permet de savoir si le compte est supprimable. 
+
+\begin{DoxyReturn}{Renvoie}
+return true si le compte n\textquotesingle{}a pas d\textquotesingle{}opération associée. 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_compte_abstrait_a38421e18885c318f0fc8da6f85e1a493}{Compte\+Abstrait}}.
+
+\mbox{\Hypertarget{class_compte_a957c8791add5788ddd3b6c0d34ed51af}\label{class_compte_a957c8791add5788ddd3b6c0d34ed51af}} 
+\index{Compte@{Compte}!Last\_Rapprochement@{Last\_Rapprochement}}
+\index{Last\_Rapprochement@{Last\_Rapprochement}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{Last\_Rapprochement()}{Last\_Rapprochement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_rapprochement}{Rapprochement}} $\ast$ Compte\+::\+Last\+\_\+\+Rapprochement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}afficher le dernier rpprochement d\textquotesingle{}un compte dans la console. 
+
+Retourne le derner rapprochement d\textquotesingle{}un compte à partir de la méthode last() du map. \mbox{\Hypertarget{class_compte_a7fa4650bd64f6a8ada375f48c133a2c9}\label{class_compte_a7fa4650bd64f6a8ada375f48c133a2c9}} 
+\index{Compte@{Compte}!rapprocher@{rapprocher}}
+\index{rapprocher@{rapprocher}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{rapprocher()}{rapprocher()}}
+{\footnotesize\ttfamily void Compte\+::rapprocher (\begin{DoxyParamCaption}\item[{int}]{y,  }\item[{int}]{m,  }\item[{int}]{d,  }\item[{std\+::string}]{nom,  }\item[{std\+::string}]{desc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Permet de rapprocher un compte. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em y} & \+: Année de création \\
+\hline
+{\em m} & Mois de création \\
+\hline
+{\em d} & \+: Jour de création \\
+\hline
+{\em nom} & nom du rapprochement \\
+\hline
+{\em desc} & decription du rapprochement\\
+\hline
+\end{DoxyParams}
+\mbox{\hyperlink{class_compte_a7fa4650bd64f6a8ada375f48c133a2c9}{Compte\+::rapprocher}} permet de créer un \mbox{\hyperlink{class_rapprochement}{Rapprochement}} et donne un pointeur vers se rapprochement à toutes les opérations de date inférieur à la date du rapprochement.~\newline
+On ne change pas le pointeur Operation\+::rapprochement si une opération est déjà rapprochée. 
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_aeaee0b95ffa864c03a10db1687ca6405}{Compte\+Abstrait}}.
+
+\mbox{\Hypertarget{class_compte_ad47271fe2835e057f528f74427bb8dea}\label{class_compte_ad47271fe2835e057f528f74427bb8dea}} 
+\index{Compte@{Compte}!solde\_reset@{solde\_reset}}
+\index{solde\_reset@{solde\_reset}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{solde\_reset()}{solde\_reset()}}
+{\footnotesize\ttfamily void Compte\+::solde\+\_\+reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Remete à zero le solde d\textquotesingle{}un compte et supprime ses opérations. 
+
+Utilisé pour la remise à zero du solde de tout les comptes, cette méthode s\textquotesingle{}applique aux \char`\"{}compte réels\char`\"{} qui sont les feuilles de l\textquotesingle{}arborescence de compte. 
+
+Implémente \mbox{\hyperlink{class_compte_abstrait_a8a99bac3fc10f87d33b462a52f993448}{Compte\+Abstrait}}.
+
+\mbox{\Hypertarget{class_compte_aee543c7a6eb8cdffdee4f4d1ed6f8db5}\label{class_compte_aee543c7a6eb8cdffdee4f4d1ed6f8db5}} 
+\index{Compte@{Compte}!supprimer\_op@{supprimer\_op}}
+\index{supprimer\_op@{supprimer\_op}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{supprimer\_op()}{supprimer\_op()}}
+{\footnotesize\ttfamily bool Compte\+::supprimer\+\_\+op (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Permet de supprimer une opération. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & \+: identifiant \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true en cas de succès false sinon
+\end{DoxyReturn}
+Recherche de l\textquotesingle{}opération à partir de son id en parcourant le vecteur d\textquotesingle{}opération d\textquotesingle{}un compte,~\newline
+si l\textquotesingle{}opération est trouvée, celle-\/ci est supprimé du vecteur. \mbox{\Hypertarget{class_compte_af68bf34b9ffc7f71cbd790e38a9cffce}\label{class_compte_af68bf34b9ffc7f71cbd790e38a9cffce}} 
+\index{Compte@{Compte}!transferer@{transferer}}
+\index{transferer@{transferer}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{transferer()}{transferer()}}
+{\footnotesize\ttfamily virtual double Compte\+::transferer (\begin{DoxyParamCaption}\item[{double}]{transfert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Permet d\textquotesingle{}éffectuer de faire une opération directement sur le solde d\textquotesingle{}un compte. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em transfert} & \+: montant à transférer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retourne le solde actualisé du compte 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_abstrait_a393031e157fa7eb7ce32fd4529af8d2b}{Compte\+Abstrait}}.
+
+
+
+Réimplémentée dans \mbox{\hyperlink{class_depense_aa79008936a4f3ae2ca236c36da07aead}{Depense}}, et \mbox{\hyperlink{class_actif_ae9f74c5c6510bbd2622271531d4fdcf5}{Actif}}.
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_compte_a84122605191c03e4e3b25dc07b45c87f}\label{class_compte_a84122605191c03e4e3b25dc07b45c87f}} 
+\index{Compte@{Compte}!CompteManager@{CompteManager}}
+\index{CompteManager@{CompteManager}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{CompteManager}{CompteManager}}
+{\footnotesize\ttfamily friend Compte\+::\+Compte\+Manager\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_compte_a6fb0a5fe71dd67700fb9311587ed07a4}\label{class_compte_a6fb0a5fe71dd67700fb9311587ed07a4}} 
+\index{Compte@{Compte}!ListRapprochement@{ListRapprochement}}
+\index{ListRapprochement@{ListRapprochement}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{ListRapprochement}{ListRapprochement}}
+{\footnotesize\ttfamily Q\+Multi\+Map$<$Q\+Date, \mbox{\hyperlink{class_rapprochement}{Rapprochement}}$\ast$$>$ Compte\+::\+List\+Rapprochement\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+dictionnaire des rapprochement pouvant contenir plusieurs fois la même clé 
+
+\mbox{\Hypertarget{class_compte_a91d76a02b311e171cf117ea39efbf9a1}\label{class_compte_a91d76a02b311e171cf117ea39efbf9a1}} 
+\index{Compte@{Compte}!solde@{solde}}
+\index{solde@{solde}!Compte@{Compte}}
+\doxysubsubsection{\texorpdfstring{solde}{solde}}
+{\footnotesize\ttfamily double Compte\+::solde = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+solde défini et initialisé à 0 
+

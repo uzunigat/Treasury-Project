@@ -1,0 +1,10 @@
+release/compte.o
+release/addcomptedialog.o
+release/addtransfertdialog.o
+release/choisirpassifdialog.o
+release/main.o
+release/mainwindow.o
+release/moc_addcomptedialog.o
+release/moc_addtransfertdialog.o
+release/moc_choisirpassifdialog.o
+release/moc_mainwindow.o

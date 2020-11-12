@@ -1,0 +1,451 @@
+\hypertarget{class_main_window}{}\doxysection{Référence de la classe Main\+Window}
+\label{class_main_window}\index{MainWindow@{MainWindow}}
+
+
+Cette classe est utilisée pour gérer la fenêtre principale du programme.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructeur de la class \mbox{\hyperlink{class_main_window}{Main\+Window}} Constructeur de la class \mbox{\hyperlink{class_main_window}{Main\+Window}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\+Main\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Destructeur de la class \mbox{\hyperlink{class_main_window}{Main\+Window}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aa3ffb43aef15cee778b4e7b8d49ff0a6}{list\+Dom}} (Q\+Dom\+Element \&doc\+Elem, bool first\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Accesor a las etiquetas de un archivo de cuentas xml Méthode pour lire une liste d\textquotesingle{}étiquettes de compte en extrayant leurs attributs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ad83097c1b0948d8a6e4475492fe603e4}{open\+X\+ML}} (Q\+String file\+Name, bool first\+\_\+load)
+\begin{DoxyCompactList}\small\item\em Ouvrir fichier Comptes.\+xml Méthode pour lire un fichier Comptes.\+xml sous un format spécial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_acc843fdda776bdecaf3f1e81c72f9385}{open\+X\+M\+L\+Transactions}} (Q\+String file\+Name, bool first\+\_\+load)
+\begin{DoxyCompactList}\small\item\em Ouvrir fichier Transactions.\+xml Méthode pour lire un fichier Transactions.\+xml sous un format spécial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_af7dec6c97369074794a50cc7ed0b40d9}{pop\+Add\+Window}} (Q\+String father\+\_\+id, Q\+String type)
+\begin{DoxyCompactList}\small\item\em Ouvrir fenêtre \char`\"{}\+Add\+Window\char`\"{} Méthode pour ouvrir une nouvelle fenêtre pour saisir les parametres du compte a ajouter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a94fb520b46cb04045f4d806f2d24d66a}{pop\+Rapprochement\+Window}} (Q\+String id)
+\begin{DoxyCompactList}\small\item\em Ouvrir fenêtre \char`\"{}\+Rapprochement\char`\"{} Méthode pour ouvrir une nouvelle fenêtre pour saisir les parametres du compte a rapprocher. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a4eda0ffd0b7f46fad01e13c8bca69cf0}{pop\+Saisir\+Rapprochement}} (Q\+String id)
+\begin{DoxyCompactList}\small\item\em Ouvrir fenêtre \char`\"{}\+Saisir Rapprochement\char`\"{} Méthode pour ouvrir une nouvelle fenêtre pour génerer un rapprochement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a19b8ffa1cf5e9cb61e3f543b663da4fa}{Add\+Xml}} () const
+\begin{DoxyCompactList}\small\item\em Ajouter Méthode pour. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ac6b2b909ce0216353ca0b4457d30fa87}{delete\+X\+ML}} (Q\+String id) const
+\begin{DoxyCompactList}\small\item\em Enlever une compte directement du fichier X\+ML Méthode pour supprimer une \mbox{\hyperlink{class_compte}{Compte}} directement du fichier X\+ML. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aeae218f6eeb2162159ac5e40c0f72092}{add\+To\+Tree}} (Q\+String father\+\_\+id, Q\+String id, Q\+String nom, Q\+String prop, Q\+String type, Q\+String solde=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Ajouter un élément à un Q\+Tree\+Widget Méthode qui permet d\textquotesingle{}ajouter un compte, à partir d\textquotesingle{}un id, nom, prop, type et solde un élement dans un objet du type Q\+Tree\+Widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ad7c890a95b3e6c99084c772ba42df3b4}{delete\+From\+Tree}} (const Q\+String id)
+\begin{DoxyCompactList}\small\item\em Enlever un élément à un Q\+Tree\+Widget Méthode qui permet d\textquotesingle{}enlever un compte, à partir d\textquotesingle{}un id, un élement dans un objet du type Q\+Tree\+Widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a327dc4ae98d21f740345606feb1a7346}{Pop\+Choisir\+Passif\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Ouvrir fenetre \char`\"{}\+Passif\+Window\char`\"{} Méthode pour ouvrir une nouvelle fenêtre pour saisir les parametres du compte a ajouter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ab824e974fd8a3490487deb48b1b2d240}{write\+Xml\+File\+\_\+attributes}} (const Q\+String \&filename)
+\begin{DoxyCompactList}\small\item\em Écrire Comptes.\+xml Méthode qui permet d\textquotesingle{}écrire dans un fichier Comptes.\+xml les balises avec ses attributs sous un format donné \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a931a0ab199b4355332868f2a20f0a9d0}{write\+Xml\+File\+\_\+subnodes}} (const Q\+String \&filename)
+\begin{DoxyCompactList}\small\item\em Écrire Transactions.\+xml Méthode qui permet d\textquotesingle{}écrire dans un fichier Transactions.\+xml les balises avec ses attributs sous un format donné \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a54be790e8a4b1847b77c4b7d689e0444}{print\+\_\+header\+\_\+transactios}} (Q\+Painter \&painter)
+\begin{DoxyCompactList}\small\item\em Dessiner header du P\+DF Méthode qui permet de dessiner dans un objet du type Painter un header pour afficher un pdf. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a00223ecb9cbeadc5f3f756a59f8f1a98}{print\+\_\+header\+\_\+rapprochement}} (Q\+Painter \&painter)
+\begin{DoxyCompactList}\small\item\em Dessiner header du P\+DF pour un rapprochement Méthode qui permet de dessiner dans un objet du type Painter un header pour afficher un pdf. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a2ea9bfd7c2bb9a4bdf0e7736b7e9f219}{operations\+\_\+\+P\+DF}} (Q\+Printer \&printer, Q\+Painter \&painter, \mbox{\hyperlink{class_transaction}{Transaction}} $\ast$trans)
+\begin{DoxyCompactList}\small\item\em Écrire opérations dans un P\+DF Méthode qui permet d\textquotesingle{}écrire dans un P\+DF une liste des opérations à partir d\textquotesingle{}une transaction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ae841ed2f7972d99bd5524ce19f61c5df}{rapprochement\+\_\+\+P\+DF}} (\mbox{\hyperlink{class_rapprochement}{Rapprochement}} $\ast$rap)
+\begin{DoxyCompactList}\small\item\em Écrire rapprochement dans un P\+DF Méthode qui permet d\textquotesingle{}écrire dans un P\+DF une liste des opérations rapprochés. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a7881096dfa1ea189ae24b5b7fef929da}{operations\+\_\+\+P\+DF}} (Q\+Printer \&printer, Q\+Painter \&painter, \mbox{\hyperlink{class_transaction}{Transaction}} $\ast$trans, std\+::string id)
+\begin{DoxyCompactList}\small\item\em Écrire opérations dans un P\+DF Méthode qui permet d\textquotesingle{}écrire dans un P\+DF une liste des opérations à partir d\textquotesingle{}une transaction et un id. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a71b870343ae9785abe59c6a15dccd617}{set\+Nom\+\_\+first}} (Q\+String n)
+\item 
+const Q\+String \mbox{\hyperlink{class_main_window_aefdd90910f3b4c4ffcb24fffcfa35bec}{get\+Nom\+\_\+first}} () const
+\item 
+void \mbox{\hyperlink{class_main_window_a4d47c77e349c2b038a91fe0567ffbb73}{set\+Solde\+\_\+first}} (double s)
+\item 
+Q\+String \mbox{\hyperlink{class_main_window_a5a72bb4af6cfe1c2b8ef0ae0e97a3b73}{get\+Solde\+\_\+first}} () const
+\item 
+void \mbox{\hyperlink{class_main_window_a84f04f2f2a2f1457cbf1ab85937e7102}{set\+Id\+\_\+first}} (Q\+String id)
+\item 
+Q\+String \mbox{\hyperlink{class_main_window_a427a8b5bdb2cc88e8f5fa38c5e274a6b}{get\+Id\+\_\+first}} () const
+\item 
+bool \mbox{\hyperlink{class_main_window_ad5d2dcdedd4a1d416b5896f3565c1609}{cloture}} ()
+\begin{DoxyCompactList}\small\item\em Créer une cloture Méthode qui permet de faire une clôture des comptes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Cette classe est utilisée pour gérer la fenêtre principale du programme. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\label{class_main_window_a996c5a2b6f77944776856f08ec30858d}} 
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la class \mbox{\hyperlink{class_main_window}{Main\+Window}} Constructeur de la class \mbox{\hyperlink{class_main_window}{Main\+Window}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em parent} & Un Q\+Widget$\ast$ qui pointe vers le Q\+Widget parent \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}} 
+\index{MainWindow@{MainWindow}!````~MainWindow@{$\sim$MainWindow}}
+\index{````~MainWindow@{$\sim$MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{$\sim$MainWindow()}{~MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::$\sim$\+Main\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur Destructeur de la class \mbox{\hyperlink{class_main_window}{Main\+Window}}. 
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_main_window_aeae218f6eeb2162159ac5e40c0f72092}\label{class_main_window_aeae218f6eeb2162159ac5e40c0f72092}} 
+\index{MainWindow@{MainWindow}!addToTree@{addToTree}}
+\index{addToTree@{addToTree}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{addToTree()}{addToTree()}}
+{\footnotesize\ttfamily void Main\+Window\+::add\+To\+Tree (\begin{DoxyParamCaption}\item[{Q\+String}]{father\+\_\+id,  }\item[{Q\+String}]{id,  }\item[{Q\+String}]{nom,  }\item[{Q\+String}]{prop,  }\item[{Q\+String}]{type,  }\item[{Q\+String}]{solde = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Ajouter un élément à un Q\+Tree\+Widget Méthode qui permet d\textquotesingle{}ajouter un compte, à partir d\textquotesingle{}un id, nom, prop, type et solde un élement dans un objet du type Q\+Tree\+Widget. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em father\+\_\+id} & id du compte parent à ajouter \\
+\hline
+{\em id} & id du compte à ajouter \\
+\hline
+{\em nom} & nom du compte à ajouter \\
+\hline
+{\em prop} & propriété (Virtuel ou pas) du compte à ajouter \\
+\hline
+{\em type} & type (\mbox{\hyperlink{class_actif}{Actif}}, \mbox{\hyperlink{class_passif}{Passif}}, \mbox{\hyperlink{class_recette}{Recette}}, \mbox{\hyperlink{class_depense}{Depense}}) du compte à ajouter \\
+\hline
+{\em solde} & solde du compte à ajouter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a19b8ffa1cf5e9cb61e3f543b663da4fa}\label{class_main_window_a19b8ffa1cf5e9cb61e3f543b663da4fa}} 
+\index{MainWindow@{MainWindow}!AddXml@{AddXml}}
+\index{AddXml@{AddXml}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{AddXml()}{AddXml()}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Add\+Xml (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Ajouter Méthode pour. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em father\+\_\+id} & \\
+\hline
+{\em type} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_ad5d2dcdedd4a1d416b5896f3565c1609}\label{class_main_window_ad5d2dcdedd4a1d416b5896f3565c1609}} 
+\index{MainWindow@{MainWindow}!cloture@{cloture}}
+\index{cloture@{cloture}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{cloture()}{cloture()}}
+{\footnotesize\ttfamily bool Main\+Window\+::cloture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Créer une cloture Méthode qui permet de faire une clôture des comptes. 
+
+\mbox{\Hypertarget{class_main_window_ad7c890a95b3e6c99084c772ba42df3b4}\label{class_main_window_ad7c890a95b3e6c99084c772ba42df3b4}} 
+\index{MainWindow@{MainWindow}!deleteFromTree@{deleteFromTree}}
+\index{deleteFromTree@{deleteFromTree}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{deleteFromTree()}{deleteFromTree()}}
+{\footnotesize\ttfamily void Main\+Window\+::delete\+From\+Tree (\begin{DoxyParamCaption}\item[{const Q\+String}]{id }\end{DoxyParamCaption})}
+
+
+
+Enlever un élément à un Q\+Tree\+Widget Méthode qui permet d\textquotesingle{}enlever un compte, à partir d\textquotesingle{}un id, un élement dans un objet du type Q\+Tree\+Widget. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & id du compte à ajouter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_ac6b2b909ce0216353ca0b4457d30fa87}\label{class_main_window_ac6b2b909ce0216353ca0b4457d30fa87}} 
+\index{MainWindow@{MainWindow}!deleteXML@{deleteXML}}
+\index{deleteXML@{deleteXML}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{deleteXML()}{deleteXML()}}
+{\footnotesize\ttfamily void Main\+Window\+::delete\+X\+ML (\begin{DoxyParamCaption}\item[{Q\+String}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Enlever une compte directement du fichier X\+ML Méthode pour supprimer une \mbox{\hyperlink{class_compte}{Compte}} directement du fichier X\+ML. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & id du compte à supprimer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a427a8b5bdb2cc88e8f5fa38c5e274a6b}\label{class_main_window_a427a8b5bdb2cc88e8f5fa38c5e274a6b}} 
+\index{MainWindow@{MainWindow}!getId\_first@{getId\_first}}
+\index{getId\_first@{getId\_first}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{getId\_first()}{getId\_first()}}
+{\footnotesize\ttfamily Q\+String Main\+Window\+::get\+Id\+\_\+first (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_main_window_aefdd90910f3b4c4ffcb24fffcfa35bec}\label{class_main_window_aefdd90910f3b4c4ffcb24fffcfa35bec}} 
+\index{MainWindow@{MainWindow}!getNom\_first@{getNom\_first}}
+\index{getNom\_first@{getNom\_first}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{getNom\_first()}{getNom\_first()}}
+{\footnotesize\ttfamily const Q\+String Main\+Window\+::get\+Nom\+\_\+first (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_main_window_a5a72bb4af6cfe1c2b8ef0ae0e97a3b73}\label{class_main_window_a5a72bb4af6cfe1c2b8ef0ae0e97a3b73}} 
+\index{MainWindow@{MainWindow}!getSolde\_first@{getSolde\_first}}
+\index{getSolde\_first@{getSolde\_first}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{getSolde\_first()}{getSolde\_first()}}
+{\footnotesize\ttfamily Q\+String Main\+Window\+::get\+Solde\+\_\+first (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_main_window_aa3ffb43aef15cee778b4e7b8d49ff0a6}\label{class_main_window_aa3ffb43aef15cee778b4e7b8d49ff0a6}} 
+\index{MainWindow@{MainWindow}!listDom@{listDom}}
+\index{listDom@{listDom}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{listDom()}{listDom()}}
+{\footnotesize\ttfamily void Main\+Window\+::list\+Dom (\begin{DoxyParamCaption}\item[{Q\+Dom\+Element \&}]{doc\+Elem,  }\item[{bool}]{first\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Accesor a las etiquetas de un archivo de cuentas xml Méthode pour lire une liste d\textquotesingle{}étiquettes de compte en extrayant leurs attributs. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em doc\+Elem} & élement qui contient un objet du type Q\+Dom\+Element\& pour connaitre un element du fichier \\
+\hline
+{\em first\+\_\+time} & Attribut qui nous permet de savoir si c\textquotesingle{}est la prémier foir qu\textquotesingle{}on appel la méthode \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_ad83097c1b0948d8a6e4475492fe603e4}\label{class_main_window_ad83097c1b0948d8a6e4475492fe603e4}} 
+\index{MainWindow@{MainWindow}!openXML@{openXML}}
+\index{openXML@{openXML}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{openXML()}{openXML()}}
+{\footnotesize\ttfamily void Main\+Window\+::open\+X\+ML (\begin{DoxyParamCaption}\item[{Q\+String}]{file\+Name,  }\item[{bool}]{first\+\_\+load }\end{DoxyParamCaption})}
+
+
+
+Ouvrir fichier Comptes.\+xml Méthode pour lire un fichier Comptes.\+xml sous un format spécial. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em filename} & path du fichier xml à lire \\
+\hline
+{\em first\+\_\+load} & Attribut qui nous permet de savoir si c\textquotesingle{}est la prémier foir qu\textquotesingle{}on appel la méthode \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_acc843fdda776bdecaf3f1e81c72f9385}\label{class_main_window_acc843fdda776bdecaf3f1e81c72f9385}} 
+\index{MainWindow@{MainWindow}!openXMLTransactions@{openXMLTransactions}}
+\index{openXMLTransactions@{openXMLTransactions}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{openXMLTransactions()}{openXMLTransactions()}}
+{\footnotesize\ttfamily void Main\+Window\+::open\+X\+M\+L\+Transactions (\begin{DoxyParamCaption}\item[{Q\+String}]{file\+Name,  }\item[{bool}]{first\+\_\+load }\end{DoxyParamCaption})}
+
+
+
+Ouvrir fichier Transactions.\+xml Méthode pour lire un fichier Transactions.\+xml sous un format spécial. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em filename} & path du fichier xml à lire \\
+\hline
+{\em first\+\_\+load} & Attribut qui nous permet de savoir si c\textquotesingle{}est la prémier foir qu\textquotesingle{}on appel la méthode \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a2ea9bfd7c2bb9a4bdf0e7736b7e9f219}\label{class_main_window_a2ea9bfd7c2bb9a4bdf0e7736b7e9f219}} 
+\index{MainWindow@{MainWindow}!operations\_PDF@{operations\_PDF}}
+\index{operations\_PDF@{operations\_PDF}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{operations\_PDF()}{operations\_PDF()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Main\+Window\+::operations\+\_\+\+P\+DF (\begin{DoxyParamCaption}\item[{Q\+Printer \&}]{printer,  }\item[{Q\+Painter \&}]{painter,  }\item[{\mbox{\hyperlink{class_transaction}{Transaction}} $\ast$}]{trans }\end{DoxyParamCaption})}
+
+
+
+Écrire opérations dans un P\+DF Méthode qui permet d\textquotesingle{}écrire dans un P\+DF une liste des opérations à partir d\textquotesingle{}une transaction. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em printer} & Un objet du type Printer \\
+\hline
+{\em painter} & Un objet du type Painter sur lequel on va écrire \\
+\hline
+{\em trans} & Un objet du type Transaction$\ast$ qui contient la liste des opérations à afficher \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a7881096dfa1ea189ae24b5b7fef929da}\label{class_main_window_a7881096dfa1ea189ae24b5b7fef929da}} 
+\index{MainWindow@{MainWindow}!operations\_PDF@{operations\_PDF}}
+\index{operations\_PDF@{operations\_PDF}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{operations\_PDF()}{operations\_PDF()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Main\+Window\+::operations\+\_\+\+P\+DF (\begin{DoxyParamCaption}\item[{Q\+Printer \&}]{printer,  }\item[{Q\+Painter \&}]{painter,  }\item[{\mbox{\hyperlink{class_transaction}{Transaction}} $\ast$}]{trans,  }\item[{std\+::string}]{id }\end{DoxyParamCaption})}
+
+
+
+Écrire opérations dans un P\+DF Méthode qui permet d\textquotesingle{}écrire dans un P\+DF une liste des opérations à partir d\textquotesingle{}une transaction et un id. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em printer} & Un objet du type Printer \\
+\hline
+{\em painter} & Un objet du type Painter sur lequel on va écrire \\
+\hline
+{\em trans} & Un objet du type Transaction$\ast$ qui contient la liste des opérations à afficher \\
+\hline
+{\em id} & Un objet du type String qui permet de créer un filter pour afficher uniquement les transactions associés à un id du compte \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_af7dec6c97369074794a50cc7ed0b40d9}\label{class_main_window_af7dec6c97369074794a50cc7ed0b40d9}} 
+\index{MainWindow@{MainWindow}!popAddWindow@{popAddWindow}}
+\index{popAddWindow@{popAddWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{popAddWindow()}{popAddWindow()}}
+{\footnotesize\ttfamily void Main\+Window\+::pop\+Add\+Window (\begin{DoxyParamCaption}\item[{Q\+String}]{father\+\_\+id,  }\item[{Q\+String}]{type }\end{DoxyParamCaption})}
+
+
+
+Ouvrir fenêtre \char`\"{}\+Add\+Window\char`\"{} Méthode pour ouvrir une nouvelle fenêtre pour saisir les parametres du compte a ajouter. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em father\+\_\+id} & Permet de connaitre l\textquotesingle{}id du compte parent sélectionné \\
+\hline
+{\em type} & Permet de connaître le type de compte sélectionné \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a327dc4ae98d21f740345606feb1a7346}\label{class_main_window_a327dc4ae98d21f740345606feb1a7346}} 
+\index{MainWindow@{MainWindow}!PopChoisirPassifWindow@{PopChoisirPassifWindow}}
+\index{PopChoisirPassifWindow@{PopChoisirPassifWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{PopChoisirPassifWindow()}{PopChoisirPassifWindow()}}
+{\footnotesize\ttfamily void Main\+Window\+::\+Pop\+Choisir\+Passif\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ouvrir fenetre \char`\"{}\+Passif\+Window\char`\"{} Méthode pour ouvrir une nouvelle fenêtre pour saisir les parametres du compte a ajouter. 
+
+\mbox{\Hypertarget{class_main_window_a94fb520b46cb04045f4d806f2d24d66a}\label{class_main_window_a94fb520b46cb04045f4d806f2d24d66a}} 
+\index{MainWindow@{MainWindow}!popRapprochementWindow@{popRapprochementWindow}}
+\index{popRapprochementWindow@{popRapprochementWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{popRapprochementWindow()}{popRapprochementWindow()}}
+{\footnotesize\ttfamily void Main\+Window\+::pop\+Rapprochement\+Window (\begin{DoxyParamCaption}\item[{Q\+String}]{id }\end{DoxyParamCaption})}
+
+
+
+Ouvrir fenêtre \char`\"{}\+Rapprochement\char`\"{} Méthode pour ouvrir une nouvelle fenêtre pour saisir les parametres du compte a rapprocher. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em father\+\_\+id} & Permet de connaitre l\textquotesingle{}id du compte parent sélectionné \\
+\hline
+{\em type} & Permet de connaître le type de compte sélectionné \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a4eda0ffd0b7f46fad01e13c8bca69cf0}\label{class_main_window_a4eda0ffd0b7f46fad01e13c8bca69cf0}} 
+\index{MainWindow@{MainWindow}!popSaisirRapprochement@{popSaisirRapprochement}}
+\index{popSaisirRapprochement@{popSaisirRapprochement}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{popSaisirRapprochement()}{popSaisirRapprochement()}}
+{\footnotesize\ttfamily void Main\+Window\+::pop\+Saisir\+Rapprochement (\begin{DoxyParamCaption}\item[{Q\+String}]{id }\end{DoxyParamCaption})}
+
+
+
+Ouvrir fenêtre \char`\"{}\+Saisir Rapprochement\char`\"{} Méthode pour ouvrir une nouvelle fenêtre pour génerer un rapprochement. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & Permet de connaitre l\textquotesingle{}id du compte sélectionné \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a00223ecb9cbeadc5f3f756a59f8f1a98}\label{class_main_window_a00223ecb9cbeadc5f3f756a59f8f1a98}} 
+\index{MainWindow@{MainWindow}!print\_header\_rapprochement@{print\_header\_rapprochement}}
+\index{print\_header\_rapprochement@{print\_header\_rapprochement}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{print\_header\_rapprochement()}{print\_header\_rapprochement()}}
+{\footnotesize\ttfamily void Main\+Window\+::print\+\_\+header\+\_\+rapprochement (\begin{DoxyParamCaption}\item[{Q\+Painter \&}]{painter }\end{DoxyParamCaption})}
+
+
+
+Dessiner header du P\+DF pour un rapprochement Méthode qui permet de dessiner dans un objet du type Painter un header pour afficher un pdf. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em painter} & Un objet du type Painter sur lequel on va écrire le header du P\+DF \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a54be790e8a4b1847b77c4b7d689e0444}\label{class_main_window_a54be790e8a4b1847b77c4b7d689e0444}} 
+\index{MainWindow@{MainWindow}!print\_header\_transactios@{print\_header\_transactios}}
+\index{print\_header\_transactios@{print\_header\_transactios}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{print\_header\_transactios()}{print\_header\_transactios()}}
+{\footnotesize\ttfamily void Main\+Window\+::print\+\_\+header\+\_\+transactios (\begin{DoxyParamCaption}\item[{Q\+Painter \&}]{painter }\end{DoxyParamCaption})}
+
+
+
+Dessiner header du P\+DF Méthode qui permet de dessiner dans un objet du type Painter un header pour afficher un pdf. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em painter} & Un objet du type Painter sur lequel on va écrire le header du P\+DF \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_ae841ed2f7972d99bd5524ce19f61c5df}\label{class_main_window_ae841ed2f7972d99bd5524ce19f61c5df}} 
+\index{MainWindow@{MainWindow}!rapprochement\_PDF@{rapprochement\_PDF}}
+\index{rapprochement\_PDF@{rapprochement\_PDF}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{rapprochement\_PDF()}{rapprochement\_PDF()}}
+{\footnotesize\ttfamily void Main\+Window\+::rapprochement\+\_\+\+P\+DF (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_rapprochement}{Rapprochement}} $\ast$}]{rap }\end{DoxyParamCaption})}
+
+
+
+Écrire rapprochement dans un P\+DF Méthode qui permet d\textquotesingle{}écrire dans un P\+DF une liste des opérations rapprochés. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em rap} & \mbox{\hyperlink{class_rapprochement}{Rapprochement}}\& \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a84f04f2f2a2f1457cbf1ab85937e7102}\label{class_main_window_a84f04f2f2a2f1457cbf1ab85937e7102}} 
+\index{MainWindow@{MainWindow}!setId\_first@{setId\_first}}
+\index{setId\_first@{setId\_first}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{setId\_first()}{setId\_first()}}
+{\footnotesize\ttfamily void Main\+Window\+::set\+Id\+\_\+first (\begin{DoxyParamCaption}\item[{Q\+String}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_main_window_a71b870343ae9785abe59c6a15dccd617}\label{class_main_window_a71b870343ae9785abe59c6a15dccd617}} 
+\index{MainWindow@{MainWindow}!setNom\_first@{setNom\_first}}
+\index{setNom\_first@{setNom\_first}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{setNom\_first()}{setNom\_first()}}
+{\footnotesize\ttfamily void Main\+Window\+::set\+Nom\+\_\+first (\begin{DoxyParamCaption}\item[{Q\+String}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_main_window_a4d47c77e349c2b038a91fe0567ffbb73}\label{class_main_window_a4d47c77e349c2b038a91fe0567ffbb73}} 
+\index{MainWindow@{MainWindow}!setSolde\_first@{setSolde\_first}}
+\index{setSolde\_first@{setSolde\_first}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{setSolde\_first()}{setSolde\_first()}}
+{\footnotesize\ttfamily void Main\+Window\+::set\+Solde\+\_\+first (\begin{DoxyParamCaption}\item[{double}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_main_window_ab824e974fd8a3490487deb48b1b2d240}\label{class_main_window_ab824e974fd8a3490487deb48b1b2d240}} 
+\index{MainWindow@{MainWindow}!writeXmlFile\_attributes@{writeXmlFile\_attributes}}
+\index{writeXmlFile\_attributes@{writeXmlFile\_attributes}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{writeXmlFile\_attributes()}{writeXmlFile\_attributes()}}
+{\footnotesize\ttfamily void Main\+Window\+::write\+Xml\+File\+\_\+attributes (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Écrire Comptes.\+xml Méthode qui permet d\textquotesingle{}écrire dans un fichier Comptes.\+xml les balises avec ses attributs sous un format donné 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em filename} & path du fichier Comptes.\+xml \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a931a0ab199b4355332868f2a20f0a9d0}\label{class_main_window_a931a0ab199b4355332868f2a20f0a9d0}} 
+\index{MainWindow@{MainWindow}!writeXmlFile\_subnodes@{writeXmlFile\_subnodes}}
+\index{writeXmlFile\_subnodes@{writeXmlFile\_subnodes}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{writeXmlFile\_subnodes()}{writeXmlFile\_subnodes()}}
+{\footnotesize\ttfamily void Main\+Window\+::write\+Xml\+File\+\_\+subnodes (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Écrire Transactions.\+xml Méthode qui permet d\textquotesingle{}écrire dans un fichier Transactions.\+xml les balises avec ses attributs sous un format donné 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em filename} & path du fichier Comptes.\+xml \\
+\hline
+\end{DoxyParams}

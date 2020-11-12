@@ -1,0 +1,184 @@
+\hypertarget{class_depense}{}\doxysection{Référence de la classe Depense}
+\label{class_depense}\index{Depense@{Depense}}
+
+
+\mbox{\hyperlink{class_compte}{Compte}} de type \char`\"{}\+Dépense\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$compte.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Depense\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_depense}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_compte}{Compte}} $\ast$ \mbox{\hyperlink{class_depense_aa2386e454570b40ff221a4da35b1c90d}{Clone}} () const
+\begin{DoxyCompactList}\small\item\em Cloner compte~\newline
+. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_depense_a5d1a8e14f6b33e60d9e8b66a6568f8cd}{crediter}} (double credit)
+\begin{DoxyCompactList}\small\item\em Crediter un compte~\newline
+. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_depense_aa1dee30e6c9b52c8491a42a286b1db0a}{debiter}} (double debit)
+\begin{DoxyCompactList}\small\item\em Debiter un compte~\newline
+. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_depense_aa79008936a4f3ae2ca236c36da07aead}{transferer}} (double transfert)
+\begin{DoxyCompactList}\small\item\em Opération directe sur le solde du compte~\newline
+. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_depense_add22da612252c7d8a2a456b2b34de2f6}{Depense}} (const std\+::string \&nom, const int \&num)
+\begin{DoxyCompactList}\small\item\em Constructeur~\newline
+. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_depense_a6ab860f16158dc29eb123d5216796365}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Getter de type~\newline
+. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_depense_aa3ed801faab454bcad0ede4156e06595}{$\sim$\+Depense}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur~\newline
+destructeur par défaut de la classe \mbox{\hyperlink{class_recette}{Recette}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membres hérités additionnels}
+
+
+\doxysubsection{Description détaillée}
+\mbox{\hyperlink{class_compte}{Compte}} de type \char`\"{}\+Dépense\char`\"{}. 
+
+Les dépenses sont considérés comme des emplois (achats de biens et de prestations, les charges liées aux personnels, les impôts, etc). 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_depense_add22da612252c7d8a2a456b2b34de2f6}\label{class_depense_add22da612252c7d8a2a456b2b34de2f6}} 
+\index{Depense@{Depense}!Depense@{Depense}}
+\index{Depense@{Depense}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{Depense()}{Depense()}}
+{\footnotesize\ttfamily Depense\+::\+Depense (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nom,  }\item[{const int \&}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur~\newline
+. 
+
+Constructeur de la classe \mbox{\hyperlink{class_depense}{Depense}} 
+\begin{DoxyParams}{Paramètres}
+{\em nom} & \+: nom du compte \\
+\hline
+{\em num} & \+: identifiant du compte \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_depense_aa3ed801faab454bcad0ede4156e06595}\label{class_depense_aa3ed801faab454bcad0ede4156e06595}} 
+\index{Depense@{Depense}!````~Depense@{$\sim$Depense}}
+\index{````~Depense@{$\sim$Depense}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{$\sim$Depense()}{~Depense()}}
+{\footnotesize\ttfamily Depense\+::$\sim$\+Depense (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur~\newline
+destructeur par défaut de la classe \mbox{\hyperlink{class_recette}{Recette}}. 
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_depense_aa2386e454570b40ff221a4da35b1c90d}\label{class_depense_aa2386e454570b40ff221a4da35b1c90d}} 
+\index{Depense@{Depense}!Clone@{Clone}}
+\index{Clone@{Clone}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_compte}{Compte}} $\ast$ Depense\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Cloner compte~\newline
+. 
+
+fonction necessaire au fonctionnement de la factory, elle permet la duplication de compte \mbox{\hyperlink{class_actif}{Actif}} 
+
+Implémente \mbox{\hyperlink{class_compte_a759775c18235933a56721e5cdfd74744}{Compte}}.
+
+\mbox{\Hypertarget{class_depense_a5d1a8e14f6b33e60d9e8b66a6568f8cd}\label{class_depense_a5d1a8e14f6b33e60d9e8b66a6568f8cd}} 
+\index{Depense@{Depense}!crediter@{crediter}}
+\index{crediter@{crediter}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{crediter()}{crediter()}}
+{\footnotesize\ttfamily double Depense\+::crediter (\begin{DoxyParamCaption}\item[{double}]{credit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Crediter un compte~\newline
+. 
+
+Crédite le montant choisi au compte 
+\begin{DoxyParams}{Paramètres}
+{\em credit} & \+: montant à créditer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+retourne le solde mis à jour 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_a54105331d3b546315fdab2641a3b9232}{Compte}}.
+
+\mbox{\Hypertarget{class_depense_aa1dee30e6c9b52c8491a42a286b1db0a}\label{class_depense_aa1dee30e6c9b52c8491a42a286b1db0a}} 
+\index{Depense@{Depense}!debiter@{debiter}}
+\index{debiter@{debiter}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{debiter()}{debiter()}}
+{\footnotesize\ttfamily double Depense\+::debiter (\begin{DoxyParamCaption}\item[{double}]{debit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Debiter un compte~\newline
+. 
+
+Débite le montant choisi au compte 
+\begin{DoxyParams}{Paramètres}
+{\em debit} & \+: montant à créditer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+retourne le solde mis à jour 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_a733c756bb92930047279c74337af168e}{Compte}}.
+
+\mbox{\Hypertarget{class_depense_a6ab860f16158dc29eb123d5216796365}\label{class_depense_a6ab860f16158dc29eb123d5216796365}} 
+\index{Depense@{Depense}!getType@{getType}}
+\index{getType@{getType}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Depense\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Getter de type~\newline
+. 
+
+Permet de récupérer le type du compte en chaine de caractère \begin{DoxyReturn}{Renvoie}
+retourne le type du compte 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_compte_a091d77d9e39c25fa0ee7f6ede7eef768}{Compte}}.
+
+\mbox{\Hypertarget{class_depense_aa79008936a4f3ae2ca236c36da07aead}\label{class_depense_aa79008936a4f3ae2ca236c36da07aead}} 
+\index{Depense@{Depense}!transferer@{transferer}}
+\index{transferer@{transferer}!Depense@{Depense}}
+\doxysubsubsection{\texorpdfstring{transferer()}{transferer()}}
+{\footnotesize\ttfamily double Depense\+::transferer (\begin{DoxyParamCaption}\item[{double}]{transfert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Opération directe sur le solde du compte~\newline
+. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em transfert} & \+: montant à transferer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+retourne le solde mis à jour 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_af68bf34b9ffc7f71cbd790e38a9cffce}{Compte}}.
+

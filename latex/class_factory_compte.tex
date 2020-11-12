@@ -1,0 +1,79 @@
+\hypertarget{class_factory_compte}{}\doxysection{Référence de la classe Factory\+Compte}
+\label{class_factory_compte}\index{FactoryCompte@{FactoryCompte}}
+
+
+Générateur de \char`\"{}compte réel\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$compte.\+h$>$}
+
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_compte}{Compte}} $\ast$ \mbox{\hyperlink{class_factory_compte_a49c7732d0c78778fbd12ab6ee4b295a7}{Create}} (const std\+::string \&key) const
+\begin{DoxyCompactList}\small\item\em Permet de générer un compte~\newline
+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_factory_compte_a6ede27a3bf8c57de7155b282cea0a8f3}{Register}} (const std\+::string \&key, \mbox{\hyperlink{class_compte}{Compte}} $\ast$obj)
+\begin{DoxyCompactList}\small\item\em Enregistrer mot clef~\newline
+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::map$<$ std\+::string, \mbox{\hyperlink{class_compte}{Compte}} $\ast$ $>$ \mbox{\hyperlink{class_factory_compte_a219706f8d4643572984ad3698bc18bb7}{m\+\_\+map}} = std\+::map$<$string,\mbox{\hyperlink{class_compte}{Compte}}$\ast$$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Générateur de \char`\"{}compte réel\char`\"{}. 
+
+La factory est utile à la création de compte de type différents simplement grâce à leurs nom en chaine de caractère 
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_factory_compte_a49c7732d0c78778fbd12ab6ee4b295a7}\label{class_factory_compte_a49c7732d0c78778fbd12ab6ee4b295a7}} 
+\index{FactoryCompte@{FactoryCompte}!Create@{Create}}
+\index{Create@{Create}!FactoryCompte@{FactoryCompte}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_compte}{Compte}} $\ast$ Factory\+Compte\+::\+Create (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const}
+
+
+
+Permet de générer un compte~\newline
+. 
+
+Cette méthode génére un compte à partir du mot clé utilisé en consultant le dictionnaire d\textquotesingle{}objets enregistrés 
+\begin{DoxyParams}{Paramètres}
+{\em key} & \+: mot clé désignant le compte à dupliquer\\
+\hline
+\end{DoxyParams}
+Duplique un compte à partir de la clé le désignant. et retourne un pointeur vers le compte crée \mbox{\Hypertarget{class_factory_compte_a6ede27a3bf8c57de7155b282cea0a8f3}\label{class_factory_compte_a6ede27a3bf8c57de7155b282cea0a8f3}} 
+\index{FactoryCompte@{FactoryCompte}!Register@{Register}}
+\index{Register@{Register}!FactoryCompte@{FactoryCompte}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily void Factory\+Compte\+::\+Register (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{\mbox{\hyperlink{class_compte}{Compte}} $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Enregistrer mot clef~\newline
+. 
+
+cette fonction permet d\textquotesingle{}enregister l\textquotesingle{}orthographe à utiliser associé à un type de compte dans la factory 
+\begin{DoxyParams}{Paramètres}
+{\em key} & \+: mot clé désignant le compte comme son type par exemple \\
+\hline
+{\em obj} & \+: objet compte à dupliquer\\
+\hline
+\end{DoxyParams}
+Cette méthode enregistre un type de compte à cloner dans le map de notre factory, et enregistre la chaine de caractère le désignant sous forme de clé. 
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_factory_compte_a219706f8d4643572984ad3698bc18bb7}\label{class_factory_compte_a219706f8d4643572984ad3698bc18bb7}} 
+\index{FactoryCompte@{FactoryCompte}!m\_map@{m\_map}}
+\index{m\_map@{m\_map}!FactoryCompte@{FactoryCompte}}
+\doxysubsubsection{\texorpdfstring{m\_map}{m\_map}}
+{\footnotesize\ttfamily std\+::map$<$ string, \mbox{\hyperlink{class_compte}{Compte}} $\ast$ $>$ Factory\+Compte\+::m\+\_\+map = std\+::map$<$string,\mbox{\hyperlink{class_compte}{Compte}}$\ast$$>$()\hspace{0.3cm}{\ttfamily [static]}}
+

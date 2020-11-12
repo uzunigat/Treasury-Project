@@ -1,0 +1,256 @@
+\hypertarget{class_transaction}{}\doxysection{Référence de la classe Transaction}
+\label{class_transaction}\index{Transaction@{Transaction}}
+
+
+Conteneur d\textquotesingle{}opérations et d\textquotesingle{}informations.  
+
+
+
+
+{\ttfamily \#include $<$transaction.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Transaction\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_transaction}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_transaction_aa73c07f1b0ae5f7c0f94c8917cbbfadd}{Transaction}} (int idmax, int y, int m, int d, std\+::string ref, std\+::string \+\_\+memo)
+\begin{DoxyCompactList}\small\item\em Constructeur Constructeur de la classe \mbox{\hyperlink{class_transaction}{Transaction}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_operation}{Operation}} \& \mbox{\hyperlink{class_transaction_a0f25150dd2114a5b352fe1fdd34c409a}{add}} (double debit, double credit, \mbox{\hyperlink{class_compte_abstrait}{Compte\+Abstrait}} $\ast$compte, Q\+String intitule=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Ajouter opération Permet d\textquotesingle{}ajouter une opérations dans une transaction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_transaction_ac2dbf238d579dca4b15b661792a3d2b8}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Getter id Méthode qui permet de retourner l\textquotesingle{}id d\textquotesingle{}une transaction. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_transaction_a5fc4f290cf9c6a7f5acc488e1cfc4a62}{get\+Reference}} () const
+\begin{DoxyCompactList}\small\item\em Getter Reference Méthode qui permet de retourner la reference d\textquotesingle{}une transaction. \end{DoxyCompactList}\item 
+Q\+Date \mbox{\hyperlink{class_transaction_ab956b931484bdd9423191e58d8169d37}{get\+Date}} () const
+\begin{DoxyCompactList}\small\item\em Getter Date Méthode qui permet de retourner la date d\textquotesingle{}une transaction. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_transaction_aa884905d8b860cee6d8d488e8918f611}{get\+Memo}} () const
+\begin{DoxyCompactList}\small\item\em Getter memo Méthode qui permet de retourner le memo d\textquotesingle{}une transaction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_transaction_affb53a75f4477b40c9be5a5ca1ad540c}{Check}} () const
+\begin{DoxyCompactList}\small\item\em Vérifier la validité Méthode qui permet de vérifier la validité d\textquotesingle{}une transaction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transaction_ab962f8acb59514c09a342ae4d4269475}{afficher}} ()
+\begin{DoxyCompactList}\small\item\em Afficher une transaction Méthode qui permet d\textquotesingle{}afficher une transaction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_transaction_aa54b15c65249c9f2caecaef8ab819f08}{supprimer\+\_\+op}} (int id)
+\begin{DoxyCompactList}\small\item\em Supprimer une opération Méthode qui permet de supprimer une opération. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_operation}{Operation}} $\ast$ \mbox{\hyperlink{class_transaction_ac993a5ca1efc816db12fe67201f873d7}{recherche\+\_\+op}} (int id)
+\begin{DoxyCompactList}\small\item\em Chercher une opération Méthode qui permet de chercher une opération. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transaction_a362b0d2524d0c799165190517192dca9}{$\sim$\+Transaction}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Destructeur de la class \mbox{\hyperlink{class_transaction}{Transaction}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_transaction_a29b98e72a7ffd965ca1fa4ab9e24cea5}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Retourne le nombre des opération Méthode qui permet de retourner la taille du transaction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_transaction_a73ce1b6479fb40928a1549ff68235cef}{is\+\_\+frozen}} ()
+\begin{DoxyCompactList}\small\item\em Retourne si la transaction est gelée Méthode qui permet de savoir si une transaction en gelée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Conteneur d\textquotesingle{}opérations et d\textquotesingle{}informations. 
+
+Cette classe prend en paramètre la date, la référence, une memo et le vecteur d\textquotesingle{}opérations dont consiste la transaction 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_transaction_aa73c07f1b0ae5f7c0f94c8917cbbfadd}\label{class_transaction_aa73c07f1b0ae5f7c0f94c8917cbbfadd}} 
+\index{Transaction@{Transaction}!Transaction@{Transaction}}
+\index{Transaction@{Transaction}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{Transaction()}{Transaction()}}
+{\footnotesize\ttfamily Transaction\+::\+Transaction (\begin{DoxyParamCaption}\item[{int}]{idmax,  }\item[{int}]{y,  }\item[{int}]{m,  }\item[{int}]{d,  }\item[{std\+::string}]{ref,  }\item[{std\+::string}]{\+\_\+memo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur Constructeur de la classe \mbox{\hyperlink{class_transaction}{Transaction}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em idmax} & \+: id\+Max du \mbox{\hyperlink{class_transaction}{Transaction}} \\
+\hline
+{\em y} & \+: Année de création \\
+\hline
+{\em m} & Mois de création \\
+\hline
+{\em d} & \+: Jour de création \\
+\hline
+{\em ref} & Reference de la \mbox{\hyperlink{class_transaction}{Transaction}} \\
+\hline
+{\em \+\_\+memo} & Intitule de la \mbox{\hyperlink{class_transaction}{Transaction}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_transaction_a362b0d2524d0c799165190517192dca9}\label{class_transaction_a362b0d2524d0c799165190517192dca9}} 
+\index{Transaction@{Transaction}!````~Transaction@{$\sim$Transaction}}
+\index{````~Transaction@{$\sim$Transaction}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{$\sim$Transaction()}{~Transaction()}}
+{\footnotesize\ttfamily Transaction\+::$\sim$\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur Destructeur de la class \mbox{\hyperlink{class_transaction}{Transaction}}. 
+
+La suppression d\textquotesingle{}une transaction entraine la suppression de ses opérations.~\newline
+l\textquotesingle{}appel du destructeur d\textquotesingle{}opération permet de supprimer les opérations stockées aussi dans les comptes concernés. 
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_transaction_a0f25150dd2114a5b352fe1fdd34c409a}\label{class_transaction_a0f25150dd2114a5b352fe1fdd34c409a}} 
+\index{Transaction@{Transaction}!add@{add}}
+\index{add@{add}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_operation}{Operation}} \& Transaction\+::add (\begin{DoxyParamCaption}\item[{double}]{debit,  }\item[{double}]{credit,  }\item[{\mbox{\hyperlink{class_compte_abstrait}{Compte\+Abstrait}} $\ast$}]{compte,  }\item[{Q\+String}]{intitule = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Ajouter opération Permet d\textquotesingle{}ajouter une opérations dans une transaction. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em debit} & \+: debit de l\textquotesingle{}opération \\
+\hline
+{\em credit} & \+: credit de l\textquotesingle{}opération \\
+\hline
+{\em compte} & \mbox{\hyperlink{class_compte}{Compte}} associé à l\textquotesingle{}opération \\
+\hline
+{\em intitule} & \+: intitule de l\textquotesingle{}opération \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+l\textquotesingle{}opération crée du type \mbox{\hyperlink{class_operation}{Operation}}\&
+\end{DoxyReturn}
+Ajoute une opération au vecteur d\textquotesingle{}opération contenu dans une transaction.~\newline
+Verification de la validité de l\textquotesingle{}opération avec la méthode \mbox{\hyperlink{class_operation_adedea3660a9894116cf4806f367f3095}{Operation\+::\+Check()}} et si le compte concerné est bien réel. \mbox{\Hypertarget{class_transaction_ab962f8acb59514c09a342ae4d4269475}\label{class_transaction_ab962f8acb59514c09a342ae4d4269475}} 
+\index{Transaction@{Transaction}!afficher@{afficher}}
+\index{afficher@{afficher}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{afficher()}{afficher()}}
+{\footnotesize\ttfamily void Transaction\+::afficher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Afficher une transaction Méthode qui permet d\textquotesingle{}afficher une transaction. 
+
+Affiche les informations concernant une transaction, ainsi que ses opération en appelant la méthode Afficher() des opérations contenues dans son vecteur. \mbox{\Hypertarget{class_transaction_affb53a75f4477b40c9be5a5ca1ad540c}\label{class_transaction_affb53a75f4477b40c9be5a5ca1ad540c}} 
+\index{Transaction@{Transaction}!Check@{Check}}
+\index{Check@{Check}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{Check()}{Check()}}
+{\footnotesize\ttfamily bool Transaction\+::\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Vérifier la validité Méthode qui permet de vérifier la validité d\textquotesingle{}une transaction. 
+
+\begin{DoxyReturn}{Renvoie}
+True si la somme des débits de chaque opération est égal au somme de credits des tous les opérations, False sinon
+\end{DoxyReturn}
+verifie si de l\textquotesingle{}argent ne se créer pas lors d\textquotesingle{}une transaction, donc on vérifie que la somme du montant des opérations est nulle. \mbox{\Hypertarget{class_transaction_ab956b931484bdd9423191e58d8169d37}\label{class_transaction_ab956b931484bdd9423191e58d8169d37}} 
+\index{Transaction@{Transaction}!getDate@{getDate}}
+\index{getDate@{getDate}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily Q\+Date Transaction\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter Date Méthode qui permet de retourner la date d\textquotesingle{}une transaction. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne la date d\textquotesingle{}une transaciton du type Q\+Date 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_transaction_ac2dbf238d579dca4b15b661792a3d2b8}\label{class_transaction_ac2dbf238d579dca4b15b661792a3d2b8}} 
+\index{Transaction@{Transaction}!getId@{getId}}
+\index{getId@{getId}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Transaction\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter id Méthode qui permet de retourner l\textquotesingle{}id d\textquotesingle{}une transaction. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne l\textquotesingle{}id d\textquotesingle{}une opération 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_transaction_aa884905d8b860cee6d8d488e8918f611}\label{class_transaction_aa884905d8b860cee6d8d488e8918f611}} 
+\index{Transaction@{Transaction}!getMemo@{getMemo}}
+\index{getMemo@{getMemo}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getMemo()}{getMemo()}}
+{\footnotesize\ttfamily std\+::string Transaction\+::get\+Memo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter memo Méthode qui permet de retourner le memo d\textquotesingle{}une transaction. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne le memo d\textquotesingle{}une transaciton du type string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_transaction_a5fc4f290cf9c6a7f5acc488e1cfc4a62}\label{class_transaction_a5fc4f290cf9c6a7f5acc488e1cfc4a62}} 
+\index{Transaction@{Transaction}!getReference@{getReference}}
+\index{getReference@{getReference}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getReference()}{getReference()}}
+{\footnotesize\ttfamily const std\+::string\& Transaction\+::get\+Reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter Reference Méthode qui permet de retourner la reference d\textquotesingle{}une transaction. 
+
+\begin{DoxyReturn}{Renvoie}
+retourne la reference du transaction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_transaction_a29b98e72a7ffd965ca1fa4ab9e24cea5}\label{class_transaction_a29b98e72a7ffd965ca1fa4ab9e24cea5}} 
+\index{Transaction@{Transaction}!getSize@{getSize}}
+\index{getSize@{getSize}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Transaction\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retourne le nombre des opération Méthode qui permet de retourner la taille du transaction. 
+
+\begin{DoxyReturn}{Renvoie}
+taille de la transaction du type int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_transaction_a73ce1b6479fb40928a1549ff68235cef}\label{class_transaction_a73ce1b6479fb40928a1549ff68235cef}} 
+\index{Transaction@{Transaction}!is\_frozen@{is\_frozen}}
+\index{is\_frozen@{is\_frozen}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{is\_frozen()}{is\_frozen()}}
+{\footnotesize\ttfamily bool Transaction\+::is\+\_\+frozen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne si la transaction est gelée Méthode qui permet de savoir si une transaction en gelée. 
+
+\begin{DoxyReturn}{Renvoie}
+True si un des opérations est gelée, False sinon
+\end{DoxyReturn}
+Vérifie si une transaction est gelée en vérifiant si au moins une opération contient un pointeur de rapprochement. \mbox{\Hypertarget{class_transaction_ac993a5ca1efc816db12fe67201f873d7}\label{class_transaction_ac993a5ca1efc816db12fe67201f873d7}} 
+\index{Transaction@{Transaction}!recherche\_op@{recherche\_op}}
+\index{recherche\_op@{recherche\_op}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{recherche\_op()}{recherche\_op()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_operation}{Operation}} $\ast$ Transaction\+::recherche\+\_\+op (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Chercher une opération Méthode qui permet de chercher une opération. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & id de l\textquotesingle{}opération à rechercher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{class_operation}{Operation}} du type Operation$\ast$
+\end{DoxyReturn}
+Algorithme de recherche par id d\textquotesingle{}une opération dans une transaction. \mbox{\Hypertarget{class_transaction_aa54b15c65249c9f2caecaef8ab819f08}\label{class_transaction_aa54b15c65249c9f2caecaef8ab819f08}} 
+\index{Transaction@{Transaction}!supprimer\_op@{supprimer\_op}}
+\index{supprimer\_op@{supprimer\_op}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{supprimer\_op()}{supprimer\_op()}}
+{\footnotesize\ttfamily bool Transaction\+::supprimer\+\_\+op (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Supprimer une opération Méthode qui permet de supprimer une opération. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & id de l\textquotesingle{}opération à supprimer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+True s\textquotesingle{}il a réussi à supprimer l\textquotesingle{}opération False sinon
+\end{DoxyReturn}
+effectue une recherche par id d\textquotesingle{}une opération, met à jour le solde des comptes après annulation et supprime l\textquotesingle{}opération du vecteur. 

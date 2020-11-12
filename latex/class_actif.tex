@@ -1,0 +1,184 @@
+\hypertarget{class_actif}{}\doxysection{Référence de la classe Actif}
+\label{class_actif}\index{Actif@{Actif}}
+
+
+\mbox{\hyperlink{class_compte}{Compte}} de type \char`\"{}\+Actif\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$compte.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Actif\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_actif}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_compte}{Compte}} $\ast$ \mbox{\hyperlink{class_actif_a7f9cfacda7e2a454f828f57be8d4f3ca}{Clone}} () const
+\begin{DoxyCompactList}\small\item\em Cloner compte~\newline
+. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_actif_aad90323f964f016ab70579851cc26b1e}{crediter}} (double credit)
+\begin{DoxyCompactList}\small\item\em Crediter un compte~\newline
+. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_actif_a4b6daedba6dd63e828820fa59777eb7a}{debiter}} (double debit)
+\begin{DoxyCompactList}\small\item\em Debiter un compte~\newline
+. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_actif_ae9f74c5c6510bbd2622271531d4fdcf5}{transferer}} (double transfert)
+\begin{DoxyCompactList}\small\item\em Opération directe sur le solde du compte~\newline
+. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_actif_a39add53544feedc7048908967e6b87e8}{Actif}} (const std\+::string \&nom, const int \&num)
+\begin{DoxyCompactList}\small\item\em Constructeur~\newline
+. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_actif_affdddb6c8e82c601af0e3bcdb520053b}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Getter de type~\newline
+. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_actif_a5225711c17f943db6d12d1d6dfa747dc}{$\sim$\+Actif}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur~\newline
+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membres hérités additionnels}
+
+
+\doxysubsection{Description détaillée}
+\mbox{\hyperlink{class_compte}{Compte}} de type \char`\"{}\+Actif\char`\"{}. 
+
+L’actif d’une association est composé d’éléments qu’elle possède ayant une valeur économique positive. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_actif_a39add53544feedc7048908967e6b87e8}\label{class_actif_a39add53544feedc7048908967e6b87e8}} 
+\index{Actif@{Actif}!Actif@{Actif}}
+\index{Actif@{Actif}!Actif@{Actif}}
+\doxysubsubsection{\texorpdfstring{Actif()}{Actif()}}
+{\footnotesize\ttfamily Actif\+::\+Actif (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nom,  }\item[{const int \&}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur~\newline
+. 
+
+Constructeur de la classe \mbox{\hyperlink{class_actif}{Actif}} 
+\begin{DoxyParams}{Paramètres}
+{\em nom} & \+: nom du compte \\
+\hline
+{\em num} & \+: identifiant du compte \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_actif_a5225711c17f943db6d12d1d6dfa747dc}\label{class_actif_a5225711c17f943db6d12d1d6dfa747dc}} 
+\index{Actif@{Actif}!````~Actif@{$\sim$Actif}}
+\index{````~Actif@{$\sim$Actif}!Actif@{Actif}}
+\doxysubsubsection{\texorpdfstring{$\sim$Actif()}{~Actif()}}
+{\footnotesize\ttfamily Actif\+::$\sim$\+Actif (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur~\newline
+. 
+
+destructeur par défaut de la classe \mbox{\hyperlink{class_actif}{Actif}} 
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_actif_a7f9cfacda7e2a454f828f57be8d4f3ca}\label{class_actif_a7f9cfacda7e2a454f828f57be8d4f3ca}} 
+\index{Actif@{Actif}!Clone@{Clone}}
+\index{Clone@{Clone}!Actif@{Actif}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_compte}{Compte}} $\ast$ Actif\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Cloner compte~\newline
+. 
+
+fonction necessaire au fonctionnement de la factory, elle permet la duplication de compte \mbox{\hyperlink{class_actif}{Actif}} 
+
+Implémente \mbox{\hyperlink{class_compte_a759775c18235933a56721e5cdfd74744}{Compte}}.
+
+\mbox{\Hypertarget{class_actif_aad90323f964f016ab70579851cc26b1e}\label{class_actif_aad90323f964f016ab70579851cc26b1e}} 
+\index{Actif@{Actif}!crediter@{crediter}}
+\index{crediter@{crediter}!Actif@{Actif}}
+\doxysubsubsection{\texorpdfstring{crediter()}{crediter()}}
+{\footnotesize\ttfamily double Actif\+::crediter (\begin{DoxyParamCaption}\item[{double}]{credit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Crediter un compte~\newline
+. 
+
+Crédite le montant choisi au compte 
+\begin{DoxyParams}{Paramètres}
+{\em credit} & \+: montant à créditer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+retourne le solde mis à jour 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_a54105331d3b546315fdab2641a3b9232}{Compte}}.
+
+\mbox{\Hypertarget{class_actif_a4b6daedba6dd63e828820fa59777eb7a}\label{class_actif_a4b6daedba6dd63e828820fa59777eb7a}} 
+\index{Actif@{Actif}!debiter@{debiter}}
+\index{debiter@{debiter}!Actif@{Actif}}
+\doxysubsubsection{\texorpdfstring{debiter()}{debiter()}}
+{\footnotesize\ttfamily double Actif\+::debiter (\begin{DoxyParamCaption}\item[{double}]{debit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Debiter un compte~\newline
+. 
+
+Débite le montant choisi au compte 
+\begin{DoxyParams}{Paramètres}
+{\em debit} & \+: montant à créditer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+retourne le solde mis à jour 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_a733c756bb92930047279c74337af168e}{Compte}}.
+
+\mbox{\Hypertarget{class_actif_affdddb6c8e82c601af0e3bcdb520053b}\label{class_actif_affdddb6c8e82c601af0e3bcdb520053b}} 
+\index{Actif@{Actif}!getType@{getType}}
+\index{getType@{getType}!Actif@{Actif}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Actif\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Getter de type~\newline
+. 
+
+Permet de récupérer le type du compte en chaine de caractère \begin{DoxyReturn}{Renvoie}
+retourne le type du compte 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{class_compte_a091d77d9e39c25fa0ee7f6ede7eef768}{Compte}}.
+
+\mbox{\Hypertarget{class_actif_ae9f74c5c6510bbd2622271531d4fdcf5}\label{class_actif_ae9f74c5c6510bbd2622271531d4fdcf5}} 
+\index{Actif@{Actif}!transferer@{transferer}}
+\index{transferer@{transferer}!Actif@{Actif}}
+\doxysubsubsection{\texorpdfstring{transferer()}{transferer()}}
+{\footnotesize\ttfamily double Actif\+::transferer (\begin{DoxyParamCaption}\item[{double}]{transfert }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Opération directe sur le solde du compte~\newline
+. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em transfert} & \+: montant à transferer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+retourne le solde mis à jour 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_compte_af68bf34b9ffc7f71cbd790e38a9cffce}{Compte}}.
+
